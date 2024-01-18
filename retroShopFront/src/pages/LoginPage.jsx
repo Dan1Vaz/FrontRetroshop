@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { authContext } from "../providers/AuthProvider";
+import PopUp from "../components/PopUp";
 
 const LoginPage = () => {
   const [, setToken] = useContext(authContext);
@@ -16,6 +17,13 @@ const LoginPage = () => {
     password: "",
   });
   const [statusMessage, setStatusMessage] = useState("");
+  const [showPopup, setShowPopup] = useState(false);
+
+  const closePopup = () => {
+    setShowPopup(false);
+    setStatusMessage('');
+  };
+
 
   const enviar = (e) => {
     e.preventDefault();
@@ -32,6 +40,7 @@ const LoginPage = () => {
           return response.json();
         } else {
           throw new Error("Failed to login");
+          
         }
       })
       .then((data) => {
@@ -39,12 +48,14 @@ const LoginPage = () => {
 
         setToken(token);
         console.log("Token recibido:", token);
-        setStatusMessage("ok");
+        setStatusMessage("Logueado");
+        setShowPopup(true)
         autolink();
       })
       .catch((error) => {
         console.error("Error en inicio de sesión:", error.message);
-        setStatusMessage("error");
+        setStatusMessage("error al iniciar sesion. ");
+        setShowPopup(true)
       });
   };
 
@@ -55,9 +66,11 @@ const LoginPage = () => {
 
   return (
     <div
-      className="flex justify-center items-center flex-col gap-2">
-      <div className="">
-        <img src="/iconretroshop.svg" alt="" className="w-[px] h-[53px]" />
+      className="flex justify-center items-center flex-col pt-4 gap-[10px] ">
+      <div className="flex ">
+        <img src="/retroshop.svg" alt="" className="w-[300px] h-[300px]" />
+     
+  
       </div>
       <form
         className="flex justify-center items-center flex-col gap-5"
@@ -68,7 +81,7 @@ const LoginPage = () => {
           type="email"
           id="email"
           placeholder="Nombre"
-          className="w-[278px] h-[33px] bg-[#efefef]  p-[20px] "
+          className="w-[278px] h-[33px] bg-white  p-[20px] border border-black"
           value={userData.email}
           onChange={handleInputChange}
         />
@@ -76,7 +89,7 @@ const LoginPage = () => {
         <input
           type="password"
           placeholder="Contraseña"
-          className="w-[278px] h-[33px] bg-[#efefef]  p-[20px] "
+          className="w-[278px] h-[33px] bg-white  p-[20px] border border-black"
           id="password"
           value={userData.password}
           onChange={handleInputChange}
@@ -85,12 +98,16 @@ const LoginPage = () => {
           type="submit"
           className="w-[278px] h-[33px] bg-[#3337a3]  p-[20px] text-white py-2 px-4 "
         >
-          Inicia Sesión
+          ENTRAR
         </button>
       </form>
-      <NavLink to="/register">Crea Cuenta</NavLink>
+      <div className="flex justify-start w-[278px] items-start mt-0">
+      <NavLink className="mr-0" to="/profile/register">
+        Crear Cuenta
+      </NavLink>
+    </div>
 
-      {statusMessage && <p>{statusMessage}</p>}
+      {showPopup && <PopUp message={statusMessage} onClose={closePopup} />}
     </div>
   );
 };
