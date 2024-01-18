@@ -3,8 +3,8 @@ import SearchIcon from "@mui/icons-material/Search";
 export const Navbar = () => {
   return (
     <div className="Navbar flex flex-row justify-center items-center pt-4 gap-[20px] relative">
-      <img src="/iconretroshop.svg" alt="" className=" h-[53px]" />
-      <div className="SearchBar relative flex items-center"> 
+      <img src="/iconretroshop.svg" alt="" className="h-[53px]" />
+      <div className="SearchBar relative flex items-center">
         <input
           className="w-[278px] h-[33px] bg-[#efefef] rounded-full p-[20px] "
           type="search"
