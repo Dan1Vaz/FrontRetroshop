@@ -59,13 +59,13 @@ const RegisterPage = () => {
 
   return (
     <div
-      className="flex justify-center items-center flex-col pt-4 gap-[20px] ">
+      className="flex justify-center items-center flex-col gap-[20px] h-screen">
       <div className="flex ">
-        <img src="/retroshop.svg" alt="" className="w-[300px] h-[300px]" />
+        <img src="/retroshop.svg" alt="" className="w-[300px] h-[100px]" />
      
   
       </div>
-    <form className="flex justify-center items-center flex-col gap-5" onSubmit={send}>
+    <form className="flex justify-center items-center flex-col gap-5 mt-" onSubmit={send}>
       {/* <label htmlFor="name">Introduce nombre</label> */}
       <input
          placeholder="Nombre"
