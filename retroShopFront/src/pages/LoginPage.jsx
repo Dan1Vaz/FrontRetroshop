@@ -85,7 +85,7 @@ const LoginPage = () => {
           type="submit"
           className="w-[278px] h-[33px] bg-[#3337a3]  p-[20px] text-white py-2 px-4 "
         >
-          Iniciar Sesión
+          Inicia Sesión
         </button>
       </form>
       <NavLink to="/register">Crear Cuenta</NavLink>
