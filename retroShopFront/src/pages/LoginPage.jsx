@@ -88,7 +88,7 @@ const LoginPage = () => {
           Inicia Sesión
         </button>
       </form>
-      <NavLink to="/register">Crear Cuenta</NavLink>
+      <NavLink to="/register">Crea Cuenta</NavLink>
 
       {statusMessage && <p>{statusMessage}</p>}
     </div>
