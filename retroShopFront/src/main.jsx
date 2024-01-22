@@ -9,6 +9,9 @@ import { Footer } from "./components/Footer.jsx";
 import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage.jsx";
 import VerificationPage from "./pages/VerificationPage.jsx";
+import CreateProduct from "./pages/CreateProduct.jsx";
+import PutProductsPages from "./pages/PutProductsPages.jsx";
+import ProductsUserPage from "./pages/ProductsUserPage.jsx";
 
 const Layout = () => {
 
@@ -51,10 +54,10 @@ const router = createBrowserRouter([
     path: "/profile",
     element: <Layout2 />,
     children: [
-      {
-        path: "/profile",
-        element: <ProfilePage/>,
-      },
+      // {
+      //   path: "/profile",
+      //   element: <ProfilePage/>,
+      // },
 
       {
         path: "/profile/login",
@@ -69,6 +72,19 @@ const router = createBrowserRouter([
         path: "/profile/validation/:verificationCode/:email",
           element: <VerificationPage/>
        },
+      {
+        path: "/profile",
+          element: <CreateProduct/>
+       },
+       {
+        path: "/profile/modify/:productId",
+        element: <PutProductsPages />,
+      },
+     
+      {
+        path: "/profile/products/user",
+        element: <ProductsUserPage />,
+      },
     ]}
 
 ]);

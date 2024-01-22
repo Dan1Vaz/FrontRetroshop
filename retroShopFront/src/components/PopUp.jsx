@@ -1,7 +1,8 @@
 import InboxIcon from '@mui/icons-material/Inbox';
+import { Link } from 'react-router-dom';
 //import { useNavigate } from 'react-router-dom';
 
-const PopUp = ({ message, onClose }) => {
+const PopUp = ({ message, onClose ,link}) => {
     // const navigate = useNavigate();
 
     // function autolink() {
@@ -16,10 +17,11 @@ const PopUp = ({ message, onClose }) => {
       <InboxIcon className='text-3xl'/>
         <p className="text-red-500 w-full h-full text-xl font-bold  text-center">{message}</p>
         </div>
+        <Link to={`http://localhost:5173/${link}`}>
         <button onClick={onClose}  className="w-[278px] h-[33px] bg-[#3337a3]  p-[20px] text-white py-2 px-4  mt-4">
           Cerrar
         </button>
-     
+        </Link>
     </div>
   );
 };
