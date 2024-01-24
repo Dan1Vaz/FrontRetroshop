@@ -12,6 +12,8 @@ import VerificationPage from "./pages/VerificationPage.jsx";
 import CreateProduct from "./pages/CreateProduct.jsx";
 import PutProductsPages from "./pages/PutProductsPages.jsx";
 import ProductsUserPage from "./pages/ProductsUserPage.jsx";
+import CreateReservation from "./pages/createReservation.jsx";
+import StatusReservation from "./pages/statusReservation.jsx";
 
 const Layout = () => {
 
@@ -44,6 +46,14 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <MainPage />,
+      },
+      {
+        path: "/reser/:productId",
+        element: <CreateReservation/>,
+      },
+      {
+        path: "/status/:reservationToken/:reservationId",
+        element: <StatusReservation/>,
       },
       
     
