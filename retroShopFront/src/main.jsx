@@ -11,8 +11,6 @@ import LoginPage from "./pages/LoginPage.jsx";
 import VerificationPage from "./pages/VerificationPage.jsx";
 
 const Layout = () => {
-
-  
   return (
     <div>
       <Navbar />
@@ -22,11 +20,8 @@ const Layout = () => {
   );
 };
 const Layout2 = () => {
-
-  
   return (
     <div>
-   
       <Outlet />
       <Footer />
     </div>
@@ -42,9 +37,6 @@ const router = createBrowserRouter([
         path: "/",
         element: <MainPage />,
       },
-      
-    
-     
     ],
   },
   {
@@ -53,19 +45,19 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/profile",
-        element: <LoginPage/>,
+        element: <LoginPage />,
       },
-    
+
       {
         path: "/profile/register",
         element: <RegisterPage />,
       },
       {
         path: "/profile/validation/:verificationCode/:email",
-          element: <VerificationPage/>
-       },
-    ]}
-
+        element: <VerificationPage />,
+      },
+    ],
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
