@@ -1,14 +1,14 @@
 import { useContext, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { authContext } from '../providers/AuthProvider';
-import PopUp from '../components/PopUp';
 
-const CreateReservation = () => {
-  const {productId} = useParams();
+import { authContext } from '../providers/AuthProvider';
+import PopUp from './PopUp';
+
+const CreateReservation = (props) => {
+  const {productId} = props
   
   console.log(productId);
   const [token,] = useContext(authContext);
-
+  const [link, setLink] = useState("");
   const [reservation, setReservation] = useState('');
   const [statusMessage, setStatusMessage] = useState('');
   const [showPopup, setShowPopup] = useState(false);
@@ -42,6 +42,7 @@ const CreateReservation = () => {
         setReservation(data.id)
         console.log(data.id);
        setReservation(...reservation,data.reservationToken)
+       setLink("")
       } else {
       
         console.log(data);
@@ -72,8 +73,8 @@ const CreateReservation = () => {
       
 
       <div>
-          <button onClick={enviar}>Enviar</button>
-          {showPopup && <PopUp message={statusMessage} onClose={closePopup} />}
+          <button  className="w-[278px] h-[33px] bg-[#3337a3]  p-[20px] text-white py-2 px-4 "onClick={enviar}>Reservar</button>
+          {showPopup && <PopUp message={statusMessage} onClose={closePopup} link={link} />}
         </div>
       );
   }

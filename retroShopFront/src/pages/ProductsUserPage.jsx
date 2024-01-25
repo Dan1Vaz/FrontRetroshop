@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import useProductsByUser from '../Hook/useProductsByUser'
 import { authContext } from '../providers/AuthProvider';
 import { Link } from 'react-router-dom';
-import DeleteProductsPages from '../components/DeleteProductsPages';
+import DeleteProductsPages from '../components/DeletedProducts';
 
 const ProductsUserPage = () => {
   const [token] = useContext(authContext);

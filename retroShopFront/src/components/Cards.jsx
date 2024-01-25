@@ -1,20 +1,28 @@
-import { Link } from 'react-router-dom' 
+/* eslint-disable react/prop-types */
+
+import CreateReservation from './CreateReservation'
+
+
 
 
 const Cards = ({item}) => {
   return (
-    <Link  className="link_cards " to ={`reser/${item.id}`}>
+    
     <div className='cards'>
      <div className="image_cards">
-     <img src={`http://localhost:3001/${item.imageURL}`} alt="" className='image_cards_1' />
+     <img src={`http://localhost:3001/${item.imageURL}`} alt=""  className="w-[50px] h-[50px]" />
 
-        <img src={`http://localhost:3001/${item.imageURL2}`} alt="" className='image_cards_2' />
+        <img src={`http://localhost:3001/${item.imageURL2}`} alt=""  className="w-[50px] h-[50px]" />
 
    
 <h2>{item.name}</h2>
 <p>{item.price}</p>
+<CreateReservation productId={item.id}/>
+
+
     </div>  </div>
-    </Link>
+ 
+  
   )
 }
 

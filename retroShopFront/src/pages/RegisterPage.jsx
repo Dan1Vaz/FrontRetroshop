@@ -10,6 +10,7 @@ const RegisterPage = () => {
         password: ""
       });
       const [showPopup, setShowPopup] = useState(false);
+      const [link, setLink] = useState("");
       const closePopup = () => {
         setShowPopup(false);
         setStatusMessage(''); 
@@ -31,7 +32,7 @@ const RegisterPage = () => {
             console.log("Éxito");
             setStatusMessage("Registro exitoso , Revisa tu bandeja de entrada para verificar tu cuenta con el correo electronico que te enviamos");
            setShowPopup(true)
-
+           setLink("/")
           } else {
             return response.json(); 
           }
@@ -95,7 +96,7 @@ const RegisterPage = () => {
       />
       <button type="submit"  className="w-[278px] h-[33px] bg-[#3337a3]  p-[20px] text-white py-2 px-4 ">SIGUIENTE</button>
     </form>
-    {showPopup && <PopUp message={statusMessage} onClose={closePopup} />}
+    {showPopup && <PopUp message={statusMessage} onClose={closePopup} link={link}/>}
    
   </div>
   )

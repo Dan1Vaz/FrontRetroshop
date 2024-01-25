@@ -7,6 +7,7 @@ import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlin
 import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 import useProducts from '../../Hook/useProducts'
 
+
 const Product = () => {
   const { products } = useProducts();
   const { id } = useParams();
@@ -49,11 +50,11 @@ console.log(products);
     flex flex-col'>
       <div className="flex flex-row w-[40%]">
         <div className="productImage">
-          <img className="imgprod" src={`http://localhost:3001/${selectedProduct.imageURL}`} alt="" onClick={handleImage0} />
-          <img className="imgprod" src={`http://localhost:3001/${selectedProduct.imageURL2}`} alt="" onClick={handleImage1} />
+          <img className="w-[50px] h-[50px]" src={`http://localhost:3001/${selectedProduct.imageURL}`} alt="" onClick={handleImage0} />
+          <img className="w-[50px] h-[50px]" src={`http://localhost:3001/${selectedProduct.imageURL2}`} alt="" onClick={handleImage1} />
         </div>
         <div className="mainproductImage">
-          <img className="mainImg" src={`http://localhost:3001/${selectImage}`} alt="" />
+          <img className="w-[300px] h-[100px]" src={`http://localhost:3001/${selectImage}`} alt="" />
         </div>
       </div>
 
@@ -62,11 +63,12 @@ console.log(products);
         <p className="product_parrafo product_price">{selectedProduct.price}<EuroIcon/></p>
         <p className="product_parrafo">{selectedProduct.description}</p>
 
-        <button className="productbutton">RESERVAR <ShoppingCartOutlinedIcon/></button>
+       
 
         <p className="product_parrafo favorite" onClick={handleFavoriteToggle}>
           {isFavorite ? <FavoriteBorderOutlinedIcon/> : <FavoriteOutlinedIcon/>}
         </p>
+        
       </div>
     </div>
   );

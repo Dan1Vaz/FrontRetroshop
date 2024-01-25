@@ -27,9 +27,9 @@ const Featured = ({ type }) => {
       </div>
       <div className="bottom_featured">
         {products.map((item) => (
-          <Link key={item.id} className="link_cards" to={`/product/${item.id}`}>
+          <div key={item.id} className="link_cards" >
             <Cards item={item} />
-          </Link>
+          </div>
         ))}
       </div>
     </div>

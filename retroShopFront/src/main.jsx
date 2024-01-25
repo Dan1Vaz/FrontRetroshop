@@ -12,8 +12,9 @@ import VerificationPage from "./pages/VerificationPage.jsx";
 import CreateProduct from "./pages/CreateProduct.jsx";
 import PutProductsPages from "./pages/PutProductsPages.jsx";
 import ProductsUserPage from "./pages/ProductsUserPage.jsx";
-import CreateReservation from "./pages/createReservation.jsx";
+
 import StatusReservation from "./pages/statusReservation.jsx";
+import PutUserPage from "./pages/PutUserPage.jsx";
 
 const Layout = () => {
 
@@ -47,12 +48,9 @@ const router = createBrowserRouter([
         path: "/",
         element: <MainPage />,
       },
+     
       {
-        path: "/reser/:productId",
-        element: <CreateReservation/>,
-      },
-      {
-        path: "/status/:reservationToken/:reservationId",
+        path: "/status/:reservationId",
         element: <StatusReservation/>,
       },
       
@@ -77,6 +75,10 @@ const router = createBrowserRouter([
       {
         path: "/profile/register",
         element: <RegisterPage />,
+      },
+      {
+        path: "/profile/perfil",
+        element: <PutUserPage/>,
       },
       {
         path: "/profile/validation/:verificationCode/:email",

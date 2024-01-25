@@ -4,9 +4,9 @@ import { authContext } from '../providers/AuthProvider';
 
 import PopUp from './PopUp';
 
-const DeleteProductsPages = (props) => {
+const DeletedProducts = (props) => {
  const {productId} = props
-  const { error, loading, deleteProduct } = useProductDelete();
+  const { deleteProduct } = useProductDelete();
   const [token] = useContext(authContext);
 
   const [isPopupOpen, setPopupOpen] = useState(false);
@@ -28,7 +28,7 @@ const DeleteProductsPages = (props) => {
   return (
     <div>
    
-      <button  className="w-[150px] h-[33px] bg-[#3337a3]  p-[20px] text-white py-2 px-4 " onClick={handleDeleteProduct}>Confirmar Eliminación</button>
+      <button  className="w-[150px] h-[33px] bg-[#3337a3]  p-[20px] text-white py-2 px-4 " onClick={handleDeleteProduct}> Eliminar</button>
 
    
       {isPopupOpen && (
@@ -42,4 +42,4 @@ const DeleteProductsPages = (props) => {
   );
 };
 
-export default DeleteProductsPages;
+export default DeletedProducts;
