@@ -1,5 +1,5 @@
 import { useContext, useState } from 'react';
-
+import  baseURL from '../providers/ruta';
 import { authContext } from '../providers/AuthProvider';
 import PopUp from './PopUp';
 
@@ -22,7 +22,7 @@ const CreateReservation = (props) => {
   const enviar = async () => {
     try {
    
-      const response = await fetch(`http://localhost:3001/reservation/${productId}`, {
+      const response = await fetch(`${baseURL}/reservation/${productId}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

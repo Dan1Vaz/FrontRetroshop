@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-
+import  baseURL from '../providers/ruta';
 const VerificationPage = () => {
     const { verificationCode, email } = useParams();
     const navigate = useNavigate();
@@ -21,7 +21,7 @@ const VerificationPage = () => {
         });
     
         // Enviar solicitud fetch al montar el componente
-        fetch('http://localhost:3001/verify', {
+        fetch(`${baseURL}/verify`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

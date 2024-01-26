@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import  baseURL from '../providers/ruta';
 const useProductDelete = () => {
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
@@ -8,7 +8,7 @@ const useProductDelete = () => {
       try {
         setLoading(true);
   
-        const response = await fetch(`http://localhost:3001/products/${productId}`, {
+        const response = await fetch(`${baseURL}/products/${productId}`, {
           method: 'DELETE',
           headers: {
             Authorization: `Bearer ${token}`,

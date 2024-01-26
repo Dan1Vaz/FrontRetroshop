@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import PopUp from '../components/PopUp';
-
+import  baseURL from '../providers/ruta';
 const RegisterPage = () => {
     const [userData, setUserData] = useState({
         name: "",
@@ -20,7 +20,7 @@ const RegisterPage = () => {
       const send = (e) => {
         e.preventDefault();
     
-        fetch('http://localhost:3001/register', {
+        fetch(`${baseURL}/register`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-
+import  baseURL from '../providers/ruta';
 const StatusReservation = () => {
   const {  reservationId } = useParams();
   console.log("reservationId statusreservafront" + reservationId);
@@ -8,7 +8,7 @@ const StatusReservation = () => {
   const [statusMessage, setStatusMessage] = useState('Reserva en proceso...');
 
   useEffect(() => {
-    fetch('http://localhost:3001/reservation-update', {
+    fetch(`${baseURL}/reservation-update`, {
    
       method: 'POST',
       headers: {

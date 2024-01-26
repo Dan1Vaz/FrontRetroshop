@@ -1,6 +1,9 @@
 import InboxIcon from '@mui/icons-material/Inbox';
 import { Link } from 'react-router-dom';
 //import { useNavigate } from 'react-router-dom';
+import  baseLURL from '../providers/rutaFront';
+
+
 
 const PopUp = ({ message, onClose ,link}) => {
     // const navigate = useNavigate();
@@ -17,7 +20,7 @@ const PopUp = ({ message, onClose ,link}) => {
       <InboxIcon className='text-3xl'/>
         <p className="text-red-500 w-full h-full text-xl font-bold  text-center">{message}</p>
         </div>
-        <Link to={`http://localhost:5173/${link}`}>
+        <Link to={`${baseLURL}/${link}`}>
         <button onClick={onClose}  className="w-[278px] h-[33px] bg-[#3337a3]  p-[20px] text-white py-2 px-4  mt-4">
           Cerrar
         </button>

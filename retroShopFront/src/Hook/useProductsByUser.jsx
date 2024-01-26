@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import  baseURL from '../providers/ruta';
 const useProductsByUser = (token) => {
   const [products, setProducts] = useState([]);
   const [error, setError] = useState(null);
@@ -14,7 +14,7 @@ const useProductsByUser = (token) => {
 
     const fetchProductsByUser = async (token) => {
       try {
-        const response = await fetch("http://localhost:3001/products/user", {
+        const response = await fetch(`${baseURL}/products/user`, {
           method: 'GET',
           headers: {
             Authorization: `Bearer ${token}`,

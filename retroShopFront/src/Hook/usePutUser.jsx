@@ -1,5 +1,5 @@
 import {  useState } from "react";
-
+import  baseURL from '../providers/ruta';
 const usePutUser = () => {
 
     const [data, setData] = useState(null);
@@ -18,7 +18,7 @@ const usePutUser = () => {
     
 
 
-      const response = await fetch(`http://localhost:3001/profile`, {
+      const response = await fetch(`${baseURL}:3001/profile`, {
         method: 'PUT',
         headers: {
           Authorization: `Bearer ${token}`,

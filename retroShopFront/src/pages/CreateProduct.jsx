@@ -1,5 +1,5 @@
 import  { useState, useContext } from 'react';
-
+import  baseURL from '../providers/ruta';
 import { useNavigate } from 'react-router-dom';
 import { authContext } from '../providers/AuthProvider'
 
@@ -38,7 +38,7 @@ const CreateProduct = () => {
     
     
         try {
-          const response = await fetch('http://localhost:3001/products/create', {
+          const response = await fetch(`${baseURL}/products/create`, {
             method: 'POST',
             headers: {
               Authorization:  `Bearer ${token}`

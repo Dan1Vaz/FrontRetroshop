@@ -60,7 +60,7 @@ const PutProductsPages = () => {
       
 
  
-      <div className="flex items-center flex-col gap-[20px] h-1/2">
+      <div className="flex items-center flex-col gap-[20px] h-full">
         <div className="flex">
           <img
             src="/retroshop.svg"

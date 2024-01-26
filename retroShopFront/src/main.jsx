@@ -20,11 +20,11 @@ const Layout = () => {
 
   
   return (
-    <div className="flex flex-col  max-h-screen ">
+    <div >
     <Navbar />
-    <div className="flex-1 overflow-y-auto">
+
       <Outlet />
-    </div>
+  
     <Footer />
   </div>
 );
@@ -34,11 +34,11 @@ const Layout2 = () => {
 
   
   return (
-    <div className="flex flex-col max-h-screen  ">
+    <div   >
   
-    <div className="flex-1 overflow-y-auto place-content-start">
+   
       <Outlet />
-    </div>
+
     <Footer />
   </div>
 );

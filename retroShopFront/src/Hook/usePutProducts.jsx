@@ -1,5 +1,5 @@
 import {  useState } from "react";
-
+import  baseURL from '../providers/ruta';
 const usePutProducts = () => {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
@@ -21,7 +21,7 @@ const usePutProducts = () => {
       formData.append('avatar', productData.avatar);
       formData.append('avatar2', productData.avatar2);
 
-      const response = await fetch(`http://localhost:3001/products/${id}`, {
+      const response = await fetch(`${baseURL}/products/${id}`, {
         method: 'PUT',
         headers: {
           Authorization: `Bearer ${token}`,
