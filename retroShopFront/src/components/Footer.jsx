@@ -5,7 +5,7 @@ import PersonIcon from "@mui/icons-material/Person";
 
 export const Footer = () => {
   return (
-    <footer className="flex justify-evenly  fixed bottom-0 w-full pb-[10px] pt-[10px] border-t-2 border-[#7C7C7C] bg-white z-[2] ">
+    <footer className="flex justify-evenly  fixed bottom-0 w-full pb-[10px] pt-[10px] border-t-2 border-[#7C7C7C] bg-white z-[200] ">
       <div className="flex flex-col items-center">
         <HomeIcon fontSize="large" className="fill-[#7C7C7C]" />
         <p className="text-xs text-[#7C7C7C]">Inicio</p>

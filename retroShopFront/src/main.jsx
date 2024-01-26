@@ -20,28 +20,23 @@ const Layout = () => {
 
   
   return (
-    <div >
-    <Navbar />
-
+    <div>
+      <Navbar />
       <Outlet />
-  
-    <Footer />
-  </div>
-);
+      <Footer />
+    </div>
+  );
 };
-
 const Layout2 = () => {
 
   
   return (
-    <div   >
-  
+    <div>
    
       <Outlet />
-
-    <Footer />
-  </div>
-);
+      <Footer />
+    </div>
+  );
 };
 
 const router = createBrowserRouter([
