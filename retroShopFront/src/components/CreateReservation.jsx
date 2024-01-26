@@ -72,8 +72,8 @@ const CreateReservation = (props) => {
   
       
 
-      <div>
-          <button  className="w-[278px] h-[33px] bg-[#3337a3]  p-[20px] text-white py-2 px-4 "onClick={enviar}>Reservar</button>
+      <div >
+          <button  className=" glassmorphism "onClick={enviar}>Reservar</button>
           {showPopup && <PopUp message={statusMessage} onClose={closePopup} link={link} />}
         </div>
       );

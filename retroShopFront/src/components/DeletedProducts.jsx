@@ -1,11 +1,11 @@
 import { useContext, useState } from 'react';
 import useProductDelete from '../Hook/useProductDelete';
 import { authContext } from '../providers/AuthProvider';
-
+import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 import PopUp from './PopUp';
 
 const DeletedProducts = (props) => {
- const {productId} = props
+ const {productId,card_button} = props
   const { deleteProduct } = useProductDelete();
   const [token] = useContext(authContext);
 
@@ -26,9 +26,9 @@ const DeletedProducts = (props) => {
   };
 
   return (
-    <div>
+    <>
    
-      <button  className="w-[150px] h-[33px] bg-[#3337a3]  p-[20px] text-white py-2 px-4 " onClick={handleDeleteProduct}> Eliminar</button>
+      <button className={card_button} onClick={handleDeleteProduct}> <DeleteOutlineOutlinedIcon/></button>
 
    
       {isPopupOpen && (
@@ -38,7 +38,7 @@ const DeletedProducts = (props) => {
           link="profile/products/user"
         />
       )}
-    </div>
+    </>
   );
 };
 

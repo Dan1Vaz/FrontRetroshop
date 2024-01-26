@@ -28,11 +28,11 @@ const usePutProducts = () => {
         },
         body: formData,
       });
-   console.log(id);
       const responseData = await response.json();
       setData(responseData);
     } catch (error) {
       setError(error.message);
+      console.log(error);
     } finally {
       setLoading(false);
     }

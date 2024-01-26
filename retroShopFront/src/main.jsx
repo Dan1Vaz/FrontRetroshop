@@ -20,23 +20,28 @@ const Layout = () => {
 
   
   return (
-    <div>
-      <Navbar />
+    <div className="flex flex-col  max-h-screen ">
+    <Navbar />
+    <div className="flex-1 overflow-y-auto">
       <Outlet />
-      <Footer />
     </div>
-  );
+    <Footer />
+  </div>
+);
 };
+
 const Layout2 = () => {
 
   
   return (
-    <div>
-   
+    <div className="flex flex-col max-h-screen  ">
+  
+    <div className="flex-1 overflow-y-auto place-content-start">
       <Outlet />
-      <Footer />
     </div>
-  );
+    <Footer />
+  </div>
+);
 };
 
 const router = createBrowserRouter([

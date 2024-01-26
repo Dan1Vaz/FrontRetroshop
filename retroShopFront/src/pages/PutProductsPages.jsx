@@ -56,8 +56,8 @@ const PutProductsPages = () => {
     <div>
       {/* Crear componente de loading */}
       {loading && <p>Loading... </p>}
-      {error && <p>Error: {error.message}</p>}
-      {data && <p>Data updated successfully</p>}
+      {error && <p>Error: {error}</p>}
+      
 
  
       <div className="flex items-center flex-col gap-[20px] h-1/2">

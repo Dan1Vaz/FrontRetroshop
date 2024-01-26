@@ -3,6 +3,7 @@ import useProductsByUser from '../Hook/useProductsByUser'
 import { authContext } from '../providers/AuthProvider';
 import { Link } from 'react-router-dom';
 import DeleteProductsPages from '../components/DeletedProducts';
+import EditNoteOutlinedIcon from '@mui/icons-material/EditNoteOutlined';
 
 const ProductsUserPage = () => {
   const [token] = useContext(authContext);
@@ -17,26 +18,43 @@ const ProductsUserPage = () => {
   }
 
   return (
-    <div>
-      <h1>Products User Page</h1>
-      <div>
+   
+     <div className='flex flex-col'>
+      
+ 
+        <img src="/retroshop.svg" alt="" className="w-[300px] h-[100px]" />
+     
+  
+    
+      <h1 className='bg-white text-center my-[20px] text-pretty'>tus Productos </h1>
+      <div className='contenedor'>
         {products.map((product) => (
-          <div key={product.id}>
-           <h2> {product.name}  </h2>
-            {/* aqui vemos componente miguel si es caja ngra */}
-            <p>{product.category}</p>
-            <div className='flex gap-2'>
+          <div  className= "container_card "key={product.id}>
+        
+           <div className="image_cards">
+              <img
+                className="img image_cards_1"
+                src={`http://localhost:3001/${product.imageURL}`}
+                alt="cagada"/>
+              <img
+                className="img image_cards_2 "
+                src={`http://localhost:3001/${product.imageURL2}`}
+                alt="" />
+            </div> 
+            <h2 className='card_text'> {product.name}  </h2>
+            <p className='card_text'>{product.category}</p>
+            <div className='card_buttons'>
             <Link to={`/profile/modify/${product.id}`}>
-              <button  className="w-[150px] h-[33px] bg-[#3337a3]  p-[20px] text-white py-2 px-4 ">Modificar</button>
+              <button  className="card_button"><EditNoteOutlinedIcon/></button>
             </Link>
             {/* <Link to={`/profile/delete/${product.id}`}> */}
-             <DeleteProductsPages productId ={product.id}/>
+             <DeleteProductsPages card_button="card_button" productId ={product.id} />
             {/* </Link> */}
             </div>
             </div>
         ))}
       </div>
-    </div>
+      </div>
   );
 };
 
