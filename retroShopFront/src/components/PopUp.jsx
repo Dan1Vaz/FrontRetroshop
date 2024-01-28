@@ -12,7 +12,7 @@ const PopUp = ({ message, onClose ,link}) => {
     //   navigate("/profile");
     // }
   return (
-    <div className="fixed top-0 left-0 w-full h-full flex flex-col justify-center items-center bg-white mt-0 mb-10">
+    <div className="fixed top-0 left-0 w-full h-full flex flex-col justify-center items-center bg-white mt-0 mb-10 z-[300]">
        
    <img src="/retroshop.svg" alt="" className="w-[300px] h-[300px] -mt-40" />
 

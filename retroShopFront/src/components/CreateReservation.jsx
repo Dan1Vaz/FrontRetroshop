@@ -1,13 +1,12 @@
 import { useContext, useState } from 'react';
-import  baseURL from '../providers/ruta';
+import baseURL from '../providers/ruta';
 import { authContext } from '../providers/AuthProvider';
 import PopUp from './PopUp';
 
 const CreateReservation = (props) => {
-  const {productId} = props
-  
-  console.log(productId);
-  const [token,] = useContext(authContext);
+  const { productId } = props;
+
+  const [token] = useContext(authContext);
   const [link, setLink] = useState("");
   const [reservation, setReservation] = useState('');
   const [statusMessage, setStatusMessage] = useState('');
@@ -18,64 +17,55 @@ const CreateReservation = (props) => {
     setStatusMessage('');
   };
 
-
   const enviar = async () => {
     try {
-   
-      const response = await fetch(`${baseURL}/reservation/${productId}`, {
+      const response = await fetch(`http://localhost:3001/reservation/${productId}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${token}`,
         },
-      
       });
+
       const data = await response.json();
+
       if (response.ok) {
-    
         console.log("Éxito");
         setStatusMessage("Reserva solicitada");
-        setStatusMessage(data.message),
-        console.log(data.message)
-        console.log(data.email)
+        setStatusMessage(data.message);
+      
         setShowPopup(true);
-        setReservation(data.id)
-        console.log(data.id);
-       setReservation(...reservation,data.reservationToken)
-       setLink("")
+        setReservation(data.id);
+        setReservation(...reservation, data.reservationToken);
+        setLink("");
       } else {
       
-        console.log(data);
-        setStatusMessage(data.message );
+        setStatusMessage(data.error);
         setShowPopup(true);
-        setReservation(data.id)
-        console.log("data.message")
-
-        console.log(data.message)
-
-
+        setReservation(data.id);
+     ;
       }
     } catch (error) {
       console.error("Error al enviar los datos:", error);
-      setStatusMessage("Error al enviar los datos");
+
+      if (error.response && error.response.status === 400) {
+        setStatusMessage(error.response.data.message);
+      } else {
+        setStatusMessage("Error al enviar los datos");
+      }
+
       setShowPopup(true);
-     
     }
   };
 
-//   const handleInputChange = (e) => {
-//     const { id, value } = e.target;
-//     setReservation({ ...reservation, [id]: value }); // Use [id] to dynamically set the property
-//   };
-
   return (
-  
-      
+    <div>
+      <button className="glassmorphism" onClick={enviar}>
+        Reservar
+      </button>
+      {showPopup && <PopUp message={statusMessage} onClose={closePopup} link={link} />}
+    </div>
+  );
+};
 
-      <div >
-          <button  className=" glassmorphism "onClick={enviar}>Reservar</button>
-          {showPopup && <PopUp message={statusMessage} onClose={closePopup} link={link} />}
-        </div>
-      );
-  }
 export default CreateReservation;
