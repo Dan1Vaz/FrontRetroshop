@@ -43,7 +43,6 @@ const CreateReservation = (props) => {
         setStatusMessage(data.error);
         setShowPopup(true);
         setReservation(data.id);
-     ;
       }
     } catch (error) {
       console.error("Error al enviar los datos:", error);
