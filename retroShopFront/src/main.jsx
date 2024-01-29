@@ -15,6 +15,7 @@ import ProductsUserPage from "./pages/ProductsUserPage.jsx";
 
 import StatusReservation from "./pages/statusReservation.jsx";
 import PutUserPage from "./pages/PutUserPage.jsx";
+import Error404 from "./pages/Error404.jsx";
 
 const Layout = () => {
 
@@ -38,6 +39,16 @@ const Layout2 = () => {
     </div>
   );
 };
+const Layout3 = () => {
+
+  
+  return (
+ 
+   
+      <Outlet />
+
+  );
+};
 
 const router = createBrowserRouter([
   {
@@ -53,6 +64,7 @@ const router = createBrowserRouter([
         path: "/status/:reservationId",
         element: <StatusReservation/>,
       },
+    
       
     
      
@@ -96,6 +108,18 @@ const router = createBrowserRouter([
       {
         path: "/profile/products/user",
         element: <ProductsUserPage />,
+      },
+    
+    ]},
+  {
+    path: "*",
+    element: <Layout3/>,
+    children: [
+  
+     
+      {
+        path: "*",
+        element: <Error404/>,
       },
     ]}
 
