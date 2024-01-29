@@ -59,7 +59,7 @@ const CreateReservation = (props) => {
 
   return (
     <div>
-      <button className="glassmorphism" onClick={enviar}>
+      <button className="card_button" onClick={enviar}>
         Reservar
       </button>
       {showPopup && <PopUp message={statusMessage} onClose={closePopup} link={link} />}
