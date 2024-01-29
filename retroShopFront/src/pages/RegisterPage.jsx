@@ -70,7 +70,7 @@ const RegisterPage = () => {
       {/* <label htmlFor="name">Introduce nombre</label> */}
       <input
          placeholder="Nombre"
-         className="w-[278px] h-[33px] bg-white  p-[20px] border border-black"
+         className="input"
         type="text"
         id="name"
         value={userData.name}
@@ -79,7 +79,7 @@ const RegisterPage = () => {
       {/* <label htmlFor="email">Introduce email</label> */}
       <input
         type="email"
-        className="w-[278px] h-[33px] bg-white  p-[20px] border border-black"
+        className="input"
         placeholder="Email"
         id="email"
         value={userData.email}
@@ -88,13 +88,13 @@ const RegisterPage = () => {
       {/* <label htmlFor="password"> Contraseña</label> */}
       <input
         type="password"
-        className="w-[278px] h-[33px] bg-white  p-[20px] border border-black"
+        className="input"
         placeholder="Contraseña"
         id="password"
         value={userData.password}
         onChange={handleInputChange}
       />
-      <button type="submit"  className="w-[278px] h-[33px] bg-[#3337a3]  p-[20px] text-white py-2 px-4 ">SIGUIENTE</button>
+      <button type="submit"  className="card_button">SIGUIENTE</button>
     </form>
     {showPopup && <PopUp message={statusMessage} onClose={closePopup} link={link}/>}
    

@@ -2,12 +2,20 @@ import  { useContext, useState } from "react";
 import usePutProducts from "../Hook/usePutProducts";
 import { authContext } from "../providers/AuthProvider";
 import { useParams } from "react-router-dom";
-
+import PopUp from '../components/PopUp';
 const PutProductsPages = () => {
   const [token] = useContext(authContext);
   const { data, error, loading, putProduct } = usePutProducts();
   const { productId } = useParams();
   console.log(productId);
+  const [showPopup, setShowPopup] = useState(false);
+  const [link, setLink] = useState("");
+  const closePopup = () => {
+    setShowPopup(false);
+    setStatusMessage(''); 
+  };
+
+  const [statusMessage, setStatusMessage] = useState("");
   const [productData, setProductData] = useState({
     name: "",
     category: "",
@@ -33,9 +41,19 @@ const PutProductsPages = () => {
     };
 
     // Llama a la función putProduct del hook
-    await putProduct(productId, updateBody, token);
+    try {
+      await putProduct(productId, updateBody, token);
+   
+      setStatusMessage("Producto actualizado correctamente");
+      setLink("profile/products/user")
+    } catch (error) {
+     
+      console.error("Error al actualizar el producto:", error);
+      setStatusMessage("Error al actualizar el producto");
+      setLink(`profile/modify/${productId}`)
+    }
+    setShowPopup(true); // Muestra el popup después de enviar el formulario
   };
-
   const handleInputChange = (e) => {
     const { id, value } = e.target;
     setProductData({ ...productData, [id]: value });
@@ -60,7 +78,7 @@ const PutProductsPages = () => {
       
 
  
-      <div className="flex items-center flex-col gap-[20px] h-full">
+      <div className="flex items-center flex-col gap-[20px] ">
         <div className="flex">
           <img
             src="/retroshop.svg"
@@ -68,7 +86,7 @@ const PutProductsPages = () => {
             className="w-[300px] h-[100px]"
           />
         </div>
-        <h1>Registro de Producto</h1>
+        <h1>modificar producto</h1>
         <form
           className="flex justify-center items-center flex-col gap-4"
           onSubmit={handleUpdateProduct}
@@ -77,14 +95,14 @@ const PutProductsPages = () => {
           <input
             type="text"
             id="name"
-            className="w-[300px]  bg-white  p-[20px] border border-black"
+            className="input h-[550px]"
             placeholder="nombre del articulo"
             value={productData.name}
             onChange={handleInputChange}
           />
          <select
           id="category"
-          className="w-[300px] bg-white p-[20px] border border-black"
+          className="input_category"
           value={productData.category}
           onChange={handleInputChange}
         >
@@ -93,7 +111,7 @@ const PutProductsPages = () => {
           </option>
           <option value="consola">Consola</option>
           <option value="movil">Móvil</option>
-          <option value="juegos">Juegos</option>
+          <option value="videojuegos">Juegos</option>
           <option value="televisor">Televisor</option>
           <option value="ordenador">Ordenador</option>
         </select>
@@ -101,7 +119,7 @@ const PutProductsPages = () => {
               <input
                type="text" 
               id="price"
-              className="w-[300px] bg-white  p-[20px] border border-black"
+              className="input"
               placeholder='price'
                value={productData.price}
                 onChange={handleInputChange} />
@@ -109,7 +127,7 @@ const PutProductsPages = () => {
               {/* <label htmlFor="location">Ubicación</label> */}
               <input type="text"
                id="location"
-               className="w-[300px] h-[33px] bg-white  p-[20px] border border-black"
+               className="input"
                placeholder='Localidad'
                 value={productData.location}
                  onChange={handleInputChange} />
@@ -120,7 +138,7 @@ const PutProductsPages = () => {
               <textarea id="description"
                value={productData.description} 
                onChange={handleInputChange}
-                   className="w-[300px] h-[33px] bg-white  p-[20px] border border-black"
+                   className="input"
                    placeholder='Descripción'>
                </textarea>
           <input
@@ -137,11 +155,12 @@ const PutProductsPages = () => {
           />
           <button
             type="submit"
-            className="w-[300px] h-[33px] bg-[#3337a3]  p-[20px] text-white py-2 px-4"
+            className="card_button"
           >
             Enviar
           </button>
         </form>
+        {showPopup && <PopUp message={statusMessage} onClose={closePopup} link={link}/>}
       </div>
     </div>
   );

@@ -75,10 +75,10 @@ const CreateProduct = () => {
       };
     
       return (
-        <div className="max-container min-h-screen">
+        
+      <div   className="flex justify-center items-center flex-col gap-[20px] ">
       <div className="flex ">
-        <img src="/retroshop.svg" alt="" className="logo" />
-     
+        <img src="/retroshop.svg" alt="" className="w-[300px] h-[100px]" />
   
       </div>
           <h1 className='blue-gradient_text head-text flex justify-center ' >Registro de Producto</h1>
@@ -95,7 +95,7 @@ const CreateProduct = () => {
             {/* <label htmlFor="category">Categoría</label> */}
             <select
           id="category"
-          className="input"
+          className="input_category"
           value={productData.category}
           onChange={handleInputChange}
         >
@@ -150,7 +150,7 @@ const CreateProduct = () => {
         id="avatar2"
          onChange={handleFileChange2} />
      
-     <button type="submit"  className="btn ">enviar</button>
+     <button type="submit"  className="card_button  ">enviar</button>
           
           </form>
         
