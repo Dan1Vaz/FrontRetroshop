@@ -7,18 +7,14 @@ const StatusReservation = () => {
   const navigate = useNavigate();
   const [statusMessage, setStatusMessage] = useState('Reserva en proceso...');
   function autolink() {
-    navigate("/profile/login");
+    navigate("/profile/products/user");
   }
 
-  const [, setStatus] = useState({
-    reservationId:""
-  });
+ 
 
   useEffect(() => {
-
-    setStatus({
-     reservationId: reservationId
-    });
+    
+  
     fetch(`${baseURL}/reservation-update`, {
       method: 'PUT',
       headers: {
@@ -30,23 +26,17 @@ const StatusReservation = () => {
     })
     .then(response => response.json())
     .then(data => {
-      if (data.message) {
-        setStatusMessage(data.message);
-      } else {
-        throw new Error('Failed verification');
-      }
+      setStatusMessage(data.message); 
+      autolink()
+      
     })
     .catch(error => {
       console.error("Error en la verificación:", error.message);
       setStatusMessage(`Error en la verificación: ${error.message}`);
     });
-  }, [reservationId]);
+  }, [reservationId,navigate]);
 
-  return (
-    <div>
-      <div>Status: {statusMessage}</div>
-    </div>
-  );
+
 }
 
 export default StatusReservation;

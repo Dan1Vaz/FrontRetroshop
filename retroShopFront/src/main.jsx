@@ -16,6 +16,7 @@ import ProductsUserPage from "./pages/ProductsUserPage.jsx";
 import StatusReservation from "./pages/statusReservation.jsx";
 import PutUserPage from "./pages/PutUserPage.jsx";
 import Error404 from "./pages/Error404.jsx";
+import ConfirmacionPassword from "./pages/ConfirmacionPassword.jsx";
 
 const Layout = () => {
 
@@ -63,6 +64,10 @@ const router = createBrowserRouter([
       {
         path: "/status/:reservationId",
         element: <StatusReservation/>,
+      },
+      {
+        path: "/confirmacion/:reservationId/:email",
+        element: <ConfirmacionPassword/>,
       },
     
       

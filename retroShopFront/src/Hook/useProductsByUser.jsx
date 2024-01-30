@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import  baseURL from '../providers/ruta';
+import baseURL from '../providers/ruta';
+
 const useProductsByUser = (token) => {
   const [products, setProducts] = useState([]);
   const [error, setError] = useState(null);
@@ -8,10 +9,6 @@ const useProductsByUser = (token) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const autolink = () => {
-      navigate("/profile/products/user");
-    };
-
     const fetchProductsByUser = async (token) => {
       try {
         const response = await fetch(`${baseURL}/products/user`, {
@@ -27,7 +24,6 @@ const useProductsByUser = (token) => {
 
         const productsData = await response.json();
         setProducts(productsData);
-        autolink();  
       } catch (error) {
         setError(error.message);
       } finally {
@@ -36,7 +32,13 @@ const useProductsByUser = (token) => {
     };
 
     fetchProductsByUser(token);
-  }, [token, navigate]);
+  }, [token]);
+
+  useEffect(() => {
+    if (products.length > 0) {
+      navigate("/profile/products/user");
+    }
+  }, [products, navigate]);
 
   return { products, error, loading };
 };

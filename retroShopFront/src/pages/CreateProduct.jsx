@@ -105,8 +105,9 @@ const CreateProduct = () => {
           <option value="consola">Consola</option>
           <option value="movil">Móvil</option>
           <option value="videojuegos">Juegos</option>
-          <option value="televisor">Televisor</option>
+          <option value="radio">Televisor</option>
           <option value="ordenador">Ordenador</option>
+          <option value="otros">otros</option>
         </select>
     
             {/* <label htmlFor="price">Precio</label> */}
@@ -158,5 +159,4 @@ const CreateProduct = () => {
         </div>
       );
     };
-
-export default CreateProduct
+    export default CreateProduct;

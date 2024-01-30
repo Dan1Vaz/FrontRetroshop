@@ -15,13 +15,13 @@
   @apply grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-4 grid-rows-[repeat(2,minmax(150px,min-content))] px-5;
 }
 .container_card {
-  @apply shadow-[0_0_30px_black] w-[200px] h-[200px] mx-auto my-[10px] ;
+  @apply shadow-[0_0_10px_black] w-[200px] h-[200px] mx-auto my-[10px] bg-slate-200 rounded-lg ;
 }
 .image_cards {
-  @apply w-[200px] h-[45%] relative cursor-pointer;
+  @apply w-[200px] h-[50%] relative cursor-pointer overflow-hidden;
 }
 .img {
-  @apply w-full h-full object-cover absolute right-0 top-0;
+  @apply w-full h-full object-cover absolute right-0 top-0 overflow-hidden;
 }
 .image_cards_1 {
   @apply z-10;

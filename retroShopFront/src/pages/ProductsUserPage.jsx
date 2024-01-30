@@ -45,10 +45,10 @@ const ProductsUserPage = () => {
             <p className='card_text'>{product.category}</p>
             <div className='card_buttons'>
             <Link to={`/profile/modify/${product.id}`}>
-              <button  className="card_button"><EditNoteOutlinedIcon/></button>
+              <button  className="card_button1"><EditNoteOutlinedIcon/></button>
             </Link>
             {/* <Link to={`/profile/delete/${product.id}`}> */}
-             <DeleteProductsPages card_button="card_button" productId ={product.id} />
+             <DeleteProductsPages card_button="card_button1" productId ={product.id} />
             {/* </Link> */}
             </div>
             </div>
