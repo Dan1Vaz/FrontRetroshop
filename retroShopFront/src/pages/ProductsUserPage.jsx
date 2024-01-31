@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import DeleteProductsPages from '../components/DeletedProducts';
 import EditNoteOutlinedIcon from '@mui/icons-material/EditNoteOutlined';
 import  baseURL from '../providers/ruta';
+
 const ProductsUserPage = () => {
   const [token] = useContext(authContext);
   const { products, error, loading } = useProductsByUser(token);
@@ -30,7 +31,7 @@ const ProductsUserPage = () => {
       <div className='contenedor'>
         {products.map((product) => (
           <div  className= "container_card "key={product.id}>
-        
+      
            <div className="image_cards">
               <img
                 className="img image_cards_1"

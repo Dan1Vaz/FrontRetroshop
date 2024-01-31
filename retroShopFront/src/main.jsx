@@ -17,6 +17,8 @@ import StatusReservation from "./pages/statusReservation.jsx";
 import PutUserPage from "./pages/PutUserPage.jsx";
 import Error404 from "./pages/Error404.jsx";
 import ConfirmacionPassword from "./pages/ConfirmacionPassword.jsx";
+import VerStatusReserva from "./components/VerStatusReserva.jsx";
+import CreateReview from "./pages/CreateReview.jsx";
 
 const Layout = () => {
 
@@ -68,6 +70,14 @@ const router = createBrowserRouter([
       {
         path: "/confirmacion/:reservationId/:email",
         element: <ConfirmacionPassword/>,
+      },
+      {
+        path: "/reserva",
+        element: <VerStatusReserva/>,
+      },
+      {
+        path: "/review/:productId",
+        element: <CreateReview/>,
       },
     
       
