@@ -12,6 +12,9 @@ import LoginPage from "./pages/LoginPage.jsx";
 import VerificationPage from "./pages/VerificationPage.jsx";
 import { NavbarSearchedProducts } from "./components/ProductCard/NavbarSearchedProducts.jsx";
 import { SearchProductsPage } from "./pages/SearchProductsPage.jsx";
+import CreateProduct from "./pages/CreateProduct.jsx";
+import PutProductsPages from "./pages/PutProductsPages.jsx";
+import ProductsUserPage from "./pages/ProductsUserPage.jsx";
 
 const Layout = ({ children }) => {
   return (
@@ -55,6 +58,11 @@ const router = createBrowserRouter([
     path: "/profile",
     element: <Layout />,
     children: [
+      // {
+      //   path: "/profile",
+      //   element: <ProfilePage/>,
+      // },
+
       {
         path: "/profile/login",
         element: <LoginPage />,

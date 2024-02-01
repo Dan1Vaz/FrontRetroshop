@@ -6,7 +6,7 @@ const VerificationPage = () => {
     const navigate = useNavigate();
   
     function autolink() {
-      navigate("/login");
+      navigate("/profile/login");
     }
     const [, setUserData] = useState({
         email: "",

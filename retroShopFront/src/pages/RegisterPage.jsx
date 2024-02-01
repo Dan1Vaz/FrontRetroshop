@@ -1,6 +1,7 @@
 
 
 import { useState } from 'react';
+import PopUp from '../components/PopUp';
 
 const RegisterPage = () => {
     const [userData, setUserData] = useState({
@@ -8,8 +9,13 @@ const RegisterPage = () => {
         email: "",
         password: ""
       });
+      const [showPopup, setShowPopup] = useState(false);
+      const closePopup = () => {
+        setShowPopup(false);
+        setStatusMessage(''); 
+      };
       const [statusMessage, setStatusMessage] = useState("");
-
+    
       const send = (e) => {
         e.preventDefault();
     
@@ -23,8 +29,9 @@ const RegisterPage = () => {
         .then(response => {
           if (response.ok) {
             console.log("Éxito");
-            setStatusMessage("Registro exitoso , te hemos enviado un correo para verificar tu cuenta");
-      
+            setStatusMessage("Registro exitoso , Revisa tu bandeja de entrada para verificar tu cuenta con el correo electronico que te enviamos");
+           setShowPopup(true)
+
           } else {
             return response.json(); 
           }
@@ -33,12 +40,14 @@ const RegisterPage = () => {
           if (data) {
             console.log(data);
             setStatusMessage(data.message);
+            setShowPopup(true)
           
           }
         })
         .catch(error => {
           console.error("Error al enviar los datos:", error);
           setStatusMessage("Error al enviar los datos");
+          setShowPopup(true)
         });
       };
     
@@ -49,13 +58,18 @@ const RegisterPage = () => {
 
 
   return (
-    <div className='flex justify-center items-center flex-col gap-2'>
+    <div
+      className="flex justify-center items-center flex-col gap-[20px] h-screen">
+      <div className="flex ">
+        <img src="/retroshop.svg" alt="" className="w-[300px] h-[100px]" />
      
-    <h2>Registro</h2>
-    <form className="flex justify-center items-center flex-col" onSubmit={send}>
+  
+      </div>
+    <form className="flex justify-center items-center flex-col gap-5 mt-" onSubmit={send}>
       {/* <label htmlFor="name">Introduce nombre</label> */}
       <input
          placeholder="Nombre"
+         className="w-[278px] h-[33px] bg-white  p-[20px] border border-black"
         type="text"
         id="name"
         value={userData.name}
@@ -64,6 +78,7 @@ const RegisterPage = () => {
       {/* <label htmlFor="email">Introduce email</label> */}
       <input
         type="email"
+        className="w-[278px] h-[33px] bg-white  p-[20px] border border-black"
         placeholder="Email"
         id="email"
         value={userData.email}
@@ -72,14 +87,15 @@ const RegisterPage = () => {
       {/* <label htmlFor="password"> Contraseña</label> */}
       <input
         type="password"
+        className="w-[278px] h-[33px] bg-white  p-[20px] border border-black"
         placeholder="Contraseña"
         id="password"
         value={userData.password}
         onChange={handleInputChange}
       />
-      <button type="submit">Registrar</button>
+      <button type="submit"  className="w-[278px] h-[33px] bg-[#3337a3]  p-[20px] text-white py-2 px-4 ">SIGUIENTE</button>
     </form>
-    {statusMessage && <p className="exitoso">{statusMessage}<span>&#160;</span></p>}  
+    {showPopup && <PopUp message={statusMessage} onClose={closePopup} />}
    
   </div>
   )
