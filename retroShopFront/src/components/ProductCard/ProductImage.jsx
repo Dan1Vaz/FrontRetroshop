@@ -15,14 +15,14 @@ export const ProductImage = ({ productImg1, productImg2 }) => {
         <img
           src={`http://192.168.1.131:3001/${productImg1}`}
           alt="ProductImage1"
-          className="rounded-t-[10px] object-contain"
+          className="rounded-t-[10px] min-h-[158px] max-h-[158px] min-w-[150px] max-w-[150px] object-cover"
         />
       </div>
       <div className="each-slide-effect">
         <img
           src={`http://192.168.1.131:3001/${productImg2}`}
           alt="ProductImage1"
-          className="rounded-t-[10px] min-h-[150px] object-cover"
+          className="rounded-t-[10px] min-h-[158px] max-h-[158px] min-w-[150px] max-w-[150px] object-cover"
         />
       </div>
     </Slide>

@@ -4,7 +4,7 @@ import useProducts from "../Hook/useProducts";
 
 export const MainPage = () => {
   const { products, loading, error } = useProducts();
-  console.log(products);
+  //console.log(products);
   return (
     <>
       <header className="flex h-[135px] justify-center items-center">
@@ -12,7 +12,7 @@ export const MainPage = () => {
           COMPRA Y VENDE LOS MEJORES PRODUCTOS RETRO EN NUESTRA PÁGINA
         </h1>
       </header>
-      <main className="min-h-[1350px]">
+      <main>
         <div className="flex items-center justify-center border-y-2 border-[#7C7C7C] h-[76px]">
           <h2 className="font-bold text-[#080C89] ">PRODUCTOS DESTACADOS</h2>
         </div>
