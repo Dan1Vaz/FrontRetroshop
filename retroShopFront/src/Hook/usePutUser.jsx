@@ -1,5 +1,5 @@
 import {  useState } from "react";
-import  baseURL from '../providers/ruta';
+
 const usePutUser = () => {
 
     const [data, setData] = useState(null);
@@ -11,14 +11,14 @@ const usePutUser = () => {
     const putUser = async (userData,token) =>{
       try{  setLoading(true);
         const formData = new FormData();
-      formData.append('name', userData.name);
-      formData.append('password', userData.password);
-      formData.append('biography', userData.biography);
-      formData.append('avatar', userData.avatar);
-    
+        if(userData.name) formData.append('name', userData.name);
+        if(userData.password) formData.append('password', userData.password);
+        if(userData.biography) formData.append('biography', userData.biography);
+        if(userData.avatar) formData.append('avatar', userData.avatar);
 
 
-      const response = await fetch(`${baseURL}:3001/profile`, {
+
+      const response = await fetch(`http://localhost:3001/profile`, {
         method: 'PUT',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -27,7 +27,7 @@ const usePutUser = () => {
       });
 
       const responseData = await response.json();
-      setData(responseData);
+      if(responseData.ok) setData(responseData);
     } catch (error) {
       setError(error.message);
     } finally {

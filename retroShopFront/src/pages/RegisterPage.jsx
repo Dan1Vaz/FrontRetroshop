@@ -34,6 +34,7 @@ const RegisterPage = () => {
            setShowPopup(true)
            setLink("/")
           } else {
+            setLink("/profile/register")
             return response.json(); 
           }
         })

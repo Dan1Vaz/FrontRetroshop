@@ -12,45 +12,45 @@ const PutUserPage = () => {
      password: "",
      biography:"",
       avatar: "",
-   
+
     });
-  
+
     const handleUpdateProduct = async (e) => {
       e.preventDefault();
   //recojo cuerpo
-      
+
       const updateBody = {
         name: userData.name,
         password: userData.password,
         biography: userData.biography,
         avatar: userData.avatar,
-      
+
       };
-  
+
       // Llama a la función putUser del hook
       await putUser( updateBody, token);
     };
-  
+
     const handleInputChange = (e) => {
       const { id, value } = e.target;
       setuserData({ ...userData, [id]: value });
     };
-  
+
     const handleFileChange = (e) => {
       const file = e.target.files[0];
       setuserData({ ...userData, avatar: file });
     };
-  
-    
-  
+
+
+
     return (
       <div>
         {/* Crear componente de loading */}
         {loading && <p>Loading... </p>}
         {error && <p>Error: {error.message}</p>}
         {data && <p>Data updated successfully</p>}
-  
-   
+
+
         <div className="flex items-center flex-col gap-[20px] h-1/2">
           <div className="flex">
             <img
@@ -64,7 +64,7 @@ const PutUserPage = () => {
             className="flex justify-center items-center flex-col gap-4"
             onSubmit={handleUpdateProduct}
           >
-           
+
             <input
               type="text"
               id="name"
@@ -73,13 +73,13 @@ const PutUserPage = () => {
               value={userData.name}
               onChange={handleInputChange}
             />
-       
-            
-        
-              
-        
-              
-           
+
+
+
+
+
+
+
                 {/* <label htmlFor="description">Descripción</label> */}
                 <textarea id="biography"
                  value={userData.biography} 
@@ -101,7 +101,7 @@ const PutUserPage = () => {
                 placeholder='verifica tu password'
                  value={userData.password}
                   onChange={handleInputChange} />
-           
+
             <button
               type="submit"
               className="w-[300px] h-[33px] bg-[#3337a3]  p-[20px] text-white py-2 px-4"

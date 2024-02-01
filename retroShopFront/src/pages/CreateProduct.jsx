@@ -19,22 +19,21 @@ const CreateProduct = () => {
       });
     
       const [statusMessage, setStatusMessage] = useState('');
-    
-      const autolink = () => {
-        navigate('/profile/products/user');
-      };
+ 
+     
+ 
     
       const enviar = async (e) => {
         e.preventDefault();
     
         const formData = new FormData();
-        formData.append('name', productData.name);
-        formData.append('category', productData.category);
-        formData.append('price', productData.price);
-        formData.append('location', productData.location);
-        formData.append('description', productData.description);
-        formData.append('avatar', productData.avatar);
-        formData.append('avatar2', productData.avatar2);
+       if(productData.name) formData.append('name', productData.name);
+       if(productData.category) formData.append('category', productData.category);
+       if(productData.price)formData.append('price', productData.price);
+       if(productData.location)formData.append('location', productData.location);
+       if(productData.description) formData.append('description', productData.description);
+       if(productData.avatar) formData.append('avatar', productData.avatar);
+       if(productData.avatar2)formData.append('avatar2', productData.avatar2);
     
     
         try {
@@ -48,7 +47,7 @@ const CreateProduct = () => {
        console.log(formData);
           if (response.ok) {
             setStatusMessage('Registro exitoso');
-            autolink();
+            navigate('/profile/products/user');
           } else {
             const data = await response.json();
             if (data) {
