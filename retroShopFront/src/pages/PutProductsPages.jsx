@@ -3,7 +3,7 @@ import usePutProducts from "../Hook/usePutProducts";
 import { authContext } from "../providers/AuthProvider";
 import { useParams } from "react-router-dom";
 
-const PutProductsPages = () => {
+export const PutProductsPages = () => {
   const [token] = useContext(authContext);
   const { data, error, loading, putProduct } = usePutProducts();
   const { productId } = useParams();
@@ -146,5 +146,3 @@ const PutProductsPages = () => {
     </div>
   );
 };
-
-export default PutProductsPages;

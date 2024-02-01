@@ -4,7 +4,7 @@ import { authContext } from '../providers/AuthProvider';
 import { Link } from 'react-router-dom';
 import DeleteProductsPages from '../components/DeleteProductsPages';
 
-const ProductsUserPage = () => {
+export const ProductsUserPage = () => {
   const [token] = useContext(authContext);
   const { products, error, loading } = useProductsByUser(token);
 
@@ -39,5 +39,3 @@ const ProductsUserPage = () => {
     </div>
   );
 };
-
-export default ProductsUserPage;

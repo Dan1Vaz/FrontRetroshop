@@ -1,20 +1,43 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import "./index.css";
 import { AuthProvider } from "./providers/AuthProvider.jsx";
-import { SearchProvider, useSearch } from "./providers/SearchContext.jsx";
-import { MainPage } from "./pages/MainPage";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer.jsx";
-import RegisterPage from "./pages/RegisterPage";
-import LoginPage from "./pages/LoginPage.jsx";
-import VerificationPage from "./pages/VerificationPage.jsx";
 import { NavbarSearchedProducts } from "./components/ProductCard/NavbarSearchedProducts.jsx";
-import { SearchProductsPage } from "./pages/SearchProductsPage.jsx";
+import SearchProductsPage from "./pages/SearchProductsPage.jsx";
+import { MainPage } from "./pages/MainPage.jsx";
+import ConfirmacionPassword from "./pages/ConfirmacionPassword.jsx";
+import { StatusReservation } from "./pages/StatusReservation.jsx";
+import LoginPage from "./pages/LoginPage.jsx";
+import { RegisterPage } from "./pages/RegisterPage.jsx";
+import { VerificationPage } from "./pages/VerificationPage.jsx";
+import { ProfilePage } from "./pages/ProfilePage.jsx";
+import { ReservationsPage } from "./pages/ReservationsPage.jsx";
+import { PutUserPage } from "./pages/PutUserPage.jsx";
+import { PutProductsPages } from "./pages/PutProductsPages.jsx";
+import { ProductsUserPage } from "./pages/ProductsUserPage.jsx";
+import CreateReview from "./pages/CreateReview.jsx";
 import CreateProduct from "./pages/CreateProduct.jsx";
-import PutProductsPages from "./pages/PutProductsPages.jsx";
-import ProductsUserPage from "./pages/ProductsUserPage.jsx";
+import Error404 from "./pages/Error404.jsx";
+// import {
+//   SearchProductsPage,
+//   CreateProduct,
+//   LoginPage,
+//   MainPage,
+//   ProductsUserPage,
+//   ProfilePage,
+//   PutProductsPages,
+//   RegisterPage,
+//   ReservationsPage,
+//   VerificationPage,
+//   StatusReservation,
+//   ConfirmacionPassword,
+//   CreateReview,
+//   PutUserPage,
+//   Error404,
+// } from "/pages";
 
 const Layout = ({ children }) => {
   return (
@@ -43,10 +66,6 @@ const router = createBrowserRouter([
       {
         path: "/confirmacion/:reservationId/:email",
         element: <ConfirmacionPassword />,
-      },
-      {
-        path: "/reserva",
-        element: <VerStatusReserva />,
       },
       {
         path: "/review/:productId",

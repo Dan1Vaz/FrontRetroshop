@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import PopUp from '../components/PopUp';
 
-const RegisterPage = () => {
+export const RegisterPage = () => {
     const [userData, setUserData] = useState({
         name: "",
         email: "",
@@ -101,8 +101,3 @@ const RegisterPage = () => {
   </div>
   )
 }
-
-
-
-
-export default RegisterPage

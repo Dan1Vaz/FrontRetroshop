@@ -5,7 +5,7 @@ import { ErrorMessage } from "../components/ErrorMessage";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { useState } from "react";
 //El componente de la pagina a imprimir
-const ReservationsPage = () => {
+export const ReservationsPage = () => {
   // nos traemos los estados
   const { reservations, loading, error } = useReservations();
   const [currentTab, setCurrentTab] = useState("en proceso");
@@ -64,5 +64,3 @@ const ReservationsPage = () => {
     </>
   );
 };
-
-export default ReservationsPage;

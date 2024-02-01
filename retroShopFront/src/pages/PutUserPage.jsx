@@ -3,7 +3,7 @@ import usePutUser from "../Hook/usePutUser";
 import { authContext } from "../providers/AuthProvider";
 
 
-const PutUserPage = () => {
+export const PutUserPage = () => {
     const [token] = useContext(authContext);
     const { data, error, loading, putUser } = usePutUser();
 
@@ -113,5 +113,3 @@ const PutUserPage = () => {
       </div>
     );
   };
-
-export default PutUserPage

@@ -3,14 +3,14 @@ import { authContext } from "../providers/AuthProvider";
 import { Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom"
 
-const ProfilePage = () => {
+export const ProfilePage = () => {
   const [token] = useContext(authContext);
   const navigate = useNavigate();
   if (!token) {
     return <Navigate to="/profile/login" />;
   }
   return (
-    <div className="flex items-center flex-col gap-[20px] h-screen bg-[#F6F6F6]">
+    <div className="flex b items-center flex-col gap-[20px] h-screen bg-[#F6F6F6]">
       <div className="w-[424px] h-[160px] bg-white">
         <img
           src="/iconProfileEmpty.svg"
@@ -88,5 +88,3 @@ const ProfilePage = () => {
     </div>
   );
 };
-
-export default ProfilePage;

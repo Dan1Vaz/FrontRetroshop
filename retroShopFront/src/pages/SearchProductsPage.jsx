@@ -1,11 +1,7 @@
 import { ProductCard } from "../components/ProductCard/ProductCard";
-
-import { useState, useEffect } from "react";
-import { useSearch } from "../providers/SearchContext";
-import { useSearchParams } from "react-router-dom";
 import { useSearchedProducts } from "../Hook/useSearchedProducts";
 
-export const SearchProductsPage = () => {
+const SearchProductsPage = () => {
   //const { searchedProducts } = useSearch();
   // console.log(
   //   "Productos buscados en la pagina de resultados",
@@ -38,3 +34,5 @@ export const SearchProductsPage = () => {
     </>
   );
 };
+
+export default SearchProductsPage;

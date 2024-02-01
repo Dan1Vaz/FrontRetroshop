@@ -1,12 +1,10 @@
-import  { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { authContext } from "../providers/AuthProvider";
 import PopUp from "../components/PopUp";
 import { useParams } from "react-router-dom";
 const ConfirmacionPassword = () => {
-
-    const { reservationId,email } = useParams();
-
+  const { reservationId, email } = useParams();
 
   const [, setToken] = useContext(authContext);
   const navigate = useNavigate();
@@ -20,7 +18,7 @@ const ConfirmacionPassword = () => {
 
   const closePopup = () => {
     setShowPopup(false);
-    setStatusMessage('');
+    setStatusMessage("");
   };
 
   const enviar = (e) => {
@@ -46,7 +44,7 @@ const ConfirmacionPassword = () => {
         console.log("Token recibido:", token);
         setStatusMessage("Logueado");
         setShowPopup(true);
-        navigate(`/status/${reservationId}`); 
+        navigate(`/status/${reservationId}`);
       })
       .catch((error) => {
         console.error("Error en inicio de sesión:", error.message);
@@ -69,7 +67,6 @@ const ConfirmacionPassword = () => {
         className="flex justify-center items-center flex-col gap-5"
         onSubmit={enviar}
       >
-    
         <input
           type="password"
           placeholder="Contraseña"
@@ -85,13 +82,10 @@ const ConfirmacionPassword = () => {
           confirma tu contraseña para verificar la reserva
         </button>
       </form>
-      
 
       {showPopup && <PopUp message={statusMessage} onClose={closePopup} />}
     </div>
   );
 };
 
-
-
-export default ConfirmacionPassword
+export default ConfirmacionPassword;
