@@ -28,6 +28,7 @@ const ReservationsPage = () => {
   //intermedio de la carga
   if (loading) return <p className="flex justify-center font-bold">Cargando, por favor espere...</p>;
   if (error) return <ErrorMessage message={error} className="flex justify-center"/>;
+  
 
   return (
     <>
@@ -42,13 +43,13 @@ const ReservationsPage = () => {
       <nav className="flex justify-evenly py-4 mb-8">
         <button
           onClick={handlerInProcess}
-          className="bg-[#D9D9D9] px-10 py-2 font-bold rounded-full"
+          className="bg-[#D9D9D9] px-10 py-2 font-bold rounded-full focus:bg-[#FE7193]"
         >
           En Proceso
         </button>
         <button
           onClick={handlerFinished}
-          className="bg-[#D9D9D9] px-10 py-2 font-bold rounded-full"
+          className="bg-[#D9D9D9] px-10 py-2 font-bold rounded-full focus:bg-[#FE7193]"
         >
           Finalizada
         </button>

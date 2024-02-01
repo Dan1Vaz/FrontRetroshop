@@ -4,7 +4,7 @@ import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 const Reservation = ({ reservation }) => {
   return (
     <>
-      <img src={`/profile/products/${reservation.imageURL}`} alt="" className="h-full"/>
+      <img src={`http://localhost:3001/${reservation.imageURL}`} alt="" className="h-full max-w-28 object-cover min-w-28"/>
       <h2 className="capitalize font-bold">{reservation.name}</h2>
       <ArrowRightIcon />
     </>
@@ -12,3 +12,5 @@ const Reservation = ({ reservation }) => {
 };
 
 export default Reservation;
+
+
