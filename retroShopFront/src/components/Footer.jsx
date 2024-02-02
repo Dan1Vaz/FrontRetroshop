@@ -14,7 +14,7 @@ export const Footer = () => {
         </Link>
       </div>
       <button className="flex flex-col items-center text-center">
-        <Link to="profile/products">
+        <Link to="/profile">
           <AddCircleOutlineIcon fontSize="large" className="fill-[#7C7C7C]" />
           <p className="text-xs text-[#7C7C7C]">Subir</p>
         </Link>

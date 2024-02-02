@@ -1,6 +1,5 @@
 import { useState, useEffect, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-//import baseURL from '../providers/ruta';
 import { authContext } from "../providers/AuthProvider";
 
 export const StatusReservation = () => {
@@ -8,12 +7,9 @@ export const StatusReservation = () => {
   const [token] = useContext(authContext);
   const navigate = useNavigate();
   const [statusMessage, setStatusMessage] = useState("Reserva en proceso...");
-  function autolink() {
-    navigate("/profile/products/user");
-  }
-
+  
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}/reservation-update`, {
+    fetch(`${import.meta.env.VITE_BASE_URL}/reservation-update`, {
       method: "PUT",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -26,7 +22,7 @@ export const StatusReservation = () => {
       .then((response) => response.json())
       .then((data) => {
         setStatusMessage(data.message);
-        autolink();
+        navigate("/profile/products/user");
       })
       .catch((error) => {
         console.error("Error en la verificación:", error.message);
@@ -34,3 +30,5 @@ export const StatusReservation = () => {
       });
   }, [reservationId, navigate]);
 };
+
+export default StatusReservation

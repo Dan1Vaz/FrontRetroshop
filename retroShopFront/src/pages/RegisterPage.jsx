@@ -20,7 +20,7 @@ export const RegisterPage = () => {
       const send = (e) => {
         e.preventDefault();
     
-        fetch('http://localhost:3001/register', {
+        fetch(`${import.meta.env.VITE_BASE_URL}:3001/register`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

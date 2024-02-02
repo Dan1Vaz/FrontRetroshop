@@ -6,6 +6,10 @@ import { useNavigate } from "react-router-dom"
 export const ProfilePage = () => {
   const [token] = useContext(authContext);
   const navigate = useNavigate();
+  const btnNav = ()=>{navigate("/profile/reservations")};
+  const btnNav2 = ()=>{navigate("/profile/products/user")};
+  const btnNav3 = ()=>{navigate("/profile/perfil")};
+
   if (!token) {
     return <Navigate to="/profile/login" />;
   }
@@ -29,8 +33,7 @@ export const ProfilePage = () => {
 
         <div className="w-[424px] h-[40px] d-flex flex-row">
           <button
-            type="button"
-            // onClick={navigate("/")}
+            onClick={btnNav}
             className="w-[424px] h-[40px] flex flex-row justify-start pb-[6px]"
           >
             <img
@@ -49,7 +52,7 @@ export const ProfilePage = () => {
         <div className="w-[424px] h-[40px] d-flex flex-row">
           <button
             type="button"
-            // onClick={navigate("/")}
+            onClick={btnNav2}
             className="w-[424px] h-[40px] flex flex-row justify-start pb-[6px] pt-[6px]"
           >
             <img
@@ -70,7 +73,7 @@ export const ProfilePage = () => {
       <div className="pt-100px w-[424px] h-[60px] bg-white mt-[80px] d-flex flex-row">
         <button 
         type="button"
-        // onClick={navigate("/")}
+        onClick={btnNav3}
         className="w-[424px] h-[40px] flex column pt-[6px]">
           <img
             src="/settings.svg"

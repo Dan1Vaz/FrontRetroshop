@@ -12,7 +12,7 @@ const useCreateReview = () => {
 
     try {
       const response = await fetch(
-        `${import.meta.env.BASE_URL}/review/${productId}`,
+        `${import.meta.env.VITE_BASE_URL}/review/${productId}`,
         {
           method: "PUT",
           headers: {

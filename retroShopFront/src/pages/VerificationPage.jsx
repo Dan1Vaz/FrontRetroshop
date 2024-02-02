@@ -21,7 +21,7 @@ export const VerificationPage = () => {
     });
 
     // Enviar solicitud fetch al montar el componente
-    fetch("http://localhost:3001/verify", {
+    fetch(`${import.meta.env.VITE_BASE_URL}/verify`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

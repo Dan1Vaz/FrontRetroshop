@@ -23,7 +23,7 @@ const useReservations = () => {
         setLoading(true);
 //aqui traemos toda la info del back por el controllergetReservations
         const fetchReservations = async () => {
-          const res = await fetch("http://localhost:3001/reservations", {
+          const res = await fetch(`${import.meta.env.VITE_BASE_URL}:3001/reservations`, {
             method: 'GET',
             headers: { authorization: `Bearer ${token}` },
           });

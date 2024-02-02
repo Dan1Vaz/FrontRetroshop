@@ -28,7 +28,7 @@ const LoginPage = () => {
   const enviar = (e) => {
     e.preventDefault();
 
-    fetch("http://localhost:3001/login", {
+    fetch(`${import.meta.env.VITE_BASE_URL}:3001/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

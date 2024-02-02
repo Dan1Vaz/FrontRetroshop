@@ -14,7 +14,7 @@ const useProductsByUser = (token) => {
 
     const fetchProductsByUser = async (token) => {
       try {
-        const response = await fetch("http://localhost:3001/products/user", {
+        const response = await fetch(`${import.meta.env.VITE_BASE_URL}:3001/products/user`, {
           method: 'GET',
           headers: {
             Authorization: `Bearer ${token}`,

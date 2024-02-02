@@ -8,7 +8,7 @@ const useProducts = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch("http://192.168.1.131:3001/products");
+        const response = await fetch(`${import.meta.env.VITE_BASE_URL}:3001/products`);
         if (!response.ok) {
           throw new Error("Failed to fetch products");
         }

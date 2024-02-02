@@ -18,7 +18,7 @@ const usePutUser = () => {
 
 
 
-      const response = await fetch(`http://localhost:3001/profile`, {
+      const response = await fetch(`${import.meta.env.VITE_BASE_URL}:3001/profile`, {
         method: 'PUT',
         headers: {
           Authorization: `Bearer ${token}`,
