@@ -19,7 +19,7 @@ const CreateReservation = (props) => {
 
   const enviar = async () => {
     try {
-      const response = await fetch(`http://localhost:3001/reservation/${productId}`, {
+      const response = await fetch(`${import.meta.env.VITE_BASE_URL}:3001/reservation/${productId}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
