@@ -16,17 +16,20 @@ const useReservations = () => {
     if (!token) {
       return navigate("/profile/login");
     }
-//por el contrario cargar la pagina con las reservas
+    //por el contrario cargar la pagina con las reservas
     const loadReservations = async () => {
       try {
         //estado cargando...
         setLoading(true);
-//aqui traemos toda la info del back por el controllergetReservations
+        //aqui traemos toda la info del back por el controllergetReservations
         const fetchReservations = async () => {
-          const res = await fetch(`${import.meta.env.VITE_BASE_URL}:3001/reservations`, {
-            method: 'GET',
-            headers: { authorization: `Bearer ${token}` },
-          });
+          const res = await fetch(
+            `http://${import.meta.env.VITE_BASE_URL}:3001/reservations`,
+            {
+              method: "GET",
+              headers: { authorization: `Bearer ${token}` },
+            }
+          );
           const body = await res.json();
           if (!res.ok) {
             throw new Error(body.message);

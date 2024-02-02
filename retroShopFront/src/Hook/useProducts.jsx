@@ -5,10 +5,15 @@ const useProducts = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+
+  
+
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch(`${import.meta.env.VITE_BASE_URL}:3001/products`);
+        const response = await fetch(
+          `http://${import.meta.env.VITE_BASE_URL}:3001/products`
+        );
         if (!response.ok) {
           throw new Error("Failed to fetch products");
         }

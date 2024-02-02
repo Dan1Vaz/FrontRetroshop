@@ -14,12 +14,15 @@ const useProductsByUser = (token) => {
 
     const fetchProductsByUser = async (token) => {
       try {
-        const response = await fetch(`${import.meta.env.VITE_BASE_URL}:3001/products/user`, {
-          method: 'GET',
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
+        const response = await fetch(
+          `http://${import.meta.env.VITE_BASE_URL}:3001/products/user`,
+          {
+            method: "GET",
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
 
         if (!response.ok) {
           throw new Error("Error fetching products");
@@ -27,7 +30,7 @@ const useProductsByUser = (token) => {
 
         const productsData = await response.json();
         setProducts(productsData);
-        autolink();  
+        autolink();
       } catch (error) {
         setError(error.message);
       } finally {

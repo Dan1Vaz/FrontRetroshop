@@ -9,7 +9,9 @@ export const useSearchedProducts = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `${import.meta.env.VITE_BASE_URL}:3001/products/search?${searchParams.toString()}`
+          `http://${
+            import.meta.env.VITE_BASE_URL
+          }:3001/products/search?${searchParams.toString()}`
         );
 
         if (response.ok) {
