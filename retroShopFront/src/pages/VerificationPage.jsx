@@ -19,7 +19,7 @@ export const VerificationPage = () => {
     });
 
     // Enviar solicitud fetch al montar el componente
-    fetch(`${import.meta.env.VITE_BASE_URL}/verify`, {
+    fetch(`http://${import.meta.env.VITE_BASE_URL}/verify`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

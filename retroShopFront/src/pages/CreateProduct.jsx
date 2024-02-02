@@ -38,7 +38,7 @@ const CreateProduct = () => {
     
     
         try {
-          const response = await fetch('http://localhost:3001/products/create', {
+          const response = await fetch(`http://${import.meta.env.VITE_BASE_URL}/products/create`, {
             method: 'POST',
             headers: {
               Authorization:  `Bearer ${token}`

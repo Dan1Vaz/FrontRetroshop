@@ -21,7 +21,7 @@ const usePutProducts = () => {
        if(productData.avatar)formData.append('avatar', productData.avatar);
        if(productData.avatar2)formData.append('avatar2', productData.avatar2);
 
-      const response = await fetch(`${import.meta.env.VITE_BASE_URL}:3001/products/${id}`, {
+      const response = await fetch(`http://${import.meta.env.VITE_BASE_URL}:3001/products/${id}`, {
         method: 'PUT',
         headers: {
           Authorization: `Bearer ${token}`,

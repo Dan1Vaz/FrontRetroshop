@@ -4,7 +4,7 @@ import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 const Reservation = ({ reservation }) => {
   return (
     <>
-      <img src={`${import.meta.env.VITE_BASE_URL}:3001/${reservation.imageURL}`} alt="" className="h-full max-w-28 object-cover min-w-28"/>
+      <img src={`http://${import.meta.env.VITE_BASE_URL}:3001/${reservation.imageURL}`} alt="" className="h-full max-w-28 object-cover min-w-28"/>
       <h2 className="capitalize font-bold">{reservation.name}</h2>
       <ArrowRightIcon />
     </>

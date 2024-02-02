@@ -26,15 +26,20 @@ export const ReservationsPage = () => {
   };
 
   //intermedio de la carga
-  if (loading) return <p className="flex justify-center font-bold">Cargando, por favor espere...</p>;
-  if (error) return <ErrorMessage message={error} className="flex justify-center"/>;
-  
+  if (loading)
+    return (
+      <p className="flex justify-center font-bold">
+        Cargando, por favor espere...
+      </p>
+    );
+  if (error)
+    return <ErrorMessage message={error} className="flex justify-center" />;
 
   return (
     <>
       {/* aqui se imprime el boton de volver atras que te manda al perfil del usuario */}
       <div className="flex justify-evenly py-10">
-        <Link to={"/profile"} className="absolute left-7">
+        <Link to={"/profile/menu"} className="absolute left-7">
           <ArrowBackIcon className="size-10" />
         </Link>
         <h1 className="text-2xl font-bold">Reservas</h1>

@@ -9,7 +9,7 @@ export const StatusReservation = () => {
   const [statusMessage, setStatusMessage] = useState("Reserva en proceso...");
   
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_BASE_URL}/reservation-update`, {
+    fetch(`http://${import.meta.env.VITE_BASE_URL}/reservation-update`, {
       method: "PUT",
       headers: {
         Authorization: `Bearer ${token}`,
