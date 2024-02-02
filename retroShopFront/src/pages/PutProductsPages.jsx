@@ -60,7 +60,7 @@ export const PutProductsPages = () => {
       {data && <p>Data updated successfully</p>}
 
  
-      <div className="flex items-center flex-col gap-[20px] h-1/2">
+      <div className="flex justify-center items-center flex-col gap-[20px] h-screen">
         <div className="flex">
           <img
             src="/retroshop.svg"
@@ -68,7 +68,7 @@ export const PutProductsPages = () => {
             className="w-[300px] h-[100px]"
           />
         </div>
-        <h1>Registro de Producto</h1>
+        <h1>modificar producto</h1>
         <form
           className="flex justify-center items-center flex-col gap-4"
           onSubmit={handleUpdateProduct}
@@ -77,14 +77,14 @@ export const PutProductsPages = () => {
           <input
             type="text"
             id="name"
-            className="w-[300px]  bg-white  p-[20px] border border-black"
+            className="w-[278px] h-[33px] bg-white  p-[20px] border border-black"
             placeholder="nombre del articulo"
             value={productData.name}
             onChange={handleInputChange}
           />
          <select
           id="category"
-          className="w-[300px] bg-white p-[20px] border border-black"
+          className="w-[278px] h-[33px] bg-white  p-[20px] border border-black"
           value={productData.category}
           onChange={handleInputChange}
         >
@@ -101,7 +101,7 @@ export const PutProductsPages = () => {
               <input
                type="text" 
               id="price"
-              className="w-[300px] bg-white  p-[20px] border border-black"
+              className="w-[278px] h-[33px] bg-white  p-[20px] border border-black"
               placeholder='price'
                value={productData.price}
                 onChange={handleInputChange} />
@@ -109,7 +109,7 @@ export const PutProductsPages = () => {
               {/* <label htmlFor="location">Ubicación</label> */}
               <input type="text"
                id="location"
-               className="w-[300px] h-[33px] bg-white  p-[20px] border border-black"
+               className="w-[278px] h-[33px] bg-white  p-[20px] border border-black"
                placeholder='Localidad'
                 value={productData.location}
                  onChange={handleInputChange} />
@@ -120,7 +120,7 @@ export const PutProductsPages = () => {
               <textarea id="description"
                value={productData.description} 
                onChange={handleInputChange}
-                   className="w-[300px] h-[33px] bg-white  p-[20px] border border-black"
+               className="w-[278px] h-[33px] bg-white  p-[20px] border border-black"
                    placeholder='Descripción'>
                </textarea>
           <input
@@ -137,7 +137,7 @@ export const PutProductsPages = () => {
           />
           <button
             type="submit"
-            className="w-[300px] h-[33px] bg-[#3337a3]  p-[20px] text-white py-2 px-4"
+            className="w-[278px] h-[33px] bg-[#3337a3]  p-[20px] text-white py-2 px-4"
           >
             Enviar
           </button>

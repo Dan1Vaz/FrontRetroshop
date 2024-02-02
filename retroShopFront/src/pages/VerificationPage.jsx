@@ -5,9 +5,7 @@ export const VerificationPage = () => {
   const { verificationCode, email } = useParams();
   const navigate = useNavigate();
 
-  function autolink() {
-    navigate("/profile/login");
-  }
+
   const [, setUserData] = useState({
     email: "",
     verificationCode: "",
@@ -34,7 +32,7 @@ export const VerificationPage = () => {
       .then((response) => {
         if (response.ok) {
           console.log("Verificación exitosa");
-          autolink();
+          navigate("/profile/login");
         } else {
           throw new Error("Failed verification");
         }

@@ -51,7 +51,7 @@ export const PutUserPage = () => {
         {data && <p>Data updated successfully</p>}
 
 
-        <div className="flex items-center flex-col gap-[20px] h-1/2">
+        <div  className="flex justify-center items-center flex-col gap-[20px] h-screen">
           <div className="flex">
             <img
               src="/retroshop.svg"
@@ -68,12 +68,19 @@ export const PutUserPage = () => {
             <input
               type="text"
               id="name"
-              className="w-[300px]  bg-white  p-[20px] border border-black"
+              className="w-[278px] h-[33px] bg-white  p-[20px] border border-black"
               placeholder="nombre del articulo"
               value={userData.name}
               onChange={handleInputChange}
             />
 
+<input
+                 type="password" 
+                id="password"
+                className="w-[278px] h-[33px] bg-white  p-[20px] border border-black"
+                placeholder='verifica tu password'
+                 value={userData.password}
+                  onChange={handleInputChange} />
 
 
 
@@ -84,8 +91,7 @@ export const PutUserPage = () => {
                 <textarea id="biography"
                  value={userData.biography} 
                  onChange={handleInputChange}
-                     className="w-[300px] h-[33px] bg-white  p-[20px] border border-black"
-                     placeholder='biography'>
+                 className="w-[278px] h-[33px] bg-white  p-[20px] border border-black">
                  </textarea>
             <input
               type="file"
@@ -94,17 +100,10 @@ export const PutUserPage = () => {
               onChange={handleFileChange}
             />
                 {/* <label htmlFor="price">Precio</label> */}
-                <input
-                 type="password" 
-                id="password"
-                className="w-[300px] bg-white  p-[20px] border border-black"
-                placeholder='verifica tu password'
-                 value={userData.password}
-                  onChange={handleInputChange} />
-
+             
             <button
               type="submit"
-              className="w-[300px] h-[33px] bg-[#3337a3]  p-[20px] text-white py-2 px-4"
+              className="w-[278px] h-[33px] bg-[#3337a3]  p-[20px] text-white py-2 px-4"
             >
               Enviar
             </button>
