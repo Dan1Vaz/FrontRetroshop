@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { ErrorMessage } from "../components/ErrorMessage";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-// import { useState } from "react";
 import DetailedProduct from "../components/DetailedProduct";
 import useProductById from "../Hook/useProductById";
+// import BackButton from "../components/BackButton";
 //El componente de la pagina a imprimir
 export const DetailedProductPage = () => {
   // nos traemos los estados
@@ -24,6 +24,7 @@ export const DetailedProductPage = () => {
     <>
       {/* aqui se imprime el boton de volver atras */}
       <div className="flex justify-center py-5">
+        {/* <BackButton /> */}
         <Link to={"../"}>
           <ArrowBackIcon className="size-7" />
         </Link>
