@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+// import CreateReservation from "./ProductCard/CreateReservation";
 import { FavButton } from "./ProductCard/FavButton";
 import { ProductImage } from "./ProductCard/ProductImage";
 
@@ -29,6 +30,7 @@ const DetailedProduct = ({ product }) => {
         {product.description}
       </textarea>
       <section className="flex justify-evenly py-4 mb-8">
+        {/* <CreateReservation /> */}
         <button
           // onClick={handler}
           className="bg-[#D9D9D9] px-10 py-2 font-bold rounded-full focus:bg-[#FE7193]"
