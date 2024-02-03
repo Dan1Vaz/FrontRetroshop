@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
-import baseURL from "../providers/ruta";
-import { authContext } from "../providers/AuthProvider";
-import PopUp from "./PopUp";
+
+import PopUp from "../PopUp";
+import { authContext } from "../../providers/AuthProvider";
 
 const CreateReservation = (props) => {
   const { productId } = props;
@@ -61,7 +61,7 @@ const CreateReservation = (props) => {
 
   return (
     <div>
-      <button className="card_button" onClick={enviar}>
+      <button className="bg-[#D9D9D9] px-10 py-2 font-bold rounded-full focus:bg-[#FE7193]"onClick={enviar}>
         Reservar
       </button>
       {showPopup && (

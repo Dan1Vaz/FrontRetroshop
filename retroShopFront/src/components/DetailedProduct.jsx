@@ -2,7 +2,7 @@
 // import CreateReservation from "./ProductCard/CreateReservation";
 import { FavButton } from "./ProductCard/FavButton";
 import { ProductImage } from "./ProductCard/ProductImage";
-
+import CreateReservation from "./ProductCard/CreateReservation";
 //componente que imprime el producto a detalle
 const DetailedProduct = ({ product }) => {
   console.log(product);
@@ -31,12 +31,13 @@ const DetailedProduct = ({ product }) => {
       </textarea>
       <section className="flex justify-evenly py-4 mb-8">
         {/* <CreateReservation /> */}
-        <button
+        {/* <button
           // onClick={handler}
           className="bg-[#D9D9D9] px-10 py-2 font-bold rounded-full focus:bg-[#FE7193]"
         >
           Reservar
-        </button>
+        </button> */}
+        <CreateReservation productId={product.id}/>
         <FavButton />
       </section>
       <div>Review</div>
