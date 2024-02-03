@@ -8,7 +8,7 @@ import useProductById from "../Hook/useProductById";
 export const DetailedProductPage = () => {
   // nos traemos los estados
   const { product, loading, error } = useProductById();
-  // console.log(products);
+  // console.log(product);
 
   //intermedio de la carga
   if (loading)
@@ -23,17 +23,14 @@ export const DetailedProductPage = () => {
   return (
     <>
       {/* aqui se imprime el boton de volver atras */}
-      <div className="flex justify-evenly py-10">
-        <Link to={"../"} className="absolute left-7">
-          <ArrowBackIcon className="size-10" />
+      <div className="flex justify-center py-5">
+        <Link to={"../"}>
+          <ArrowBackIcon className="size-7" />
         </Link>
       </div>
-      
+
       {/* aqui se imprime el componente que muestra el producto */}
-      <article className="flex flex-col flex-nowrap items-center content-end w-full">
-        <DetailedProduct product={product}
-        />
-      </article>
+      <DetailedProduct product={product} />
     </>
   );
 };

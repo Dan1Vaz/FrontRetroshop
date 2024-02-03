@@ -8,7 +8,7 @@ const ReservationList = ({ reservations, currentTab }) => {
   return reservations.length ? (
     <ul className="w-full">
       {reservations.map((reservation) => (
-        <Link to={`/profile/products/${reservation.productId}`} key={reservation.id}>
+        <Link to={`/products/product/?id=${reservation.productId}`} key={reservation.id}>
         <li className="flex bg-[#D9D9D9] h-24 w-full justify-between items-center">
           <Reservation reservation={reservation} />
         </li>
