@@ -15,7 +15,7 @@ export const ReservationsPage = () => {
   const filteredReservations = reservations.filter((reservation) => {
     return reservation.status === currentTab;
   });
-  // console.log(filteredReservations);
+  console.log(filteredReservations);
 
   // handlers para cambiar los estados segun cliques
   const handlerInProcess = () => {

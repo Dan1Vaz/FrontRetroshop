@@ -21,6 +21,7 @@ import { ProductsUserPage } from "./pages/ProductsUserPage.jsx";
 import CreateReview from "./pages/CreateReview.jsx";
 import CreateProduct from "./pages/CreateProduct.jsx";
 import Error404 from "./pages/Error404.jsx";
+import { DetailedProductPage } from "./pages/DetailedProductPage.jsx";
 // import {
 //   SearchProductsPage,
 //   CreateProduct,
@@ -137,6 +138,10 @@ const router = createBrowserRouter([
       {
         path: "/products",
         element: <SearchProductsPage />,
+      },
+      {
+        path: "/products/product",
+        element: <DetailedProductPage />,
       },
     ],
   },
