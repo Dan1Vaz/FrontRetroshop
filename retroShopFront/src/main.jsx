@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
@@ -139,6 +140,12 @@ const router = createBrowserRouter([
         path: "/products",
         element: <SearchProductsPage />,
       },
+    ],
+  },
+  {
+    path: "/products",
+    element: <Layout />,
+    children: [
       {
         path: "/products/product",
         element: <DetailedProductPage />,

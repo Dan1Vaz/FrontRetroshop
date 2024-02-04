@@ -1,6 +1,4 @@
-import { Link } from "react-router-dom";
 import { ErrorMessage } from "../components/ErrorMessage";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import DetailedProduct from "../components/DetailedProduct";
 import useProductById from "../Hook/useProductById";
 // import BackButton from "../components/BackButton";
@@ -22,14 +20,6 @@ export const DetailedProductPage = () => {
 
   return (
     <>
-      {/* aqui se imprime el boton de volver atras */}
-      <div className="flex justify-center py-5">
-        {/* <BackButton /> */}
-        <Link to={"../"}>
-          <ArrowBackIcon className="size-7" />
-        </Link>
-      </div>
-
       {/* aqui se imprime el componente que muestra el producto */}
       <DetailedProduct product={product} />
     </>
