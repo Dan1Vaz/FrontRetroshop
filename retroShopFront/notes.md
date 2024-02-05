@@ -48,3 +48,7 @@ No se si se me escapa algo más.
 
 - Revisar la confirmacion de cuenta a través del link q se envía por correo porque cree un usuario nuevo y no se confirmaba la cuenta dando click  al enlace  del correo
 
+- Boton fav en pagina main
+
+
+

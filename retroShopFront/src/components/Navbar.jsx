@@ -35,7 +35,9 @@ export const Navbar = () => {
 
   return (
     <div className="Navbar flex flex-wrap justify-center items-center pt-4 gap-[20px] sticky top-0 z-10 bg-white">
-      <img src="/iconretroshop.svg" alt="" className="h-[53px]" />
+      <Link to="/">
+        <img src="/iconretroshop.svg" alt="" className="h-[53px]" />
+      </Link>
       <div className="SearchBar relative flex items-center">
         <form onSubmit={handleSubmit}>
           <input
