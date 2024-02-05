@@ -40,19 +40,22 @@ const CreateReservation = (props) => {
         setShowPopup(true);
         setReservation(data.id);
         setReservation(...reservation, data.reservationToken);
-        setLink("");
+        setLink("/");
       } else {
         setStatusMessage(data.error);
         setShowPopup(true);
         setReservation(data.id);
+        setLink("/");
       }
     } catch (error) {
       console.error("Error al enviar los datos:", error);
 
       if (error.response && error.response.status === 400) {
         setStatusMessage(error.response.data.message);
+        setLink("/");
       } else {
         setStatusMessage("Error al enviar los datos");
+        setLink("/");
       }
 
       setShowPopup(true);
