@@ -69,3 +69,23 @@ export const ReservationsPage = () => {
     </>
   );
 };
+
+// {/* aqui se imprime los botones que cambian los estados al clicar */}
+// <nav className="flex justify-evenly py-4">
+// <button
+//   onClick={handlerInProcess}
+//   className={`bg-${
+//     currentTab === "en proceso" ? "[#FE7193]" : "[#D9D9D9]"
+//   } px-10 py-2 font-bold rounded-full`}
+// >
+//   En Proceso
+// </button>
+// <button
+//   onClick={handlerFinished}
+//   className={`bg-${
+//     currentTab === "finalizada" ? "[#FE7193]" : "[#D9D9D9]"
+//   } px-10 py-2 font-bold rounded-full`}
+// >
+//   Finalizada
+// </button>
+// </nav>
