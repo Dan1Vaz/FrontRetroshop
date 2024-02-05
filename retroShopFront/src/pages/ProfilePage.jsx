@@ -17,7 +17,7 @@ export const ProfilePage = () => {
     navigate("/profile/reservations");
   };
   const btnNav2 = () => {
-    navigate("/profile/products/user");
+    navigate("/profile/seller");
   };
   const btnNav3 = () => {
     navigate("/profile/perfil");

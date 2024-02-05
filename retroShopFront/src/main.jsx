@@ -23,6 +23,7 @@ import CreateReview from "./pages/CreateReview.jsx";
 import CreateProduct from "./pages/CreateProduct.jsx";
 import Error404 from "./pages/Error404.jsx";
 import { DetailedProductPage } from "./pages/DetailedProductPage.jsx";
+import { ReservationsSeller } from "./pages/ReservationSeller.jsx";
 // import {
 //   SearchProductsPage,
 //   CreateProduct,
@@ -104,6 +105,10 @@ const router = createBrowserRouter([
       {
         path: "/profile/reservations",
         element: <ReservationsPage />,
+      },
+      {
+        path: "/profile/seller",
+        element: <ReservationsSeller />,
       },
       {
         path: "/profile/perfil",
