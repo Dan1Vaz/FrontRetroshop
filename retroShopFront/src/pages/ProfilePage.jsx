@@ -2,6 +2,9 @@ import { useContext } from "react";
 import { authContext } from "../providers/AuthProvider";
 import { Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom"
+import { LogOutButton } from "../components/LogOutButton";
+import useGetUser from "../Hook/useGetUser";
+
 
 export const ProfilePage = () => {
   const [token] = useContext(authContext);
@@ -9,6 +12,7 @@ export const ProfilePage = () => {
   const btnNav = ()=>{navigate("/profile/reservations")};
   const btnNav2 = ()=>{navigate("/profile/products/user")};
   const btnNav3 = ()=>{navigate("/profile/perfil")};
+  const {data,loading, error} = useGetUser()
 
   if (!token) {
     return <Navigate to="/profile/login" />;
