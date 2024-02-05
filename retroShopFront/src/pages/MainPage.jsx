@@ -12,7 +12,7 @@ export const MainPage = () => {
           COMPRA Y VENDE LOS MEJORES PRODUCTOS RETRO EN NUESTRA PÁGINA
         </h1>
       </header>
-      <main>
+      <main className="pb-28">
         <div className="flex items-center justify-center border-y-2 border-[#7C7C7C] h-[76px]">
           <h2 className="font-bold text-[#080C89] ">PRODUCTOS DESTACADOS</h2>
         </div>

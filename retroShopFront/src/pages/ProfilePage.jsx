@@ -1,98 +1,78 @@
 import { useContext } from "react";
 import { authContext } from "../providers/AuthProvider";
 import { Navigate } from "react-router-dom";
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 import { LogOutButton } from "../components/LogOutButton";
 import useGetUser from "../Hook/useGetUser";
-
+import PersonIcon from "@mui/icons-material/Person";
+import HandshakeIcon from "@mui/icons-material/Handshake";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import StoreIcon from "@mui/icons-material/Store";
+import SettingsIcon from "@mui/icons-material/Settings";
 
 export const ProfilePage = () => {
   const [token] = useContext(authContext);
   const navigate = useNavigate();
-  const btnNav = ()=>{navigate("/profile/reservations")};
-  const btnNav2 = ()=>{navigate("/profile/products/user")};
-  const btnNav3 = ()=>{navigate("/profile/perfil")};
-  const {data,loading, error} = useGetUser()
+  const btnNav = () => {
+    navigate("/profile/reservations");
+  };
+  const btnNav2 = () => {
+    navigate("/profile/products/user");
+  };
+  const btnNav3 = () => {
+    navigate("/profile/perfil");
+  };
+  const { data, loading, error } = useGetUser();
 
   if (!token) {
     return <Navigate to="/profile/login" />;
   }
   return (
-    <div className="flex b items-center flex-col gap-[20px] bg-[#F6F6F6]">
-      <div className="w-[375px] h-[160px] bg-white">
-        <img
-          src={`http://${import.meta.env.VITE_BASE_URL}:3001/${data.avatarURL}`}
-          alt=""
-          className="w-[73px] h-[73px] relative top-[74px] left-[26px]"
-        />
-        <h1 className="w-[87px] h-[21px] top-[25px] left-[145px] relative font-family Roboto font-size 15px font-weight 500 line-height 26px text-transform uppercase">
-         {data.name}
-        </h1>
+    <div className="bg-slate-100 h-screen flex flex-col">
+      <div className="flex items-center pt-10 bg-white border-b-[0.5px] border-[#7C7C7C]">
+        {data.avatarURL ? (
+          <img
+            src={`http://${import.meta.env.VITE_BASE_URL}:3001/${
+              data.avatarURL
+            }`}
+            alt=""
+            className="m-2 w-20 h-20 rounded-full object-cover border-[#7C7C7C] border-[0.5px]"
+          />
+        ) : (
+          <PersonIcon className="m-2 w-20 h-20 rounded-full fill-slate-200 bg-slate-400" />
+        )}
+        <h1 className="font-medium">{data.name}</h1>
       </div>
-
-      <div className="pt-50px w-[375px] h-[104px] bg-white mt-[30px]">
-        <h2 className="relative top-[-25px] left-[18px] text-lg">
-          Transacciones
-        </h2>
-
-        <div className="w-[375px] h-[40px] d-flex flex-row">
-          <button
-            onClick={btnNav}
-            className="w-[375px] h-[40px] flex flex-row justify-start pb-[6px]"
-          >
-            <img
-              src="/handshake.svg"
-              alt=""
-              className="inline pl-[12px] pr-[6px] object-scale-down w-[32] h-[20]"
-            />
-            <h2 className="inline pl-[6px] h-[4px]">Reservas</h2>
-            <img
-              src="/vector.svg"
-              alt=""
-              className="inline ml-auto w-[12px] h-[20px]"
-            />
+      <p className="pl-4 pt-4 font-medium">Transacciones</p>
+      <div className="border-y-[0.5px] border-[#7C7C7C] bg-white relative">
+        <div className="flex items-center ml-3 mt-3 ">
+          <HandshakeIcon sx={{ fontSize: 50 }} />
+          <article className="ml-4">Reservas</article>
+          <button onClick={btnNav}>
+            <ArrowForwardIosIcon className="absolute right-9 top-[25px]" />
           </button>
         </div>
-        <div className="w-[424px] h-[40px] d-flex flex-row">
-          <button
-            type="button"
-            onClick={btnNav2}
-            className="w-[424px] h-[40px] flex flex-row justify-start pb-[6px] pt-[6px]"
-          >
-            <img
-              src="/salesIcon.svg"
-              alt=""
-              className="inline pl-[12px] object-scale-down w-[27] h-[20]"
-            />
-            <h2 className="inline pl-[6px] h-[6px]">Ventas</h2>
-            <img
-              src="/vector.svg"
-              alt=""
-              className="inline ml-auto w-[12px] h-[20px]"
-            />
+        <div className="flex items-center ml-3 mb-3  ">
+          <StoreIcon sx={{ fontSize: 50 }} />
+          <article className="ml-4">Ventas</article>
+          <button onClick={btnNav2}>
+            <ArrowForwardIosIcon className="absolute right-9 top-[75px]" />
           </button>
         </div>
       </div>
-
-      <div className="pt-100px w-[424px] h-[60px] bg-white mt-[80px] d-flex flex-row">
-        <button 
-        type="button"
-        onClick={btnNav3}
-        className="w-[424px] h-[40px] flex column pt-[6px]">
-          <img
-            src="/settings.svg"
-            alt=""
-            className="object-scale-down w-[32] h-[20] pl-[12px] pr-[6px]"
-          />
-          <h2 className="inline pl-[6px] text-lg pt-[6px]">Configuración</h2>
-          <img
-            src="/vector.svg"
-            alt=""
-            className="inline ml-auto w-[12px] h-[20px]"
-          />
-        </button>
+      <p className="pl-4 pt-4 font-medium">Cuenta</p>
+      <div className="border-y-[0.5px] border-[#7C7C7C] bg-white">
+        <div className="flex items-center ml-3 my-3 ">
+          <SettingsIcon sx={{ fontSize: 50 }} />
+          <article className="ml-4">Configuracion</article>
+          <button onClick={btnNav3}>
+            <ArrowForwardIosIcon className="absolute right-9 top-[370px]" />
+          </button>
+        </div>
       </div>
-      <LogOutButton />
+      <div className="flex justify-center pt-6">
+        <LogOutButton />
+      </div>
     </div>
   );
 };

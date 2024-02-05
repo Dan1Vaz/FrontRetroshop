@@ -43,7 +43,7 @@ import { DetailedProductPage } from "./pages/DetailedProductPage.jsx";
 
 const Layout = ({ children }) => {
   return (
-    <div className="pb-28">
+    <div className="">
       {children}
       <Outlet />
       <Footer />

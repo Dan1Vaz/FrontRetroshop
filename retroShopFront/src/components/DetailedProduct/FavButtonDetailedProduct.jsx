@@ -10,7 +10,7 @@ export const FavButtonDetailedProduct = () => {
   };
 
   return (
-    <div className="flex justify-center items-center w-[35px] h-[35px] rounded-full bg-[#D9D9D9] absolute right-4 top-5">
+    <div className="flex justify-center items-center w-[35px] h-[35px] rounded-full bg-[#D9D9D9] absolute right-4 top-8">
       <button onClick={handleButtonClick} className="flex">
         <FavoriteIcon
           className={`fill-[${buttonColor}]`}

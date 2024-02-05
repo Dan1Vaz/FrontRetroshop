@@ -20,7 +20,7 @@ export const ProductsUserPage = () => {
   }
 
   return (
-    <div>
+    <div className="pb-28">
       <h1>Products User Page</h1>
       <ul className="productsTable grid grid-cols-2 gap-4 justify-items-center w-full pt-[15px]">
         {products.map((product) => (
