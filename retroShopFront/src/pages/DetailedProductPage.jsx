@@ -1,12 +1,12 @@
 import { ErrorMessage } from "../components/ErrorMessage";
-import DetailedProduct from "../components/DetailedProduct";
+import DetailedProduct from "../components/DetailedProduct/DetailedProduct";
 import useProductById from "../Hook/useProductById";
 // import BackButton from "../components/BackButton";
 //El componente de la pagina a imprimir
 export const DetailedProductPage = () => {
   // nos traemos los estados
-  const { product, loading, error } = useProductById();
-  // console.log(product);
+  const { data, loading, error } = useProductById();
+   //console.log(product);
 
   //intermedio de la carga
   if (loading)
@@ -21,7 +21,7 @@ export const DetailedProductPage = () => {
   return (
     <>
       {/* aqui se imprime el componente que muestra el producto */}
-      <DetailedProduct product={product} />
+      <DetailedProduct data={data} />
     </>
   );
 };

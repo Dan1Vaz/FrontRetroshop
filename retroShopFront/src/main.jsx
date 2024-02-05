@@ -6,7 +6,7 @@ import "./index.css";
 import { AuthProvider } from "./providers/AuthProvider.jsx";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer.jsx";
-import { NavbarSearchedProducts } from "./components/ProductCard/NavbarSearchedProducts.jsx";
+import { NavbarSearchedProducts } from "./components/NavbarSearchedProducts.jsx";
 import SearchProductsPage from "./pages/SearchProductsPage.jsx";
 import { MainPage } from "./pages/MainPage.jsx";
 import ConfirmacionPassword from "./pages/ConfirmacionPassword.jsx";

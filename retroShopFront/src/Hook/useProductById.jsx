@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 
 const useProductById = () => {
-  const [product, setProduct] = useState([]);
+  const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [searchParams] = useSearchParams();
@@ -24,7 +24,7 @@ const useProductById = () => {
         const productData = await response.json();
         console.log(productData);
         //sacamos los datos
-        setProduct(productData);
+        setData(productData);
       } catch (error) {
         setError(error.message);
       } finally {
@@ -35,7 +35,7 @@ const useProductById = () => {
     fetchProduct();
   }, [searchParams]);
 
-  return { product, loading, error };
+  return { data, loading, error };
 };
 
 export default useProductById;
