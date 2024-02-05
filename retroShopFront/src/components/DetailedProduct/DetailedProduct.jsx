@@ -27,10 +27,10 @@ const DetailedProduct = ({ data }) => {
       </>
 
       <section className="flex items-center mt-5 gap-6 border-y-[0.5px] border-[#7C7C7C]  ">
-        {data.seller[0].avatarURL ? (
+        {data.seller.avatarURL ? (
           <img
             src={`http://${import.meta.env.VITE_BASE_URL}:3001/${
-              data.seller[0].avatarURL
+              data.seller.avatarURL
             }`}
             alt=""
             className="m-2 w-20 h-20 rounded-full object-cover"
@@ -38,7 +38,7 @@ const DetailedProduct = ({ data }) => {
         ) : (
           <PersonIcon className="m-2 w-20 h-20 rounded-full fill-slate-200 bg-slate-400" />
         )}
-        <h1 className="font-medium">{data.seller[0].name}</h1>
+        <h1 className="font-medium">{data.seller.name}</h1>
       </section>
       <div className="flex justify-center mt-4 ">
         <CreateReservation productId={data.product.id} />
