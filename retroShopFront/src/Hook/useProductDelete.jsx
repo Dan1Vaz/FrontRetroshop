@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-const useProductDelete = () => {
-  const [error, setError] = useState(null);
+const useProductDelete = (productId, token) => {
+  const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
   const deleteProduct = async (productId, token) => {
@@ -18,20 +18,16 @@ const useProductDelete = () => {
         }
       );
 
-      if (!response.ok) {
-        throw new Error("Error deleting product");
-      } else {
-        const data = await response.json();
-        return data;
-      }
+      const data = await response.json();
+
+      return { error, loading, data };
     } catch (error) {
-      setError(error.message);
+      setError(error);
     } finally {
       setLoading(false);
     }
   };
-
-  return { error, loading, deleteProduct };
+  deleteProduct(productId, token);
 };
 
 export default useProductDelete;
