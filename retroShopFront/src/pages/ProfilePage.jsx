@@ -23,7 +23,7 @@ export const ProfilePage = () => {
     navigate("/profile/perfil");
   };
   const { data, loading, error } = useGetUser();
-
+  console.log([token]);
   if (!token) {
     return <Navigate to="/profile/login" />;
   }

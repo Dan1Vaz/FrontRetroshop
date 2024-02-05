@@ -1,6 +1,6 @@
 import  { useState, useContext } from 'react';
 
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 import { authContext } from '../providers/AuthProvider'
 
 const CreateProduct = () => {
@@ -8,6 +8,9 @@ const CreateProduct = () => {
     const navigate = useNavigate();
     const [token,] = useContext(authContext);
 
+    if (!token) {
+      return <Navigate to="/profile/login" />;
+    }
 
     const [productData, setProductData] = useState({
         name: '',
