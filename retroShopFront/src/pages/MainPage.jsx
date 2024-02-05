@@ -19,6 +19,7 @@ export const MainPage = () => {
         <ul className="productsTable grid grid-cols-2 gap-4 justify-items-center w-full pt-[15px]">
           {products.map((product) => (
             <li key={product.id} className="max-w-[154px]">
+              <Link to={`/products/product/?id=${product.id}`} key={product.id}>
               <ProductCard
                 productCategory={product.category}
                 productImg1={product.imageURL}
@@ -26,6 +27,7 @@ export const MainPage = () => {
                 productName={product.name}
                 productPrice={product.price}
               />
+              </Link>
             </li>
           ))}
         </ul>

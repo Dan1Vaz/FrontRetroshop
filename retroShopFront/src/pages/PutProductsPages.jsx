@@ -93,7 +93,7 @@ export const PutProductsPages = () => {
           </option>
           <option value="consola">Consola</option>
           <option value="movil">Móvil</option>
-          <option value="juegos">Juegos</option>
+          <option value="videojuegos">Videojuegos</option>
           <option value="televisor">Televisor</option>
           <option value="ordenador">Ordenador</option>
         </select>

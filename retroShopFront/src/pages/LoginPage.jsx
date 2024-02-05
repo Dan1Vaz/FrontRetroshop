@@ -54,8 +54,9 @@ const LoginPage = () => {
       })
       .catch((error) => {
         console.error("Error en inicio de sesión:", error.message);
-        setStatusMessage("error al iniciar sesion. ");
+        setStatusMessage("Nombre de usuario o contraseña incorrectos");
         setShowPopup(true)
+        
       });
   };
 
@@ -67,11 +68,7 @@ const LoginPage = () => {
   return (
     <div
       className="flex justify-center items-center flex-col gap-[20px] h-screen">
-      <div className="flex ">
-        <img src="/retroshop.svg" alt="" className="w-[300px] h-[100px]" />
-     
-  
-      </div>
+        <img src="/retroshop.svg" alt="" className="h-[100px] p-4" />
       <form
         className="flex justify-center items-center flex-col gap-5"
         onSubmit={enviar}
@@ -96,18 +93,18 @@ const LoginPage = () => {
         />
         <button
           type="submit"
-          className="w-[278px] h-[33px] bg-[#3337a3]  p-[20px] text-white py-2 px-4 "
+          className="w-[278px] h-[33px] bg-[#3337a3] text-white rounded-sm "
         >
-          ENTRAR
+          Iniciar Sesión
         </button>
       </form>
       <div className="flex justify-start w-[278px] items-start mt-0">
-      <NavLink className="mr-0" to="/profile/register">
+      <NavLink className="mr-0 underline text-blue-600 hover:text-blue-800 visited:[#3337a3]" to="/profile/register">
         Crear Cuenta
       </NavLink>
     </div>
 
-      {showPopup && <PopUp message={statusMessage} onClose={closePopup} />}
+      {showPopup && <PopUp link={''} message={statusMessage} onClose={closePopup} />}
     </div>
   );
 };

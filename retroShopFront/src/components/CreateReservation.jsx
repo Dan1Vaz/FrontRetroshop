@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
-import baseURL from "../providers/ruta";
-import { authContext } from "../providers/AuthProvider";
+
 import PopUp from "./PopUp";
+import { authContext } from "../providers/AuthProvider";
 
 const CreateReservation = (props) => {
   const { productId } = props;
@@ -40,19 +40,22 @@ const CreateReservation = (props) => {
         setShowPopup(true);
         setReservation(data.id);
         setReservation(...reservation, data.reservationToken);
-        setLink("");
+        setLink("/");
       } else {
         setStatusMessage(data.error);
         setShowPopup(true);
         setReservation(data.id);
+        setLink("/");
       }
     } catch (error) {
       console.error("Error al enviar los datos:", error);
 
       if (error.response && error.response.status === 400) {
         setStatusMessage(error.response.data.message);
+        setLink("/");
       } else {
         setStatusMessage("Error al enviar los datos");
+        setLink("/");
       }
 
       setShowPopup(true);
@@ -60,14 +63,17 @@ const CreateReservation = (props) => {
   };
 
   return (
-    <div>
-      <button className="card_button" onClick={enviar}>
+    <>
+      <button
+        className="bg-[#D9D9D9] px-10 py-2 font-bold rounded-full focus:bg-[#FE7193]"
+        onClick={enviar}
+      >
         Reservar
       </button>
       {showPopup && (
         <PopUp message={statusMessage} onClose={closePopup} link={link} />
       )}
-    </div>
+    </>
   );
 };
 

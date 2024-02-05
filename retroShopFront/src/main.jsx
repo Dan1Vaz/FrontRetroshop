@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
@@ -5,7 +6,7 @@ import "./index.css";
 import { AuthProvider } from "./providers/AuthProvider.jsx";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer.jsx";
-import { NavbarSearchedProducts } from "./components/ProductCard/NavbarSearchedProducts.jsx";
+import { NavbarSearchedProducts } from "./components/NavbarSearchedProducts.jsx";
 import SearchProductsPage from "./pages/SearchProductsPage.jsx";
 import { MainPage } from "./pages/MainPage.jsx";
 import ConfirmacionPassword from "./pages/ConfirmacionPassword.jsx";
@@ -21,6 +22,7 @@ import { ProductsUserPage } from "./pages/ProductsUserPage.jsx";
 import CreateReview from "./pages/CreateReview.jsx";
 import CreateProduct from "./pages/CreateProduct.jsx";
 import Error404 from "./pages/Error404.jsx";
+import { DetailedProductPage } from "./pages/DetailedProductPage.jsx";
 // import {
 //   SearchProductsPage,
 //   CreateProduct,
@@ -137,6 +139,16 @@ const router = createBrowserRouter([
       {
         path: "/products",
         element: <SearchProductsPage />,
+      },
+    ],
+  },
+  {
+    path: "/products",
+    element: <Layout />,
+    children: [
+      {
+        path: "/products/product",
+        element: <DetailedProductPage />,
       },
     ],
   },

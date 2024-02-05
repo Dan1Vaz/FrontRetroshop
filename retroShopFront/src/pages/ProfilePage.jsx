@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { authContext } from "../providers/AuthProvider";
 import { Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom"
-import useGetUser from "../Hook/useGetUser";
 
 export const ProfilePage = () => {
   const [token] = useContext(authContext);
@@ -10,9 +9,6 @@ export const ProfilePage = () => {
   const btnNav = ()=>{navigate("/profile/reservations")};
   const btnNav2 = ()=>{navigate("/profile/products/user")};
   const btnNav3 = ()=>{navigate("/profile/perfil")};
- const {data,loading, error} = useGetUser()
-
-console.log(data);
 
   if (!token) {
     return <Navigate to="/profile/login" />;
@@ -74,29 +70,25 @@ console.log(data);
         </div>
       </div>
 
-      <div className="w-[375px] h-[60px] bg-white mt-[30px]">
-        <h2 className="relative top-[-25px] left-[18px] text-lg">
-          Cuenta
-        </h2>
-        <div className="w-[375px] h-[60px] bg-white d-flex flex-row">
-          <button 
-          type="button"
-          onClick={btnNav3}
-          className="w-[375px] h-[40px] flex column pt-[6px]">
-            <img
-              src="/settings.svg"
-              alt=""
-              className="object-scale-down w-[32] h-[20] pl-[12px] pr-[6px]"
-            />
-            <h2 className="inline pl-[6px] text-lg pt-[6px]">Configuración</h2>
-            <img
-              src="/vector.svg"
-              alt=""
-              className="inline ml-auto w-[12px] h-[20px]"
-            />
-          </button>
-        </div>
+      <div className="pt-100px w-[424px] h-[60px] bg-white mt-[80px] d-flex flex-row">
+        <button 
+        type="button"
+        onClick={btnNav3}
+        className="w-[424px] h-[40px] flex column pt-[6px]">
+          <img
+            src="/settings.svg"
+            alt=""
+            className="object-scale-down w-[32] h-[20] pl-[12px] pr-[6px]"
+          />
+          <h2 className="inline pl-[6px] text-lg pt-[6px]">Configuración</h2>
+          <img
+            src="/vector.svg"
+            alt=""
+            className="inline ml-auto w-[12px] h-[20px]"
+          />
+        </button>
       </div>
+      <LogOutButton />
     </div>
   );
 };

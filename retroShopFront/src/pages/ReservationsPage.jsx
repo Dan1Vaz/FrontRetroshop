@@ -15,7 +15,7 @@ export const ReservationsPage = () => {
   const filteredReservations = reservations.filter((reservation) => {
     return reservation.status === currentTab;
   });
-  // console.log(filteredReservations);
+  console.log(filteredReservations);
 
   // handlers para cambiar los estados segun cliques
   const handlerInProcess = () => {
@@ -45,7 +45,7 @@ export const ReservationsPage = () => {
         <h1 className="text-2xl font-bold">Reservas</h1>
       </div>
       {/* aqui se imprime los botones que cambian los estados al clicar */}
-      <nav className="flex justify-evenly py-4 mb-8">
+      <nav className="flex justify-evenly py-4">
         <button
           onClick={handlerInProcess}
           className="bg-[#D9D9D9] px-10 py-2 font-bold rounded-full focus:bg-[#FE7193]"

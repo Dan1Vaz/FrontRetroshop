@@ -28,14 +28,14 @@ const DeleteProductsPages = (props) => {
   return (
     <div>
    
-      <button  className="w-[150px] h-[33px] bg-[#3337a3]  p-[20px] text-white py-2 px-4 " onClick={handleDeleteProduct}>Confirmar Eliminación</button>
+      <button  className="w-[150px] h-[33px] bg-[#3337a3]  p-[20px] text-white py-2 px-4 " onClick={handleDeleteProduct}> Eliminar</button>
 
    
       {isPopupOpen && (
         <PopUp
           message="Producto eliminado exitosamente"
           onClose={handleClosePopup}
-          link="profile/products/user"
+          link="/"
         />
       )}
     </div>

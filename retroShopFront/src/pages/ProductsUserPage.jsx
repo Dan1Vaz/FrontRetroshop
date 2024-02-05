@@ -4,6 +4,8 @@ import { authContext } from '../providers/AuthProvider';
 import { Link } from 'react-router-dom';
 import DeleteProductsPages from '../components/DeleteProductsPages';
 import { ProductCard } from '../components/ProductCard/ProductCard';
+import VerStatus from '../components/verStatus';
+
 
 export const ProductsUserPage = () => {
   const [token] = useContext(authContext);
@@ -35,7 +37,7 @@ export const ProductsUserPage = () => {
             </Link>
            
              <DeleteProductsPages productId ={product.id}/>
-          
+         <VerStatus productId={product.id}/>
          
              </li>
         ))}

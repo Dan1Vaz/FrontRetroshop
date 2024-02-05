@@ -38,7 +38,7 @@ const CreateProduct = () => {
     
     
         try {
-          const response = await fetch(`http://${import.meta.env.VITE_BASE_URL}/products/create`, {
+          const response = await fetch(`http://${import.meta.env.VITE_BASE_URL}:3001/products/create`, {
             method: 'POST',
             headers: {
               Authorization:  `Bearer ${token}`
@@ -104,7 +104,7 @@ const CreateProduct = () => {
           </option>
           <option value="consola">Consola</option>
           <option value="movil">Móvil</option>
-          <option value="juegos">Juegos</option>
+          <option value="videojuegos">Videojuegos</option>
           <option value="televisor">Televisor</option>
           <option value="ordenador">Ordenador</option>
         </select>

@@ -19,7 +19,7 @@ export const VerificationPage = () => {
     });
 
     // Enviar solicitud fetch al montar el componente
-    fetch(`http://${import.meta.env.VITE_BASE_URL}/verify`, {
+    fetch(`http://${import.meta.env.VITE_BASE_URL}:3001/verify`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -39,12 +39,13 @@ export const VerificationPage = () => {
       })
       .catch((error) => {
         console.error("Error en la verificación:", error.message);
+      
       });
   }, [email, verificationCode]);
 
   return (
     <div className="register">
-      <h2>listotto</h2>
+     
     </div>
   );
 };
