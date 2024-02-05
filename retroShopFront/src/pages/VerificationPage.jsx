@@ -41,7 +41,7 @@ export const VerificationPage = () => {
         console.error("Error en la verificación:", error.message);
       
       });
-  }, [email, verificationCode,navigate]);
+  }, [email, verificationCode]);
 
   return (
     <div className="register">
