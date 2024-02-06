@@ -65,21 +65,3 @@ const DeletedProducts = (props) => {
 
 export default DeletedProducts;
 
-// try {
-//   await deleteProduct(productId, token);
-//   console.log("probando" + productId);
-//   setShowPopup(true);
-//   setStatusMessage("Producto eliminado exitosamente");
-// } catch (error) {
-//   setShowPopup(true);
-//   if (error.response) {
-//     setStatusMessage(error.response.data.message);
-//     console.log("Error si hay response", statusMessage);
-//   } else if (error.message) {
-//     setStatusMessage(error.message);
-//     console.log("Error si hay message", statusMessage);
-//   } else {
-//     setStatusMessage("Error desconocido al eliminar el producto");
-//   }
-//   console.error("Error deleting product:", error);
-// }

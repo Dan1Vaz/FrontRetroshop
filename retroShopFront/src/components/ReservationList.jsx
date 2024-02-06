@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ReservBlank } from "./ReservBlank";
 import { ReservBlankFinished } from "./ReservBlankFinished";
 import Reservation from "./Reservation";
+
 //componente que imprime la lista de reservas
 const ReservationList = ({ reservations, currentTab }) => {
   return reservations.length ? (
@@ -11,6 +12,7 @@ const ReservationList = ({ reservations, currentTab }) => {
         <Link to={`/products/product/?id=${reservation.productId}`} key={reservation.id}>
         <li className="flex bg-[#D9D9D9] h-24 w-full justify-between items-center">
           <Reservation reservation={reservation} />
+        
         </li>
         </Link>
       ))}

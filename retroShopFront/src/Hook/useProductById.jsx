@@ -15,7 +15,7 @@ const useProductById = () => {
         const response = await fetch(
           `http://${
             import.meta.env.VITE_BASE_URL
-          }:3001/products/product/?id=${searchParams.get("id")}}`
+          }:3001/products/product/?id=${searchParams.get("id")}`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch products");
