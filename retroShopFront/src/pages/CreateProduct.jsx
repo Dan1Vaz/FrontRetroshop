@@ -78,19 +78,19 @@ const CreateProduct = () => {
       };
     
       return (
-        <div className="flex  items-center flex-col gap-[20px] h-1/2">
+        <div className="flex  items-center flex-col gap-[20px] h-screen">
       <div className="flex ">
-        <img src="/retroshop.svg" alt="" className="w-[300px] h-[100px]" />
+        <img src="/retroshop.svg" alt="" className="  h-[100px]" />
      
   
       </div>
-          <h1>Registro de Producto</h1>
+          <h1 className='font-bold text-[#1e3a8a]'>Registro de Producto</h1>
          
-          <form className="flex justify-center items-center flex-col gap-4" onSubmit={enviar} >
+          <form className="flex justify-center items-center flex-col gap-4 text-[#1e3a8a]" onSubmit={enviar} >
            
             <input type="text"
              id="name" 
-             className="w-[300px]  bg-white  p-[20px] border border-black"
+             className="w-[300px]  bg-white  p-[20px] border border-[#db2777] rounded-md"
              placeholder='nombre del articulo'
              value={productData.name}
              onChange={handleInputChange} />
@@ -98,7 +98,7 @@ const CreateProduct = () => {
             {/* <label htmlFor="category">Categoría</label> */}
             <select
           id="category"
-          className="w-[300px] bg-white p-[20px] border border-black"
+          className="w-[300px] bg-white p-[20px] border border-[#db2777] rounded-md"
           value={productData.category}
           onChange={handleInputChange}
         >
@@ -116,15 +116,15 @@ const CreateProduct = () => {
             <input
              type="text" 
             id="price"
-            className="w-[300px] bg-white  p-[20px] border border-black"
-            placeholder='price'
+            className="w-[300px] bg-white  p-[20px] border border-[#db2777] rounded-md"
+            placeholder='precio'
              value={productData.price}
               onChange={handleInputChange} />
     
             {/* <label htmlFor="location">Ubicación</label> */}
             <input type="text"
              id="location"
-             className="w-[300px] h-[33px] bg-white  p-[20px] border border-black"
+             className="w-[300px] h-[33px] bg-white  p-[20px] border border-[#db2777] rounded-md"
              placeholder='Localidad'
               value={productData.location}
                onChange={handleInputChange} />
@@ -132,10 +132,10 @@ const CreateProduct = () => {
           
        
             {/* <label htmlFor="description">Descripción</label> */}
-            <textarea id="description"
+            <textarea id="descripción"
              value={productData.description} 
              onChange={handleInputChange}
-                 className="w-[300px] h-[33px] bg-white  p-[20px] border border-black"
+                 className="w-[300px] h-[33px] bg-white  p-[20px] border border-[#db2777] rounded-md"
                  placeholder='Descripción'>
              </textarea>
         {/* <label htmlFor="avatar">Imagen 2</label> */}
@@ -143,13 +143,13 @@ const CreateProduct = () => {
 
        <input  type="file"
         id="avatar"
-      className="w-[400px] h-[50px] bg-white ml-[95px] pt-[20px] pr-0 pl-0 "
+      className="w-[400px] h-[50px] bg-white ml-[95px] pt-[20px] pr-0 pl-0"
       
          onChange={handleFileChange} />
         {/* <label htmlFor="avatar2">imagen 2</label> */}
        <input 
         type="file" 
-        className="w-[400px] h-[50px] bg-white ml-[60px] p-[20px] "
+        className="w-[400px] h-[50px] bg-white ml-[60px] p-[20px]"
         id="avatar2"
          onChange={handleFileChange2} />
      
