@@ -53,16 +53,12 @@ export const PutUserPage = () => {
       {loading && <p>Loading... </p>}
       {error && <p>Error: {error.message}</p>}
       {data && <p>Data updated successfully</p>}
+      <div className="flex justify-center items-center flex-col mt-20 mb-[100px]">
+        <img src="/retroshop.svg" alt="" className="w-[400px] h-[100px]" />
 
-      <div className="flex justify-center items-center flex-col gap-[20px] h-screen">
-        <div className="flex">
-          <img
-            src="/retroshop.svg"
-            alt=""
-            className="w-[300px] h-[100px]"
-          />
-        </div>
-        <h1 className="text-2xl font-bold text-[#3337a3]">Modificar Perfil</h1>
+        <h1 className="text-2xl font-bold text-[#3337a3] mb-5">
+          Modificar Perfil
+        </h1>
         <form
           className="flex justify-center items-center flex-col gap-4"
           onSubmit={handleUpdateProduct}
@@ -78,8 +74,8 @@ export const PutUserPage = () => {
           <input
             type="password"
             id="password"
-            className="w-[278px] h-[33px] bg-white  p-[20px] border border-[#db2777] rounded-md"
-            placeholder="Verifica tu password"
+            className="w-[278px] h-[33px] bg-white p-[20px] border border-[#db2777] rounded-md"
+            placeholder="Verifica tu Clave"
             value={userData.password}
             onChange={handleInputChange}
           />
@@ -87,12 +83,13 @@ export const PutUserPage = () => {
             id="biography"
             value={userData.biography}
             onChange={handleInputChange}
-            className="w-[278px] h-[33px] bg-white  p-[20px] border border-[#db2777] rounded-md"
-          placeholder="Tu nueva Biografia"></textarea>
+            className="w-[278px] h-[73px] bg-white p-[20px] border border-[#db2777] rounded-md"
+            placeholder="Tu nueva Biografia"
+          ></textarea>
           <input
             type="file"
             id="avatar"
-            className="w-[400px] h-[50px] bg-white ml-[95px] pt-[20px] pr-0 pl-0 text-[#3337a3]"
+            className="text-[#3337a3]"
             onChange={handleFileChange}
           />
           {/* Mostrar la foto del usuario si existe */}

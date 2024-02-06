@@ -67,7 +67,7 @@ const LoginPage = () => {
 
   return (
     <div
-      className="flex justify-center items-center flex-col gap-[20px] h-screen">
+      className="flex justify-center items-center flex-col mt-20 gap-10">
         <img src="/retroshop.svg" alt="" className="h-[100px] p-4" />
       <form
         className="flex justify-center items-center flex-col gap-5"

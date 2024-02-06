@@ -78,20 +78,21 @@ const CreateProduct = () => {
   };
 
   return (
-    <div className="flex  items-center flex-col gap-[20px] h-screen">
-      <div className="flex ">
-        <img src="/retroshop.svg" alt="" className="  h-[100px]" />
-      </div>
-      <h1 className="font-bold text-[#3337a3]">Registro de Producto</h1>
+    <div className="flex justify-center items-center flex-col mt-3 mb-[100px]">
+      <img src="/retroshop.svg" alt="" className="w-[400px] h-[100px]" />
+
+      <h1 className="text-2xl font-bold text-[#3337a3] mb-5">
+        Registro de Producto
+      </h1>
 
       <form
-        className="flex justify-center items-center flex-col gap-4 text-[#3337a3]"
+        className="flex justify-center items-center flex-col gap-5 text-[#3337a3]"
         onSubmit={enviar}
       >
         <input
           type="text"
           id="name"
-          className="w-[300px]  bg-white  p-[20px] border border-[#db2777] rounded-md"
+          className="w-[278px] h-[33px]  bg-white  p-[20px] border border-[#db2777] rounded-md"
           placeholder="Nombre del articulo"
           value={productData.name}
           onChange={handleInputChange}
@@ -100,11 +101,11 @@ const CreateProduct = () => {
         {/* <label htmlFor="category">Categoría</label> */}
         <select
           id="category"
-          className="w-[300px] bg-white p-[20px] border border-[#db2777] rounded-md"
+          className="w-[278px] bg-white p-[20px] border border-[#db2777] rounded-md"
           value={productData.category}
           onChange={handleInputChange}
         >
-          <option value="" disabled>pull
+          <option value="" disabled>
             Selecciona una categoría
           </option>
           <option value="consola">Consola</option>
@@ -118,7 +119,7 @@ const CreateProduct = () => {
         <input
           type="text"
           id="price"
-          className="w-[300px] bg-white  p-[20px] border border-[#db2777] rounded-md"
+          className="w-[278px] h-[33px] bg-white  p-[20px] border border-[#db2777] rounded-md"
           placeholder="Precio"
           value={productData.price}
           onChange={handleInputChange}
@@ -128,7 +129,7 @@ const CreateProduct = () => {
         <input
           type="text"
           id="location"
-          className="w-[300px] h-[33px] bg-white  p-[20px] border border-[#db2777] rounded-md"
+          className="w-[278px] h-[33px] bg-white  p-[20px] border border-[#db2777] rounded-md"
           placeholder="Localidad"
           value={productData.location}
           onChange={handleInputChange}
@@ -139,7 +140,7 @@ const CreateProduct = () => {
           id="descripción"
           value={productData.description}
           onChange={handleInputChange}
-          className="w-[300px] h-[33px] bg-white  p-[20px] border border-[#db2777] rounded-md"
+          className="w-[278px] h-[73px] bg-white p-[20px] border border-[#db2777] rounded-md"
           placeholder="Description"
         ></textarea>
         {/* <label htmlFor="avatar">Imagen 2</label> */}
@@ -148,22 +149,22 @@ const CreateProduct = () => {
         <input
           type="file"
           id="avatar"
-          className="w-[400px] h-[50px] bg-white ml-[95px] pt-[20px] pr-0 pl-0"
+          className="text-[#3337a3]"
           onChange={handleFileChange}
         />
         {/* <label htmlFor="avatar2">imagen 2</label> */}
         <input
           type="file"
-          className="w-[400px] h-[50px] bg-white ml-[60px] p-[20px]"
+          className="text-[#3337a3]"
           id="avatar2"
           onChange={handleFileChange2}
         />
 
         <button
           type="submit"
-          className="w-[278px] h-[33px]  rounded-md bg-[#3337a3]  p-[20px] text-white py-2 px-4"
+          className="w-[278px] h-[33px] bg-[#3337a3] text-white rounded-sm"
         >
-          enviar
+          Enviar
         </button>
       </form>
     </div>

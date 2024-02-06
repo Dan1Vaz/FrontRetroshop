@@ -57,18 +57,16 @@ export const RegisterPage = () => {
   };
 
   return (
-    <div className="flex justify-center items-center flex-col gap-[20px] h-screen">
-      <div className="flex ">
-        <img src="/retroshop.svg" alt="" className="h-[100px] p-4" />
-      </div>
+    <div className="flex justify-center items-center flex-col mt-20 gap-10">
+      <img src="/retroshop.svg" alt="" className="h-[100px] p-4"/>
       <form
-        className="flex justify-center items-center flex-col gap-5 mt-"
+        className="flex justify-center items-center flex-col gap-5"
         onSubmit={send}
       >
         {/* <label htmlFor="name">Introduce nombre</label> */}
         <input
           placeholder="Nombre"
-          className="w-[278px] h-[33px] bg-white  p-[20px] border border-black"
+          className="w-[278px] h-[33px] bg-white  p-[20px] border border-[#db2777] rounded-md"
           type="text"
           id="name"
           value={userData.name}
@@ -77,7 +75,7 @@ export const RegisterPage = () => {
         {/* <label htmlFor="email">Introduce email</label> */}
         <input
           type="email"
-          className="w-[278px] h-[33px] bg-white  p-[20px] border border-black"
+          className="w-[278px] h-[33px] bg-white  p-[20px] border border-[#db2777] rounded-md"
           placeholder="Email"
           id="email"
           value={userData.email}
@@ -86,7 +84,7 @@ export const RegisterPage = () => {
         {/* <label htmlFor="password"> Contraseña</label> */}
         <input
           type="password"
-          className="w-[278px] h-[33px] bg-white  p-[20px] border border-black"
+          className="w-[278px] h-[33px] bg-white  p-[20px] border border-[#db2777] rounded-md"
           placeholder="Contraseña"
           id="password"
           value={userData.password}
