@@ -47,7 +47,7 @@ console.log(products);
         ) : (
           <PersonIcon className="m-2 w-20 h-20 rounded-full fill-slate-200 bg-slate-400" />
         )}
-        <h1 className="font-medium">{data.product.name}</h1>
+        <h2 className="font-medium"> {products.status}</h2>
       </section>
     
       <div className="flex justify-center mt-4 ">
@@ -89,10 +89,4 @@ console.log(products);
 
 export default SellerProductDetail;
 
-{
-  /* <article className="bg-slate-950 w-9 h-9 flex justify-center items-center rounded-full">
-  <PersonIcon sx={{ fontSize: 35 }} className="fill-slate-500" />
-</article>; */
-}
 
-// `http://${import.meta.env.VITE_BASE_URL}:3001/${productImg1}`
