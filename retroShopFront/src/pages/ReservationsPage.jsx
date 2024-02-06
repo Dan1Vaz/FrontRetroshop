@@ -36,7 +36,7 @@ export const ReservationsPage = () => {
     return <ErrorMessage message={error} className="flex justify-center" />;
 
   return (
-    <>
+    <div className="pb-20">
       {/* aqui se imprime el boton de volver atras que te manda al perfil del usuario */}
       <div className="flex justify-evenly py-10">
         <Link to={"/profile/menu"} className="absolute left-7">
@@ -66,7 +66,7 @@ export const ReservationsPage = () => {
           currentTab={currentTab}
         />
       </article>
-    </>
+    </div>
   );
 };
 
