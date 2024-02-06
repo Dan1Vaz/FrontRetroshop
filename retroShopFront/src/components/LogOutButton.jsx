@@ -11,7 +11,7 @@ export const LogOutButton = () => {
   return (
     <Link to="/">
       <button
-        className="bg-[#D9D9D9] px-10 py-2 font-bold rounded-full active:border-[#FE7193] border-2"
+        className="bg-[#D9D9D9] px-10 py-2 font-bold rounded-full active:border-[#FE7193] border-2 text-[#3337a3]"
         onClick={handleLogOut}
       >
         Log Out

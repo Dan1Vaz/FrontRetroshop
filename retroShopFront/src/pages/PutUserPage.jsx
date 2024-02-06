@@ -48,7 +48,7 @@ export const PutUserPage = () => {
   };
 
   return (
-    <div>
+    <>
       {/* Crear componente de loading */}
       {loading && <p>Loading... </p>}
       {error && <p>Error: {error.message}</p>}
@@ -62,7 +62,7 @@ export const PutUserPage = () => {
             className="w-[300px] h-[100px]"
           />
         </div>
-        <h1>Modificar perfil</h1>
+        <h1 className="text-2xl font-bold text-[#3337a3]">Modificar Perfil</h1>
         <form
           className="flex justify-center items-center flex-col gap-4"
           onSubmit={handleUpdateProduct}
@@ -71,7 +71,7 @@ export const PutUserPage = () => {
             type="text"
             id="name"
             className="w-[278px] h-[33px] bg-white  p-[20px] border border-black"
-            placeholder="Nombre del artículo"
+            placeholder="Nombre Nuevo"
             value={userData.name}
             onChange={handleInputChange}
           />
@@ -111,6 +111,6 @@ export const PutUserPage = () => {
           </button>
         </form>
       </div>
-    </div>
+    </>
   );
 };
