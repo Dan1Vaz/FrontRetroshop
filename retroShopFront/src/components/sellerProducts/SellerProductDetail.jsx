@@ -60,14 +60,14 @@ console.log(products);
     </>
   ) : products.status === "en proceso" ? (
     <>
-      {/* Agrega el texto correspondiente para el estado "en proceso" */}
+     
       <p>¡Te falta poco para finalizar el proceso!</p>
       <p>boton</p>
       
     </>
   ) : products.status === "pendiente" ? (
     <>
-      {/* Agrega el texto correspondiente para el estado "pendiente" */}
+      
       <p>Ponte en contacto con el comprador. Toda la información está en tu correo electrónico.</p>
     </>
   ) : (
