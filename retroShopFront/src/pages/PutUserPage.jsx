@@ -70,7 +70,7 @@ export const PutUserPage = () => {
           <input
             type="text"
             id="name"
-            className="w-[278px] h-[33px] bg-white  p-[20px] border border-black"
+            className="w-[278px] h-[33px] bg-white  p-[20px] border border-[#db2777] rounded-md"
             placeholder="Nombre Nuevo"
             value={userData.name}
             onChange={handleInputChange}
@@ -78,7 +78,7 @@ export const PutUserPage = () => {
           <input
             type="password"
             id="password"
-            className="w-[278px] h-[33px] bg-white  p-[20px] border border-black"
+            className="w-[278px] h-[33px] bg-white  p-[20px] border border-[#db2777] rounded-md"
             placeholder="Verifica tu password"
             value={userData.password}
             onChange={handleInputChange}
@@ -87,12 +87,12 @@ export const PutUserPage = () => {
             id="biography"
             value={userData.biography}
             onChange={handleInputChange}
-            className="w-[278px] h-[33px] bg-white  p-[20px] border border-black"
-          ></textarea>
+            className="w-[278px] h-[33px] bg-white  p-[20px] border border-[#db2777] rounded-md"
+          placeholder="Tu nueva Biografia"></textarea>
           <input
             type="file"
             id="avatar"
-            className="w-[400px] h-[50px] bg-white ml-[95px] pt-[20px] pr-0 pl-0"
+            className="w-[400px] h-[50px] bg-white ml-[95px] pt-[20px] pr-0 pl-0 text-[#3337a3]"
             onChange={handleFileChange}
           />
           {/* Mostrar la foto del usuario si existe */}
@@ -105,7 +105,7 @@ export const PutUserPage = () => {
           )}
           <button
             type="submit"
-            className="w-[278px] h-[33px] bg-[#3337a3]  p-[20px] text-white py-2 px-4"
+            className="w-[278px] h-[33px] bg-[#3337a3] text-white rounded-sm"
           >
             Enviar
           </button>
