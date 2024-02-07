@@ -22,7 +22,7 @@ const CreateProduct = () => {
   const [statusMessage, setStatusMessage] = useState("");
 
   const autolink = () => {
-    navigate("/profile/products/user");
+    navigate("/profile/seller");
   };
 
   const enviar = async (e) => {
@@ -137,7 +137,7 @@ const CreateProduct = () => {
 
         {/* <label htmlFor="description">Descripción</label> */}
         <textarea
-          id="descripción"
+          id="description"
           value={productData.description}
           onChange={handleInputChange}
           className="w-[278px] h-[73px] bg-white p-[20px] border border-[#db2777] rounded-md"
