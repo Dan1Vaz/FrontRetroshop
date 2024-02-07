@@ -73,7 +73,12 @@ const LoginPage = () => {
         className="flex justify-center items-center flex-col gap-5"
         onSubmit={enviar}
       >
-        {/* <label htmlFor="email">Introduce email</label> */}
+        <label
+            htmlFor="email"
+            className="block text-base font-medium text-[#3337a3] w-[281px]"
+          >
+            Correo:
+          </label>
         <input
           type="email"
           id="email"
@@ -82,7 +87,12 @@ const LoginPage = () => {
           value={userData.email}
           onChange={handleInputChange}
         />
-        {/* <label htmlFor="password">Contraseña</label> */}
+        <label
+            htmlFor="password"
+            className="block text-base font-medium text-[#3337a3] w-[281px]"
+          >
+            Contraseña:
+          </label>
         <input
           type="password"
           placeholder="Contraseña"

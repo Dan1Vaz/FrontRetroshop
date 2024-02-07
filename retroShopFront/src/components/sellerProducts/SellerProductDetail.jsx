@@ -6,8 +6,8 @@ import DeletedProducts from "../DeletedProducts.jsx"
 import { FavButtonDetailedProduct } from "../DetailedProduct/FavButtonDetailedProduct.jsx"
 import EditNoteIcon from '@mui/icons-material/EditNote';
 import { Link } from "react-router-dom";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { PurcharseConfirmationPage } from "../../pages/PurcharseConfirmationPage.jsx";
+import BackButton from "../BackButton.jsx";
 
 
 const SellerProductDetail = ({ data }) => {
@@ -20,9 +20,7 @@ const SellerProductDetail = ({ data }) => {
           productImg2={data.product.imageURL2}
         />
         <FavButtonDetailedProduct />
-        <Link to={"/"} className="">
-          <ArrowBackIcon className=" relative size-10 bottom-72 left-7" />
-        </Link>
+        <div className="relative bottom-72 left-7"><BackButton /></div>
       </div>
       <>
         <h1 className="text-2xl font-bold capitalize p-2">
@@ -44,7 +42,7 @@ const SellerProductDetail = ({ data }) => {
         ) : (
           <PersonIcon className="m-2 w-20 h-20 rounded-full fill-slate-200 bg-slate-400" />
         )}
-        <h2 className="font-medium"> {data.reservation.status}</h2>
+        <h2 className="font-medium"> {data.seller.name}</h2>
       </section>
 
       <div className="flex justify-center mt-4 mb-4 ">

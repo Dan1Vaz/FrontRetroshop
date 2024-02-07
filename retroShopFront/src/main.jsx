@@ -26,6 +26,7 @@ import { DetailedProductPage } from "./pages/DetailedProductPage.jsx";
 import { ReservationsSeller } from "./pages/ReservationSeller.jsx";
 import SellerProductDetail from "./components/sellerProducts/SellerProductDetail.jsx";
 import { DetailedProductSellerPage } from "./pages/DetailedProductSellerPage.jsx";
+import { YourProductsPage } from "./pages/YourProductsPage.jsx";
 // import {
 //   SearchProductsPage,
 //   CreateProduct,
@@ -138,6 +139,10 @@ const router = createBrowserRouter([
       {
         path: "/profile/seller",
         element: <ReservationsSeller />,
+      },
+      {
+        path: "/profile/yourproducts",
+        element: <YourProductsPage />,
       },
     ],
   },

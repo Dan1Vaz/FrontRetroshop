@@ -1,11 +1,9 @@
 /* eslint-disable react/prop-types */
-// import CreateReservation from "./ProductCard/CreateReservation";
 import PersonIcon from "@mui/icons-material/Person";
 import { DetailedProductImage } from "./DetailedProductImage.jsx";
 import CreateReservation from "../CreateReservation.jsx";
 import { FavButtonDetailedProduct } from "./FavButtonDetailedProduct.jsx";
-import { Link } from "react-router-dom";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import BackButton from "../BackButton.jsx";
 //componente que imprime el producto a detalle
 const DetailedProduct = ({ data }) => {
   console.log(data);
@@ -17,9 +15,7 @@ const DetailedProduct = ({ data }) => {
           productImg2={data.product.imageURL2}
         />
         <FavButtonDetailedProduct />
-        <Link to={"/"} className="">
-          <ArrowBackIcon className=" relative size-10 bottom-72 left-7" />
-        </Link>
+        <div className="relative bottom-72 left-7"><BackButton /></div>
       </div>
       <>
         <h1 className="text-2xl font-bold capitalize p-2">
@@ -48,7 +44,6 @@ const DetailedProduct = ({ data }) => {
       <div className="flex justify-center mt-4 ">
         <CreateReservation productId={data.product.id} />
       </div>
-      <div className=""></div>
     </div>
   );
 };

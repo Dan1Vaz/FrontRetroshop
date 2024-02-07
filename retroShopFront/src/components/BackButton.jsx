@@ -10,7 +10,7 @@ const BackButton = () => {
 
   return (
     <Link onClick={goBack}>
-      <ArrowBackIcon className="size-7" />
+      <ArrowBackIcon className="size-10" />
     </Link>
   );
 };

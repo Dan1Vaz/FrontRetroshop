@@ -1,6 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import usePutUser from "../Hook/usePutUser";
 import { authContext } from "../providers/AuthProvider";
+import { Link } from "react-router-dom";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 export const PutUserPage = () => {
   const [token] = useContext(authContext);
@@ -53,16 +55,25 @@ export const PutUserPage = () => {
       {loading && <p>Loading... </p>}
       {error && <p>Error: {error.message}</p>}
       {data && <p>Data updated successfully</p>}
-      <div className="flex justify-center items-center flex-col mt-20 mb-[100px]">
-        <img src="/retroshop.svg" alt="" className="w-[400px] h-[100px]" />
-
-        <h1 className="text-2xl font-bold text-[#3337a3] mb-5">
-          Modificar Perfil
-        </h1>
+      <div className="flex justify-center items-center flex-col">
+        <div className="flex justify-evenly py-10">
+          <Link to={"/profile/menu"} className="absolute left-7">
+            <ArrowBackIcon className="size-10 fill-[#000000]" />
+          </Link>
+          <h1 className="text-2xl font-bold text-[#000000]">
+            Modificar Perfil
+          </h1>
+        </div>
         <form
-          className="flex justify-center items-center flex-col gap-4"
+          className="flex justify-center items-center flex-col gap-4 mt-20"
           onSubmit={handleUpdateProduct}
         >
+          <label
+            htmlFor="name"
+            className="block text-base font-medium text-[#3337a3] w-[281px]"
+          >
+            Nombre:
+          </label>
           <input
             type="text"
             id="name"
@@ -71,6 +82,12 @@ export const PutUserPage = () => {
             value={userData.name}
             onChange={handleInputChange}
           />
+          <label
+            htmlFor="password"
+            className="block text-base font-medium text-[#3337a3] w-[281px]"
+          >
+            Contraseña:
+          </label>
           <input
             type="password"
             id="password"
@@ -79,17 +96,16 @@ export const PutUserPage = () => {
             value={userData.password}
             onChange={handleInputChange}
           />
-          <textarea
-            id="biography"
-            value={userData.biography}
-            onChange={handleInputChange}
-            className="w-[278px] h-[73px] bg-white p-[20px] border border-[#db2777] rounded-md"
-            placeholder="Tu nueva Biografia"
-          ></textarea>
+          <label
+            htmlFor="avatar"
+            className="block text-base font-medium text-[#3337a3] w-[281px]"
+          >
+            Foto de Perfil:
+          </label>
           <input
             type="file"
             id="avatar"
-            className="text-[#3337a3]"
+            className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50  focus:outline-none"
             onChange={handleFileChange}
           />
           {/* Mostrar la foto del usuario si existe */}

@@ -59,7 +59,7 @@ export const ProfilePage = () => {
       </div>
       <p className="pl-4 pt-4 font-medium text-[#000000] text-xl">Cuenta</p>
       <div className="border-y-[0.5px] border-[#db2777] bg-white">
-        <Link to="">
+        <Link to="/profile/yourproducts">
           <div className="flex items-center ml-3 my-3 ">
             <InventoryIcon sx={{ fontSize: 50 }} className="fill-[#000000]" />
             <article className="ml-4 text-[#000000]">Tus productos</article>
