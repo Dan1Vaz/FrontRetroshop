@@ -1,4 +1,5 @@
 import { useState, useContext } from "react";
+
 import { Navigate, useNavigate } from "react-router-dom";
 import { authContext } from "../providers/AuthProvider";
 
@@ -146,14 +147,13 @@ const CreateProduct = () => {
         <input          
           type="file"
           id="avatar"
-          className="text-[#3337a3]"
+          className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none"
           onChange={handleFileChange}
         />
         {/* <label htmlFor="avatar2">imagen 2</label>  */}
         <input
           type="file"
-          className="text-[#3337a3]"
-          id="avatar2"
+          className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50  focus:outline-none"
           onChange={handleFileChange2}
         />
 
