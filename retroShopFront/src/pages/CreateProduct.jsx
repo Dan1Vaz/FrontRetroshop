@@ -21,9 +21,7 @@ const CreateProduct = () => {
 
   const [statusMessage, setStatusMessage] = useState("");
 
-  const autolink = () => {
-    navigate("/profile/seller");
-  };
+
 
   const enviar = async (e) => {
     e.preventDefault();
@@ -51,7 +49,7 @@ const CreateProduct = () => {
       console.log(formData);
       if (response.ok) {
         setStatusMessage("Registro exitoso");
-        autolink();
+        navigate("/profile/seller");
       } else {
         const data = await response.json();
         if (data) {
