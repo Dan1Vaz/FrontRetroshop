@@ -20,7 +20,7 @@ export const Footer = () => {
             className={`fill-${CurrentRoute("/") ? "[#FE7193]" : "[#7C7C7C]"}`}
             // relleno con el color que corresponde a cada icono comparando la ruta actual con el estado de CurrentRoute
           />
-          <p className="text-xs text-[#241717]">Inicio</p>
+          <p className="text-xs text-[#7C7C7C]">Inicio</p>
         </Link>
       </div>
       <button className="flex flex-col items-center text-center">
