@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { authContext } from "../providers/AuthProvider";
-import { Navigate } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { LogOutButton } from "../components/LogOutButton";
 import useGetUser from "../Hook/useGetUser";
@@ -9,19 +9,12 @@ import HandshakeIcon from "@mui/icons-material/Handshake";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import StoreIcon from "@mui/icons-material/Store";
 import SettingsIcon from "@mui/icons-material/Settings";
+import InventoryIcon from "@mui/icons-material/Inventory";
 
 export const ProfilePage = () => {
   const [token] = useContext(authContext);
   const navigate = useNavigate();
-  const btnNav = () => {
-    navigate("/profile/reservations");
-  };
-  const btnNav2 = () => {
-    navigate("/profile/seller");
-  };
-  const btnNav3 = () => {
-    navigate("/profile/perfil");
-  };
+  
   const { data, loading, error } = useGetUser();
   console.log([token]);
   if (!token) {
@@ -44,32 +37,44 @@ export const ProfilePage = () => {
         <h1 className="text-2xl font-bold text-[#3337a3]">{data.name}</h1>
         {/* <p className="text-base text-[#3337a3]">{data.description}</p> */}
       </div>
-      <p className="pl-4 pt-4 text-xl font-medium text-[#3337a3]">Transacciones</p>
+      <p className="pl-4 pt-4 text-xl font-medium text-[#000000]">
+        Transacciones
+      </p>
       <div className="border-y-[0.5px] border-[#db2777] bg-white relative">
+        <Link to='/profile/reservations'>
         <div className="flex items-center ml-3 mt-3 ">
-          <HandshakeIcon sx={{ fontSize: 50 }} className="fill-[#3337a3]"/>
-          <article className="ml-4 text-[#3337a3]">Reservas</article>
-          <button onClick={btnNav}>
-            <ArrowForwardIosIcon className="absolute right-9 top-[25px] fill-[#3337a3]" />
-          </button>
+          <HandshakeIcon sx={{ fontSize: 50 }} className="fill-[#000000]" />
+          <article className="ml-4 text-[#000000]">Reservas</article>
+            <ArrowForwardIosIcon className="absolute right-9 top-[25px] fill-[#000000]" />
         </div>
-        <div className="flex items-center ml-3 mb-3  ">
-          <StoreIcon sx={{ fontSize: 50 }} className="fill-[#3337a3]"/>
-          <article className="ml-4 text-[#3337a3]">Ventas</article>
-          <button onClick={btnNav2}>
-            <ArrowForwardIosIcon className="absolute right-9 top-[75px] fill-[#3337a3]" />
-          </button>
-        </div>
+        </Link>
+        <Link to='/profile/seller'>
+          <div className="flex items-center ml-3 mb-3  ">
+            <StoreIcon sx={{ fontSize: 50 }} className="fill-[#000000]" />
+            <article className="ml-4 text-[#000000]">Ventas</article>
+
+            <ArrowForwardIosIcon className="absolute right-9 top-[75px] fill-[#000000]" />
+          </div>
+        </Link>
       </div>
-      <p className="pl-4 pt-4 font-medium text-[#3337a3] text-xl">Cuenta</p>
+      <p className="pl-4 pt-4 font-medium text-[#000000] text-xl">Cuenta</p>
       <div className="border-y-[0.5px] border-[#db2777] bg-white">
-        <div className="flex items-center ml-3 my-3 ">
-          <SettingsIcon sx={{ fontSize: 50 }} className="fill-[#3337a3]"/>
-          <article className="ml-4 text-[#3337a3]">Configuracion</article>
-          <button onClick={btnNav3}>
-            <ArrowForwardIosIcon className="absolute right-9 top-[370px] fill-[#3337a3]" />
-          </button>
-        </div>
+        <Link to="">
+          <div className="flex items-center ml-3 my-3 ">
+            <InventoryIcon sx={{ fontSize: 50 }} className="fill-[#000000]" />
+            <article className="ml-4 text-[#000000]">Tus productos</article>
+
+            <ArrowForwardIosIcon className="absolute right-9 top-[375px] fill-[#000000]" />
+          </div>
+        </Link>
+        <Link to="/profile/perfil">
+          <div className="flex items-center ml-3 my-3 ">
+            <SettingsIcon sx={{ fontSize: 50 }} className="fill-[#000000]" />
+            <article className="ml-4 text-[#000000]">Configuracion</article>
+
+            <ArrowForwardIosIcon className="absolute right-9 top-[440px] fill-[#000000]" />
+          </div>
+        </Link>
       </div>
       <div className="flex justify-center pt-6">
         <LogOutButton />

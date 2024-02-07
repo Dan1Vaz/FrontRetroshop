@@ -44,12 +44,12 @@ import { DetailedProductSellerPage } from "./pages/DetailedProductSellerPage.jsx
 //   Error404,
 // } from "/pages";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, showFooter = true }) => {
   return (
     <div className="">
       {children}
       <Outlet />
-      <Footer />
+      {showFooter && <Footer />}
     </div>
   );
 };
@@ -109,10 +109,6 @@ const router = createBrowserRouter([
         element: <ReservationsPage />,
       },
       {
-        path: "/profile/seller",
-        element: <ReservationsSeller />,
-      },
-      {
         path: "/profile/perfil",
         element: <PutUserPage />,
       },
@@ -132,6 +128,16 @@ const router = createBrowserRouter([
       {
         path: "*",
         element: <Error404 />,
+      },
+    ],
+  },
+  {
+    path: "/profile",
+    element: <Layout showFooter={false} />,
+    children: [
+      {
+        path: "/profile/seller",
+        element: <ReservationsSeller />,
       },
     ],
   },
@@ -159,7 +165,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/products/productSeller",
-        element: <DetailedProductSellerPage/>,
+        element: <DetailedProductSellerPage />,
       },
     ],
   },
