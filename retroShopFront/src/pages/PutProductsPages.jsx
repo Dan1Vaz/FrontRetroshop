@@ -2,6 +2,7 @@ import  { useContext, useState } from "react";
 import usePutProducts from "../Hook/usePutProducts";
 import { authContext } from "../providers/AuthProvider";
 import { Link, useParams } from "react-router-dom";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 export const PutProductsPages = () => {
   const [token] = useContext(authContext);
@@ -61,12 +62,12 @@ export const PutProductsPages = () => {
 
  
       <div className="flex justify-center items-center flex-col mt-3 mb-[100px]">
-          <img
-            src="/retroshop.svg"
-            alt=""
-            className="w-[400px] h-[100px]"
-          />
-        <h1 className="text-2xl font-bold text-[#3337a3] mb-5">Modificar Producto</h1>
+      <div className="flex justify-evenly py-10">
+        <Link to={"/profile/menu"} className="absolute left-7">
+          <ArrowBackIcon className="size-10 fill-[#000000]" />
+        </Link>
+        <h1 className="text-2xl font-bold text-[#000000]">Modificar Producto</h1>
+      </div>
         <form
           className="flex justify-center items-center flex-col gap-5 text-[#3337a3]"
           onSubmit={handleUpdateProduct}
@@ -133,7 +134,7 @@ export const PutProductsPages = () => {
             className="text-[#3337a3] text-transparent pl-24 max-w-[350px]"
             onChange={handleFileChange2}
           />
-          <Link to="/profile/yourproducts">
+          <Link to="/profile">
           <button
             type="submit"
             className="w-[278px] h-[33px] bg-[#3337a3] text-white rounded-sm"
