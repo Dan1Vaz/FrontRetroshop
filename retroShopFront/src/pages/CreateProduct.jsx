@@ -80,7 +80,7 @@ const CreateProduct = () => {
       <img src="/retroshop.svg" alt="" className="w-[400px] h-[100px]" />
 
       <h1 className="text-2xl font-bold text-[#3337a3] mb-5">
-        Registro de Producto
+        Nuevo Producto
       </h1>
 
       <form
@@ -141,20 +141,19 @@ const CreateProduct = () => {
           className="w-[278px] h-[73px] bg-white p-[20px] border border-[#db2777] rounded-md"
           placeholder="Description"
         ></textarea>
-        {/* <label htmlFor="avatar">Imagen 2</label> */}
+         <label htmlFor="avatar" className="block mb-2 text-base font-medium text-[#3337a3] dark:text-white">Imagenes del producto</label> 
         {/* style={{ width: "300px" }} del inputu  */}
 
-        <input
+        <input          
           type="file"
           id="avatar"
-          className="text-[#3337a3]"
+          className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
           onChange={handleFileChange}
         />
-        {/* <label htmlFor="avatar2">imagen 2</label> */}
+        {/* <label htmlFor="avatar2">imagen 2</label>  */}
         <input
           type="file"
-          className="text-[#3337a3]"
-          id="avatar2"
+          className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
           onChange={handleFileChange2}
         />
 
