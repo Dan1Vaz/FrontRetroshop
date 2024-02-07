@@ -141,19 +141,19 @@ const CreateProduct = () => {
           className="w-[278px] h-[73px] bg-white p-[20px] border border-[#db2777] rounded-md"
           placeholder="Description"
         ></textarea>
-         <label htmlFor="avatar" className="block mb-2 text-base font-medium text-[#3337a3] dark:text-white">Imagenes del producto</label> 
+         <label htmlFor="avatar" className="block mb-2 text-base font-medium text-[#3337a3]">Imagenes del producto</label> 
         {/* style={{ width: "300px" }} del inputu  */}
 
         <input          
           type="file"
           id="avatar"
-          className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+          className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none"
           onChange={handleFileChange}
         />
         {/* <label htmlFor="avatar2">imagen 2</label>  */}
         <input
           type="file"
-          className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+          className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50  focus:outline-none"
           onChange={handleFileChange2}
         />
 
