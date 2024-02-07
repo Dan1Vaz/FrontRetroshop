@@ -8,7 +8,7 @@ import ReservationListSeller from "../components/sellerProducts/ReservationListS
 export const ReservationsSeller = () => {
   // nos traemos los estados
   const { reservations, loading, error } = useReservationsSeller();
-  const [currentTab, setCurrentTab] = useState("");
+  const [currentTab, setCurrentTab] = useState("sin reserva");
   //el estado por defecto es en proceso
   const filteredReservations = reservations.filter((reservation) => {
     return reservation.status === currentTab;
