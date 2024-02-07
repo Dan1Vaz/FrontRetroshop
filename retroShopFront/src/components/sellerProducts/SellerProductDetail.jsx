@@ -52,15 +52,12 @@ const SellerProductDetail = ({ data }) => {
           <>
             <p className="flex justify-center mt-4 mb-4"> Retroshop siempre contigo </p>
           </>
-        ) : data.reservation.status === "en proceso" ? (
+        ) : data.reservation.status === "pendiente" ? (
           <div className='flex flex-col items-center justify-center '>
             <p>¡Te falta poco para finalizar el proceso!</p>
             <PurcharseConfirmationPage reservationId={data.reservation.id} />
           </div>
-        ) : data.reservation.status === "pendiente" ? (
-          <>
-            <p>Ponte en contacto con el comprador. Toda la información está en tu correo electrónico.</p>
-          </> 
+        
         ) : data.reservation.status === "sin reservas" ? (
           <>
             <DeletedProducts productId={data.product.id} />

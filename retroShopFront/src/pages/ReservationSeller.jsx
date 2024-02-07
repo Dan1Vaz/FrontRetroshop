@@ -8,23 +8,23 @@ import ReservationListSeller from "../components/sellerProducts/ReservationListS
 export const ReservationsSeller = () => {
   // nos traemos los estados
   const { reservations, loading, error } = useReservationsSeller();
-  const [currentTab, setCurrentTab] = useState("sin reserva");
+  const [currentTab, setCurrentTab] = useState("pendiente");
   //el estado por defecto es en proceso
   const filteredReservations = reservations.filter((reservation) => {
     return reservation.status === currentTab;
   });
  
 
-  const handlerSinReserva = () => {
-    setCurrentTab("sin reserva");
-  };
+  // const handlerSinReserva = () => {
+  //   setCurrentTab("sin reserva");
+  // };
  
   const handlerPendiente = () => {
     setCurrentTab("pendiente");
   };
-  const handlerInProcess = () => {
-    setCurrentTab("en proceso");
-  };
+  // const handlerInProcess = () => {
+  //   setCurrentTab("en proceso");
+  // };
   const handlerFinished = () => {
     setCurrentTab("finalizada");
   };
@@ -57,12 +57,8 @@ export const ReservationsSeller = () => {
           Pendiente
         </button> */}
         <div className="flex flex-row text-center justify-center  mr-4 mb-2">
-        <button
-          onClick={handlerSinReserva}
-          className="bg-[#D9D9D9] px-10 py-2 font-bold rounded-full focus:bg-[#FE7193]"
-        >
-          sin reserva
-        </button>
+       
+       
         <button
           onClick={handlerPendiente}
           className="bg-[#D9D9D9] px-10 py-2 font-bold rounded-full focus:bg-[#FE7193]"
@@ -71,12 +67,8 @@ export const ReservationsSeller = () => {
         </button>
         </div>
       <div className="flex flex-row text-center justify-center  mr-4 mb-2">
-        <button
-          onClick={handlerInProcess}
-          className="bg-[#D9D9D9] px-10 py-2 font-bold rounded-full focus:bg-[#FE7193]"
-        >
-          En Proceso
-        </button>
+       
+    
         <button
           onClick={handlerFinished}
           className="bg-[#D9D9D9] px-10 py-2 font-bold rounded-full focus:bg-[#FE7193]"
