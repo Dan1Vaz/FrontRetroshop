@@ -79,7 +79,7 @@ const CreateProduct = () => {
       <img src="/retroshop.svg" alt="" className="w-[400px] h-[100px]" />
 
       <h1 className="text-2xl font-bold text-[#3337a3] mb-5">
-        Registro de Producto
+        Nuevo Producto
       </h1>
 
       <form
@@ -140,19 +140,19 @@ const CreateProduct = () => {
           className="w-[278px] h-[73px] bg-white p-[20px] border border-[#db2777] rounded-md"
           placeholder="Description"
         ></textarea>
-        {/* <label htmlFor="avatar">Imagen 2</label> */}
+         <label htmlFor="avatar" className="block mb-2 text-base font-medium text-[#3337a3]">Imagenes del producto</label> 
         {/* style={{ width: "300px" }} del inputu  */}
 
-        <input
+        <input          
           type="file"
           id="avatar"
-          className="text-[#3337a3] text-transparent pl-24 max-w-[350px]"
+          className="text-[#3337a3]"
           onChange={handleFileChange}
         />
-        {/* <label htmlFor="avatar2">imagen 2</label> */}
+        {/* <label htmlFor="avatar2">imagen 2</label>  */}
         <input
           type="file"
-          className="text-[#3337a3] text-transparent pl-24 max-w-[350px]"
+          className="text-[#3337a3]"
           id="avatar2"
           onChange={handleFileChange2}
         />
