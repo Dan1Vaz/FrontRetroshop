@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import useProductDelete from "../Hook/useProductDelete";
+
 import { authContext } from "../providers/AuthProvider";
 import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
 import PopUp from "./PopUp";
@@ -57,7 +57,7 @@ const DeletedProducts = (props) => {
       </button>
 
       {showPopup && (
-        <PopUp message={statusMessage} onClose={handleClosePopup} link="" />
+        <PopUp message={statusMessage} onClose={handleClosePopup} link="/profile/seller" />
       )}
     </>
   );

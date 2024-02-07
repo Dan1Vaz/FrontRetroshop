@@ -12,7 +12,7 @@ const PopUp = ({ message, onClose, link }) => {
     <div className="fixed top-0 left-0 w-full h-screen flex flex-col justify-center items-center bg-white mt-0 mb-10 gap-5 z-50 overflow-y-hidden">
       <img src="/retroshop.svg" alt="" className="h-[100px] p-4" />
 
-      <div className="bg-white w-600 h-1/4 p-4 rounded-xl flex flex-col justify-center items-center gap-3  border-2 ml-8 mr-8 mb10">
+      <div className="bg-white w-600 p-4 rounded-xl flex flex-col justify-center items-center gap-3  border-2 ml-8 mr-8 mb10">
         <InboxIcon className="text-3xl" />
         <p className="text-red-500 w-full h-full text-xl font-bold  text-center">
           {message}

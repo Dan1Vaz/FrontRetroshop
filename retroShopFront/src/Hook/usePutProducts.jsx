@@ -1,10 +1,11 @@
 import {  useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const usePutProducts = () => {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
-
+  const navigate = useNavigate();
   const putProduct = async (id, productData, token) => {
     console.log(id);
     console.log(productData)
@@ -31,6 +32,7 @@ const usePutProducts = () => {
    console.log(id);
       const responseData = await response.json();
       setData(responseData);
+      navigate("/profile/seller");
     } catch (error) {
       setError(error.message);
     } finally {

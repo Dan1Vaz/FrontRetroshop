@@ -7,11 +7,11 @@ import { FavButtonDetailedProduct } from "../DetailedProduct/FavButtonDetailedPr
 import EditNoteIcon from '@mui/icons-material/EditNote';
 import { Link } from "react-router-dom";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import useGetStatusReserva from "../../Hook/useGetStatusReserva.jsx";
+import { PurcharseConfirmationPage } from "../../pages/PurcharseConfirmationPage.jsx";
 
-const SellerProductDetail = ( {data} ) => {
-  const { products, loading, error } = useGetStatusReserva(data.product.id); // Llama a useGetStatusReserva
-console.log(products);
+
+const SellerProductDetail = ({ data }) => {
+  
   return (
     <div className="flex flex-col pb-28 absolute">
       <div className="w-screen relative">
@@ -27,7 +27,6 @@ console.log(products);
       <>
         <h1 className="text-2xl font-bold capitalize p-2">
           {data.product.name}
-      
         </h1>
         <h2 className="text-2xl font-semibold text-gray-700 p-2">
           {data.product.price}€
@@ -38,55 +37,44 @@ console.log(products);
       <section className="flex items-center mt-5 gap-6 border-y-[0.5px] border-[#7C7C7C]  ">
         {data.seller.avatarURL ? (
           <img
-            src={`http://${import.meta.env.VITE_BASE_URL}:3001/${
-              data.seller.avatarURL
-            }`}
+            src={`http://${import.meta.env.VITE_BASE_URL}:3001/${data.seller.avatarURL}`}
             alt=""
             className="m-2 w-20 h-20 rounded-full object-cover"
           />
         ) : (
           <PersonIcon className="m-2 w-20 h-20 rounded-full fill-slate-200 bg-slate-400" />
         )}
-        <h2 className="font-medium"> {products.status}</h2>
+        <h2 className="font-medium"> {data.reservation.status}</h2>
       </section>
-    
-      <div className="flex justify-center mt-4 ">
-      <div className="flex justify-center mt-4 ">
-  {products.status === "finalizada" ? (
-    <>
-      <p> Retroshop siempre contigo  </p>
-      
-   
-    </>
-  ) : products.status === "en proceso" ? (
-    <>
-     
-      <p>¡Te falta poco para finalizar el proceso!</p>
-      <p>boton</p>
-      
-    </>
-  ) : products.status === "pendiente" ? (
-    <>
-      
-      <p>Ponte en contacto con el comprador. Toda la información está en tu correo electrónico.</p>
-    </>
-  ) : (
-    <>
-    <DeletedProducts productId={data.product.id}/>
-    <Link to={`/profile/modify/${data.product.id}`}>
-    <button className="p-2">
-    <EditNoteIcon className="text-xl"/>
-  </button>
-    </Link>
-    </>
-  )}
-</div>
 
-</div>
-</div>
-  );
-};
+      <div className="flex justify-center mt-4 mb-4 ">
+        {data.reservation.status === "finalizada" ? (
+          <>
+            <p className="flex justify-center mt-4 mb-4"> Retroshop siempre contigo </p>
+          </>
+        ) : data.reservation.status === "en proceso" ? (
+          <div className='flex flex-col items-center justify-center '>
+            <p>¡Te falta poco para finalizar el proceso!</p>
+            <PurcharseConfirmationPage reservationId={data.reservation.id} />
+          </div>
+        ) : data.reservation.status === "pendiente" ? (
+          <>
+            <p>Ponte en contacto con el comprador. Toda la información está en tu correo electrónico.</p>
+          </> 
+        ) : data.reservation.status === "sin reservas" ? (
+          <>
+            <DeletedProducts productId={data.product.id} />
+            <Link to={`/profile/modify/${data.product.id}`}>
+              <button className="p-2">
+                <EditNoteIcon className="text-xl" />
+              </button>
+            </Link>
+          </>
+        ) : null
+        }
+      </div>
+    </div>
+  )
+}
 
 export default SellerProductDetail;
-
-

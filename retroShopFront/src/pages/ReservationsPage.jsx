@@ -36,25 +36,25 @@ export const ReservationsPage = () => {
     return <ErrorMessage message={error} className="flex justify-center" />;
 
   return (
-    <>
+    <div className="pb-20">
       {/* aqui se imprime el boton de volver atras que te manda al perfil del usuario */}
       <div className="flex justify-evenly py-10">
         <Link to={"/profile/menu"} className="absolute left-7">
-          <ArrowBackIcon className="size-10" />
+          <ArrowBackIcon className="size-10 fill-[#3337a3]" />
         </Link>
-        <h1 className="text-2xl font-bold">Reservas</h1>
+        <h1 className="text-2xl font-bold text-[#3337a3]">Reservas</h1>
       </div>
       {/* aqui se imprime los botones que cambian los estados al clicar */}
       <nav className="flex justify-evenly py-4">
         <button
           onClick={handlerInProcess}
-          className="bg-[#D9D9D9] px-10 py-2 font-bold rounded-full focus:bg-[#FE7193]"
+          className="bg-[#D9D9D9] px-10 py-2 font-bold rounded-full focus:bg-[#FE7193] text-[#3337a3]"
         >
           En Proceso
         </button>
         <button
           onClick={handlerFinished}
-          className="bg-[#D9D9D9] px-10 py-2 font-bold rounded-full focus:bg-[#FE7193]"
+          className="bg-[#D9D9D9] px-10 py-2 font-bold rounded-full focus:bg-[#FE7193] text-[#3337a3]"
         >
           Finalizada
         </button>
@@ -66,7 +66,7 @@ export const ReservationsPage = () => {
           currentTab={currentTab}
         />
       </article>
-    </>
+    </div>
   );
 };
 

@@ -67,7 +67,7 @@ const LoginPage = () => {
 
   return (
     <div
-      className="flex justify-center items-center flex-col gap-[20px] h-screen">
+      className="flex justify-center items-center flex-col mt-20 gap-10">
         <img src="/retroshop.svg" alt="" className="h-[100px] p-4" />
       <form
         className="flex justify-center items-center flex-col gap-5"
@@ -78,7 +78,7 @@ const LoginPage = () => {
           type="email"
           id="email"
           placeholder="Nombre"
-          className="w-[278px] h-[33px] bg-white  p-[20px] border border-black"
+          className="w-[278px] h-[33px] bg-white  p-[20px] border border-[#db2777] rounded-md"
           value={userData.email}
           onChange={handleInputChange}
         />
@@ -86,7 +86,7 @@ const LoginPage = () => {
         <input
           type="password"
           placeholder="Contraseña"
-          className="w-[278px] h-[33px] bg-white  p-[20px] border border-black"
+          className="w-[278px] h-[33px] bg-white  p-[20px] border border-[#db2777] rounded-md"
           id="password"
           value={userData.password}
           onChange={handleInputChange}

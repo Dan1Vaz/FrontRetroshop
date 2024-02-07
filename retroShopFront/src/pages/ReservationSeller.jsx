@@ -8,7 +8,7 @@ import ReservationListSeller from "../components/sellerProducts/ReservationListS
 export const ReservationsSeller = () => {
   // nos traemos los estados
   const { reservations, loading, error } = useReservationsSeller();
-  const [currentTab, setCurrentTab] = useState("");
+  const [currentTab, setCurrentTab] = useState("sin reserva");
   //el estado por defecto es en proceso
   const filteredReservations = reservations.filter((reservation) => {
     return reservation.status === currentTab;
@@ -40,7 +40,7 @@ export const ReservationsSeller = () => {
     return <ErrorMessage message={error} className="flex justify-center" />;
 
   return (
-    <>
+    <div className="pb-20">
       {/* aqui se imprime el boton de volver atras que te manda al perfil del usuario */}
       <div className="flex justify-evenly py-10">
         <Link to={"/profile/menu"} className="absolute left-7">
@@ -92,6 +92,6 @@ export const ReservationsSeller = () => {
           currentTab={currentTab}
         />
       </article>
-    </>
+    </div>
   );
 };

@@ -29,7 +29,7 @@ export const ProfilePage = () => {
   }
   return (
     <div className="bg-slate-100 h-screen flex flex-col">
-      <div className="flex items-center pt-10 bg-white border-b-[0.5px] border-[#7C7C7C]">
+      <div className="flex items-center pt-10 bg-white border-b-[0.5px] border-[#db2777]">
         {data.avatarURL ? (
           <img
             src={`http://${import.meta.env.VITE_BASE_URL}:3001/${
@@ -41,32 +41,33 @@ export const ProfilePage = () => {
         ) : (
           <PersonIcon className="m-2 w-20 h-20 rounded-full fill-slate-200 bg-slate-400" />
         )}
-        <h1 className="font-medium">{data.name}</h1>
+        <h1 className="text-2xl font-bold text-[#3337a3]">{data.name}</h1>
+        {/* <p className="text-base text-[#3337a3]">{data.description}</p> */}
       </div>
-      <p className="pl-4 pt-4 font-medium">Transacciones</p>
-      <div className="border-y-[0.5px] border-[#7C7C7C] bg-white relative">
+      <p className="pl-4 pt-4 text-xl font-medium text-[#3337a3]">Transacciones</p>
+      <div className="border-y-[0.5px] border-[#db2777] bg-white relative">
         <div className="flex items-center ml-3 mt-3 ">
-          <HandshakeIcon sx={{ fontSize: 50 }} />
-          <article className="ml-4">Reservas</article>
+          <HandshakeIcon sx={{ fontSize: 50 }} className="fill-[#3337a3]"/>
+          <article className="ml-4 text-[#3337a3]">Reservas</article>
           <button onClick={btnNav}>
-            <ArrowForwardIosIcon className="absolute right-9 top-[25px]" />
+            <ArrowForwardIosIcon className="absolute right-9 top-[25px] fill-[#3337a3]" />
           </button>
         </div>
         <div className="flex items-center ml-3 mb-3  ">
-          <StoreIcon sx={{ fontSize: 50 }} />
-          <article className="ml-4">Ventas</article>
+          <StoreIcon sx={{ fontSize: 50 }} className="fill-[#3337a3]"/>
+          <article className="ml-4 text-[#3337a3]">Ventas</article>
           <button onClick={btnNav2}>
-            <ArrowForwardIosIcon className="absolute right-9 top-[75px]" />
+            <ArrowForwardIosIcon className="absolute right-9 top-[75px] fill-[#3337a3]" />
           </button>
         </div>
       </div>
-      <p className="pl-4 pt-4 font-medium">Cuenta</p>
-      <div className="border-y-[0.5px] border-[#7C7C7C] bg-white">
+      <p className="pl-4 pt-4 font-medium text-[#3337a3] text-xl">Cuenta</p>
+      <div className="border-y-[0.5px] border-[#db2777] bg-white">
         <div className="flex items-center ml-3 my-3 ">
-          <SettingsIcon sx={{ fontSize: 50 }} />
-          <article className="ml-4">Configuracion</article>
+          <SettingsIcon sx={{ fontSize: 50 }} className="fill-[#3337a3]"/>
+          <article className="ml-4 text-[#3337a3]">Configuracion</article>
           <button onClick={btnNav3}>
-            <ArrowForwardIosIcon className="absolute right-9 top-[370px]" />
+            <ArrowForwardIosIcon className="absolute right-9 top-[370px] fill-[#3337a3]" />
           </button>
         </div>
       </div>
