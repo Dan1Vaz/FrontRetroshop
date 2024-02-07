@@ -38,9 +38,8 @@ export const Footer = () => {
       <div className="flex flex-col items-center text-center">
         <FavoriteIcon
           fontSize="large"
-          className={`fill-${
-            CurrentRoute("/favorite") ? "[#FE7193]" : "[#7C7C7C]"
-          }`}
+          className={CurrentRoute("/favorite")? "fill-[#FE7193]" : "fill-[#7C7C7C]"
+          }
           // relleno con el color que corresponde a cada icono comparando la ruta actual con el estado de CurrentRoute (OJO CON ESTA que aun le falta el Link con la ruta que es para colocar la ruta correcta aqui)
         />
         <p className="text-xs text-[#7C7C7C]">Favoritos</p>
@@ -50,7 +49,9 @@ export const Footer = () => {
           <PersonIcon
             fontSize="large"
             className={`fill-${
-              CurrentRoute("/profile/menu") ? "[#FE7193]" : "[#7C7C7C]"
+              CurrentRoute("/profile/menu") || CurrentRoute("/profile/login")
+                ? "[#FE7193]"
+                : "[#7C7C7C]"
             }`}
             // relleno con el color que corresponde a cada icono comparando la ruta actual con el estado de CurrentRoute
           />

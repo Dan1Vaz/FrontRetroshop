@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import useProducts from "../Hook/useProducts";
 
 export const MainPage = () => {
-  const { products, loading, error } = useProducts();
+  const { products, loading, error } = useProducts(20);
   //console.log(products);
   return (
     <>
