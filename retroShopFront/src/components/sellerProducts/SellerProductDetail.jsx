@@ -8,6 +8,7 @@ import EditNoteIcon from "@mui/icons-material/EditNote";
 import { Link } from "react-router-dom";
 import { PurcharseConfirmationPage } from "../../pages/PurcharseConfirmationPage.jsx";
 import BackButton from "../BackButton.jsx";
+import { AverageReview } from "../averageReview.jsx";
 
 const SellerProductDetail = ({ data }) => {
   return (
@@ -44,7 +45,11 @@ const SellerProductDetail = ({ data }) => {
         ) : (
           <PersonIcon className="m-2 w-20 h-20 rounded-full fill-slate-200 bg-slate-400" />
         )}
-        <h2 className="font-medium"> {data.seller.name}</h2>
+          <div className="flex flex-col">
+          <h1 className="font-medium">{data.seller.name}</h1>
+          
+          <AverageReview id ={data.product.id}/>
+        </div>
       </section>
 
       <div className="flex justify-center mt-4">

@@ -6,6 +6,7 @@ import { FavButtonDetailedProduct } from "./FavButtonDetailedProduct.jsx";
 import BackButton from "../BackButton.jsx";
 import CreateReview from "../../pages/CreateReview.jsx";
 import { StarsReview } from "../StarsReview.jsx";
+import { AverageReview } from "../averageReview.jsx";
 //componente que imprime el producto a detalle
 const DetailedProduct = ({ data }) => {
   console.log(data);
@@ -43,7 +44,11 @@ const DetailedProduct = ({ data }) => {
         ) : (
           <PersonIcon className="m-2 w-20 h-20 rounded-full fill-slate-200 bg-slate-400" />
         )}
-        <h1 className="font-medium">{data.seller.name}</h1>
+        <div className="flex flex-col">
+          <h1 className="font-medium">{data.seller.name}</h1>
+          
+          <AverageReview id ={data.product.id}/>
+        </div>
       </section>
       <div className="flex justify-center mt-4 ">
         {data.reservation.status === "finalizada" ? (

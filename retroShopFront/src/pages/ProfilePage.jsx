@@ -10,6 +10,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import StoreIcon from "@mui/icons-material/Store";
 import SettingsIcon from "@mui/icons-material/Settings";
 import InventoryIcon from "@mui/icons-material/Inventory";
+import { AverageReview } from "../components/averageReview";
 
 export const ProfilePage = () => {
   const [token] = useContext(authContext);
@@ -79,6 +80,7 @@ export const ProfilePage = () => {
       <div className="flex justify-center pt-6">
         <LogOutButton />
       </div>
+     
     </div>
   );
 };
