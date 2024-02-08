@@ -96,6 +96,7 @@ const CreateProduct = () => {
           placeholder="Nombre del articulo"
           value={productData.name}
           onChange={handleInputChange}
+          required
         />
 
         <label
@@ -116,8 +117,9 @@ const CreateProduct = () => {
           <option value="consola">Consola</option>
           <option value="movil">Móvil</option>
           <option value="videojuegos">Videojuegos</option>
-          <option value="televisor">Televisor</option>
+          <option value="radio">Televisor</option>
           <option value="ordenador">Ordenador</option>
+          <option value="otros">Otros</option>
         </select>
 
         <label
@@ -133,6 +135,7 @@ const CreateProduct = () => {
           placeholder="Precio"
           value={productData.price}
           onChange={handleInputChange}
+          required
         />
 
         <label
@@ -162,6 +165,7 @@ const CreateProduct = () => {
           onChange={handleInputChange}
           className="w-[278px] h-[73px] bg-white p-[20px] border border-[#db2777] rounded-md"
           placeholder="Description"
+          required
         ></textarea>
         <label
           htmlFor="avatar"
@@ -175,12 +179,15 @@ const CreateProduct = () => {
           id="avatar"
           className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none"
           onChange={handleFileChange}
+          required
         />
         {/* <label htmlFor="avatar2">imagen 2</label>  */}
         <input
           type="file"
+          id="avatar2"
           className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50  focus:outline-none"
           onChange={handleFileChange2}
+          required
         />
         
         <button
