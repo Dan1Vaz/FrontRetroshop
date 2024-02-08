@@ -78,7 +78,7 @@ const CreateReview = ({ productId, reservationDate }) => {
             Votar
           </button>
       
-          {isEnabled || <p className="text-center text-gray-500">voto disponible una hora después de la entrega.</p>}
+          {isEnabled || <p className="text-center text-gray-500">Voto disponible una hora después de la entrega.</p>}
         </div>
       </form> 
       {showPopup && <PopUp message={statusMessage} onClose={handleClosePopup} link="/profile/menu" />}

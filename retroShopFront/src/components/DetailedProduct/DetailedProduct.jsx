@@ -17,7 +17,7 @@ const DetailedProduct = ({ data }) => {
           productImg2={data.product.imageURL2}
         />
         <FavButtonDetailedProduct />
-        <div className="relative bottom-72 left-7">
+        <div className="relative bottom-72 left-7 max-w-10">
           <BackButton />
         </div>
       </div>

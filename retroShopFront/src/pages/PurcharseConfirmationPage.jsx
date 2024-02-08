@@ -48,18 +48,18 @@ export const PurcharseConfirmationPage = ({reservationId}) => {
       };
   
     return (
-      <div className='flex flex-col items-center justify-center gap-4'>
-        
+      <div className='flex flex-col items-center justify-center gap-4 p-2 rounded-md border-[2px] border-[#3337a3]'>
+        <p className="font-semibold">¡Te falta poco para finalizar el proceso!</p>
         {error && <div>Error: {error}</div>}
         <form className='flex flex-col items-center justify-center'onSubmit={handleSubmit}>
           
     
             <input
               type="text"
-              placeholder='Ubicación de la entrega'
+              placeholder='Introduce la Ubicacion'
               value={reservationLocation}
               onChange={(e) => setReservationLocation(e.target.value)}
-              className='mb-4'
+              className='mb-4 w-[278px] h-[33px]  bg-white  p-[20px] border border-gray-600 rounded-md'
               required
             />
           
@@ -70,7 +70,7 @@ export const PurcharseConfirmationPage = ({reservationId}) => {
               placeholder='Fecha y hora de entrega'
               value={reservationDate}
               onChange={(e) => setReservationDate(e.target.value)}
-              className='mb-4'
+              className='mb-4 w-[278px] h-[33px]  bg-white  p-[20px] border border-gray-600 rounded-md'
               required
             />
   
