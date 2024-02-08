@@ -48,7 +48,7 @@ const DetailedProduct = ({ data }) => {
       <div className="flex justify-center mt-4 ">
         {data.reservation.status === "finalizada" ? (
            !data.reservation.review ? (
-            <CreateReview productId={data.product.id} />
+            <CreateReview productId={data.product.id}reservationDate={data.reservation.reservationDate} />
           ) : (
             <StarsReview review={data.reservation.review} />
           )

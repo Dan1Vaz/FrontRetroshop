@@ -1,5 +1,4 @@
-
-import { useContext, useState } from "react"; 
+import { useContext, useState, useEffect } from "react"; 
 import useCreateReview from "../Hook/useCreateReview"; 
 import { authContext } from "../providers/AuthProvider"; 
 import PopUp from '../components/PopUp';
@@ -13,12 +12,24 @@ const Star = ({ selected, onClick }) => (
   </span> 
 ); 
 
-const CreateReview = ({ productId }) => { 
+const CreateReview = ({ productId, reservationDate }) => { 
+  
   const [token] = useContext(authContext); 
   const { insertReview } = useCreateReview(); 
   const [selectedStars, setSelectedStars] = useState(0);  
   const [statusMessage, setStatusMessage] = useState(""); 
   const [showPopup, setShowPopup] = useState(false);
+  const [isEnabled, setIsEnabled] = useState(false);
+
+  useEffect(() => {
+    const reservationTime = new Date(reservationDate).getTime();
+    const currentTime = new Date().getTime();
+    const oneHourInMilliseconds = 60 * 60 * 1000;
+
+    if (currentTime - reservationTime >= oneHourInMilliseconds) {
+      setIsEnabled(true);
+    }
+  }, [reservationDate]);
 
   const handleRate = (rating) => { 
     setSelectedStars(rating); 
@@ -26,6 +37,12 @@ const CreateReview = ({ productId }) => {
  
   const handleUpdateReview = async (e) => { 
     e.preventDefault(); 
+
+    if (!isEnabled) {
+      setStatusMessage("El formulario estará disponible una hora después de la reserva.");
+      setShowPopup(true);
+      return;
+    }
  
     try { 
       await insertReview(productId, selectedStars, token);  
@@ -44,10 +61,10 @@ const CreateReview = ({ productId }) => {
   };
  
   return ( 
-    <div> 
+    <div className="flex flex-col justify-center"> 
       <form onSubmit={handleUpdateReview}> 
-        <div>  
-          {/* Constructor de estrellas para la revisión */} 
+        <div className="flex  justify-center">  
+          {/*  estrellas Clase Array */} 
           {[...Array(5)].map((_, index) => ( 
             <Star 
               key={index} 
@@ -56,10 +73,12 @@ const CreateReview = ({ productId }) => {
             /> 
           ))} 
         </div> 
-        <div className="flex justify-center">
-          <button type="submit" className="bg-[#3337a3] px-2 font-bold rounded-full text-[#FE7193]">
+        <div className="flex flex-col justify-center">
+          <button type="submit" className={`bg-[#3337a3] px-2 font-bold rounded-full text-${isEnabled ? '[gray-200]' : 'gray-500'}`} disabled={!isEnabled}>
             Votar
           </button>
+      
+          {isEnabled || <p className="text-center text-gray-500">voto disponible una hora después de la entrega.</p>}
         </div>
       </form> 
       {showPopup && <PopUp message={statusMessage} onClose={handleClosePopup} link="/profile/menu" />}
