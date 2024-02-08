@@ -55,7 +55,7 @@ export const PutUserPage = () => {
       {loading && <p>Loading... </p>}
       {error && <p>Error: {error.message}</p>}
       {data && <p>Data updated successfully</p>}
-      <div className="flex justify-center items-center flex-col">
+      <div className="flex justify-center items-center flex-col mb-[100px]">
         <div className="flex justify-evenly py-10">
           <Link to={"/profile/menu"} className="absolute left-7">
             <ArrowBackIcon className="size-10 fill-[#000000]" />
@@ -65,12 +65,12 @@ export const PutUserPage = () => {
           </h1>
         </div>
         <form
-          className="flex justify-center items-center flex-col gap-4 mt-20"
+          className="flex justify-center items-center flex-col gap-1 mt-16"
           onSubmit={handleUpdateProduct}
         >
           <label
             htmlFor="name"
-            className="block text-base font-medium text-[#3337a3] w-[281px]"
+            className="block text-base font-medium text-[#3337a3] w-[281px] p-2"
           >
             Nombre:
           </label>
@@ -84,7 +84,7 @@ export const PutUserPage = () => {
           />
           <label
             htmlFor="password"
-            className="block text-base font-medium text-[#3337a3] w-[281px]"
+            className="block text-base font-medium text-[#3337a3] w-[281px] p-2"
           >
             Contraseña:
           </label>
@@ -98,7 +98,7 @@ export const PutUserPage = () => {
           />
           <label
             htmlFor="avatar"
-            className="block text-base font-medium text-[#3337a3] w-[281px]"
+            className="block text-base font-medium text-[#3337a3] w-[281px] p-2"
           >
             Foto de Perfil:
           </label>
@@ -118,7 +118,7 @@ export const PutUserPage = () => {
           )}
           <button
             type="submit"
-            className="w-[278px] h-[33px] bg-[#3337a3] text-white rounded-sm"
+            className="w-[278px] h-[33px] bg-[#3337a3] text-white rounded-sm mt-2"
           >
             Enviar
           </button>

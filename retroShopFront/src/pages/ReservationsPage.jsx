@@ -8,7 +8,7 @@ import { useState } from "react";
 export const ReservationsPage = () => {
   // nos traemos los estados
   const { reservations, loading, error } = useReservations();
-  const [currentTab, setCurrentTab] = useState("en proceso");
+  const [currentTab, setCurrentTab] = useState("pendiente");
   //el estado por defecto es en proceso
   console.log(reservations);
   // console.log(currentTab);
@@ -19,7 +19,7 @@ export const ReservationsPage = () => {
 
   // handlers para cambiar los estados segun cliques
   const handlerInProcess = () => {
-    setCurrentTab("en proceso");
+    setCurrentTab("pendiente");
   };
   const handlerFinished = () => {
     setCurrentTab("finalizada");
@@ -50,7 +50,7 @@ export const ReservationsPage = () => {
           onClick={handlerInProcess}
           className="bg-[#D9D9D9] px-10 py-2 font-bold rounded-full focus:bg-[#FE7193] text-[#000000]"
         >
-          En Proceso
+          Pendiente
         </button>
         <button
           onClick={handlerFinished}

@@ -9,16 +9,18 @@ const ReservationList = ({ reservations, currentTab }) => {
   return reservations.length ? (
     <ul className="w-full">
       {reservations.map((reservation) => (
-        <Link to={`/products/product/?id=${reservation.productId}`} key={reservation.id}>
-        <li className="flex bg-[#D9D9D9] h-24 w-full justify-between items-center">
-          <Reservation reservation={reservation} />
-        
-        </li>
+        <Link
+          to={`/products/product/?id=${reservation.productId}`}
+          key={reservation.id}
+        >
+          <li className="flex bg-[#D9D9D9] h-24 w-full justify-between items-center ">
+            <Reservation reservation={reservation} />
+          </li>
         </Link>
       ))}
     </ul>
   ) : // en caso de que no haya reservas en proceso o finalizadas se imprimen uno de estos componente segun el elemento onClick seleccionado
-  currentTab === "en proceso" ? (
+  currentTab === "pendiente" ? (
     <ReservBlank />
   ) : (
     <ReservBlankFinished />

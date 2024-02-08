@@ -1,42 +1,32 @@
 /* eslint-disable react/prop-types */
-
 import { Link } from "react-router-dom";
-import { ReservBlank } from "../ReservBlank";
 import { ReserFinished } from "../ReserFinished";
 import Reservation from "../Reservation";
 import { Reserpending } from "../Reserpending";
-import{ReservaProcess} from "../ReservaProcess"
+import { ProductsBlank } from "../ProductsBlank";
 
 const ReservationListSeller = ({ reservations, currentTab }) => {
-
   return reservations.length ? (
     <ul className="w-full">
       {reservations.map((reservation) => (
-       
         // <Link to={`/products/product/?id=${reservation.id}`} key={reservation.id}>
-        <Link to={`/products/productSeller/?id=${reservation.id}`} key={reservation.id}>
-
-        <li className="flex bg-[#D9D9D9] h-24 w-full justify-between items-center">
-          <Reservation reservation={reservation} />
-        </li>
+        <Link
+          to={`/products/productSeller/?id=${reservation.id}`}
+          key={reservation.id}
+        >
+          <li className="flex bg-[#D9D9D9] h-24 w-full justify-between items-center">
+            <Reservation reservation={reservation} />
+          </li>
         </Link>
-     
-
       ))}
     </ul>
-  ) :
-
-   currentTab === "sin reserva" ? (
-    <ReservBlank />
+  ) : currentTab === "sin reserva" ? (
+    <ProductsBlank />
   ) : currentTab === "pendiente" ? (
     <Reserpending />
-  ) : currentTab === "en proceso" ? (
-    <ReservaProcess />
   ) : (
-    <ReserFinished/>
-     
-    )
+    <ReserFinished />
+  );
 };
 
-
-export default ReservationListSeller
+export default ReservationListSeller;

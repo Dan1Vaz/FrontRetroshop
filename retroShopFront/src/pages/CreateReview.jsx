@@ -53,7 +53,8 @@ const CreateReview = ({productId}) => {
             /> 
           ))} 
         </div> 
-        <button type="submit">Votar</button> 
+        <div className="flex justify-center"><button type="submit" className="bg-[#3337a3] px-2 font-bold rounded-full text-[#FE7193]">Votar</button></div>
+        
       </form> 
       {/* {statusMessage && <p>{statusMessage}</p>} */} 
     </div> 

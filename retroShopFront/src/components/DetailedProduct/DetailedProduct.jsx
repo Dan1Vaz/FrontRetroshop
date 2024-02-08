@@ -4,6 +4,7 @@ import { DetailedProductImage } from "./DetailedProductImage.jsx";
 import CreateReservation from "../CreateReservation.jsx";
 import { FavButtonDetailedProduct } from "./FavButtonDetailedProduct.jsx";
 import BackButton from "../BackButton.jsx";
+import CreateReview from "../../pages/CreateReview.jsx";
 //componente que imprime el producto a detalle
 const DetailedProduct = ({ data }) => {
   console.log(data);
@@ -15,7 +16,9 @@ const DetailedProduct = ({ data }) => {
           productImg2={data.product.imageURL2}
         />
         <FavButtonDetailedProduct />
-        <div className="relative bottom-72 left-7"><BackButton /></div>
+        <div className="relative bottom-72 left-7">
+          <BackButton />
+        </div>
       </div>
       <>
         <h1 className="text-2xl font-bold capitalize p-2">
@@ -42,7 +45,11 @@ const DetailedProduct = ({ data }) => {
         <h1 className="font-medium">{data.seller.name}</h1>
       </section>
       <div className="flex justify-center mt-4 ">
-        <CreateReservation productId={data.product.id} />
+        {data.reservation.status === "finalizada" ? (
+          <CreateReview productId={data.product.id} />
+        ) : data.reservation.status === "pendiente" ? (<p className="text-center">Espera a que el vendedor se ponga en contacto contigo</p>):(
+          <CreateReservation productId={data.product.id} />
+        )}
       </div>
     </div>
   );

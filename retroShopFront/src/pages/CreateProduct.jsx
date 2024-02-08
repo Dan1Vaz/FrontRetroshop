@@ -21,8 +21,6 @@ const CreateProduct = () => {
 
   const [statusMessage, setStatusMessage] = useState("");
 
-
-
   const enviar = async (e) => {
     e.preventDefault();
 
@@ -49,7 +47,7 @@ const CreateProduct = () => {
       console.log(formData);
       if (response.ok) {
         setStatusMessage("Registro exitoso");
-        navigate("/profile/seller");
+        navigate("/profile/yourproducts");
       } else {
         const data = await response.json();
         if (data) {
@@ -79,14 +77,18 @@ const CreateProduct = () => {
     <div className="flex justify-center items-center flex-col mt-3 mb-[100px]">
       <img src="/retroshop.svg" alt="" className="w-[400px] h-[100px]" />
 
-      <h1 className="text-2xl font-bold text-[#3337a3] mb-5">
-        Nuevo Producto
-      </h1>
+      <h1 className="text-2xl font-bold text-[#3337a3] mb-5">Nuevo Producto</h1>
 
       <form
-        className="flex justify-center items-center flex-col gap-5 text-[#3337a3]"
+        className="flex justify-center items-center flex-col gap-1 text-[#3337a3]"
         onSubmit={enviar}
       >
+        <label
+          htmlFor="name"
+          className="block text-base font-medium text-[#3337a3] w-[281px] p-2"
+        >
+          Nombre del Producto:
+        </label>
         <input
           type="text"
           id="name"
@@ -96,7 +98,12 @@ const CreateProduct = () => {
           onChange={handleInputChange}
         />
 
-        {/* <label htmlFor="category">Categoría</label> */}
+        <label
+          htmlFor="category"
+          className="block text-base font-medium text-[#3337a3] w-[281px] p-2"
+        >
+          Categoria:
+        </label>
         <select
           id="category"
           className="w-[278px] bg-white p-[20px] border border-[#db2777] rounded-md"
@@ -113,7 +120,12 @@ const CreateProduct = () => {
           <option value="ordenador">Ordenador</option>
         </select>
 
-        {/* <label htmlFor="price">Precio</label> */}
+        <label
+          htmlFor="price"
+          className="block text-base font-medium text-[#3337a3] w-[281px] p-2"
+        >
+          Precio:
+        </label>
         <input
           type="text"
           id="price"
@@ -123,7 +135,12 @@ const CreateProduct = () => {
           onChange={handleInputChange}
         />
 
-        {/* <label htmlFor="location">Ubicación</label> */}
+        <label
+          htmlFor="location"
+          className="block text-base font-medium text-[#3337a3] w-[281px] p-2"
+        >
+          Ubicacion:
+        </label>
         <input
           type="text"
           id="location"
@@ -133,7 +150,12 @@ const CreateProduct = () => {
           onChange={handleInputChange}
         />
 
-        {/* <label htmlFor="description">Descripción</label> */}
+        <label
+          htmlFor="description"
+          className="block text-base font-medium text-[#3337a3] w-[281px] p-2"
+        >
+          Descripcion:
+        </label>
         <textarea
           id="description"
           value={productData.description}
@@ -141,10 +163,14 @@ const CreateProduct = () => {
           className="w-[278px] h-[73px] bg-white p-[20px] border border-[#db2777] rounded-md"
           placeholder="Description"
         ></textarea>
-         <label htmlFor="avatar" className="block mb-2 text-base font-medium text-[#3337a3]">Imagenes del producto</label> 
-        {/* style={{ width: "300px" }} del inputu  */}
+        <label
+          htmlFor="avatar"
+          className="block text-base font-medium text-[#3337a3] w-[281px] p-2"
+        >
+          Imagenes del Producto:
+        </label>
 
-        <input          
+        <input
           type="file"
           id="avatar"
           className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none"
@@ -156,13 +182,14 @@ const CreateProduct = () => {
           className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50  focus:outline-none"
           onChange={handleFileChange2}
         />
-
+        
         <button
           type="submit"
-          className="w-[278px] h-[33px] bg-[#3337a3] text-white rounded-sm"
+          className="w-[278px] h-[33px] bg-[#3337a3] text-white rounded-sm mt-2"
         >
           Enviar
         </button>
+        
       </form>
     </div>
   );

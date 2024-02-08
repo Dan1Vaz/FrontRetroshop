@@ -57,15 +57,15 @@ export const RegisterPage = () => {
   };
 
   return (
-    <div className="flex justify-center items-center flex-col mt-20 gap-10">
+    <div className="flex justify-center items-center flex-col mt-20 gap-5">
       <img src="/retroshop.svg" alt="" className="h-[100px] p-4"/>
       <form
-        className="flex justify-center items-center flex-col gap-5"
+        className="flex justify-center items-center flex-col gap-1"
         onSubmit={send}
       >
         <label
             htmlFor="name"
-            className="block text-base font-medium text-[#3337a3] w-[281px]"
+            className="block text-base font-medium text-[#3337a3] w-[281px] p-2"
           >
             Nombre:
           </label>
@@ -79,7 +79,7 @@ export const RegisterPage = () => {
         />
         <label
             htmlFor="email"
-            className="block text-base font-medium text-[#3337a3] w-[281px]"
+            className="block text-base font-medium text-[#3337a3] w-[281px] p-2"
           >
             Correo:
           </label>
@@ -93,7 +93,7 @@ export const RegisterPage = () => {
         />
         <label
             htmlFor="password"
-            className="block text-base font-medium text-[#3337a3] w-[281px]"
+            className="block text-base font-medium text-[#3337a3] w-[281px] p-2"
           >
             Contraseña:
           </label>
@@ -107,7 +107,7 @@ export const RegisterPage = () => {
         />
         <button
           type="submit"
-          className="w-[278px] h-[33px] bg-[#3337a3] text-white rounded-sm"
+          className="w-[278px] h-[33px] bg-[#3337a3] text-white rounded-sm mt-2"
         >
           Siguiente
         </button>

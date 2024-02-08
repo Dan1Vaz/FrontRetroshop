@@ -67,15 +67,15 @@ const LoginPage = () => {
 
   return (
     <div
-      className="flex justify-center items-center flex-col mt-20 gap-10">
+      className="flex justify-center items-center flex-col mt-20 gap-5">
         <img src="/retroshop.svg" alt="" className="h-[100px] p-4" />
       <form
-        className="flex justify-center items-center flex-col gap-5"
+        className="flex justify-center items-center flex-col gap-1"
         onSubmit={enviar}
       >
         <label
             htmlFor="email"
-            className="block text-base font-medium text-[#3337a3] w-[281px]"
+            className="block text-base font-medium text-[#3337a3] w-[281px] p-2"
           >
             Correo:
           </label>
@@ -89,7 +89,7 @@ const LoginPage = () => {
         />
         <label
             htmlFor="password"
-            className="block text-base font-medium text-[#3337a3] w-[281px]"
+            className="block text-base font-medium text-[#3337a3] w-[281px] p-2"
           >
             Contraseña:
           </label>
@@ -103,7 +103,7 @@ const LoginPage = () => {
         />
         <button
           type="submit"
-          className="w-[278px] h-[33px] bg-[#3337a3] text-white rounded-sm "
+          className="w-[278px] h-[33px] bg-[#3337a3] text-white rounded-sm mt-2"
         >
           Iniciar Sesión
         </button>

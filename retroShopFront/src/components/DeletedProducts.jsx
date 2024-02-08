@@ -1,5 +1,4 @@
 import { useContext, useState } from "react";
-
 import { authContext } from "../providers/AuthProvider";
 import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
 import PopUp from "./PopUp";
@@ -51,13 +50,13 @@ const DeletedProducts = (props) => {
 
   return (
     <>
-      <button onClick={handleDeleteProduct}>
+      <button onClick={handleDeleteProduct} className="bg-[#3337a3] px-4 py-2 font-bold rounded-full text-[#FE7193]">
         {" "}
-        <DeleteOutlineOutlinedIcon />
+        <DeleteOutlineOutlinedIcon /> Borrar
       </button>
 
       {showPopup && (
-        <PopUp message={statusMessage} onClose={handleClosePopup} link="/profile/seller" />
+        <PopUp message={statusMessage} onClose={handleClosePopup} link="/profile/yourproducts" />
       )}
     </>
   );

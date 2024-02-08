@@ -44,7 +44,7 @@ export const ProfilePage = () => {
         <Link to='/profile/reservations'>
         <div className="flex items-center ml-3 mt-3 ">
           <HandshakeIcon sx={{ fontSize: 50 }} className="fill-[#000000]" />
-          <article className="ml-4 text-[#000000]">Reservas</article>
+          <article className="ml-4 text-[#000000]"> Reservas</article>
             <ArrowForwardIosIcon className="absolute right-9 top-[25px] fill-[#000000]" />
         </div>
         </Link>
@@ -62,7 +62,7 @@ export const ProfilePage = () => {
         <Link to="/profile/yourproducts">
           <div className="flex items-center ml-3 my-3 ">
             <InventoryIcon sx={{ fontSize: 50 }} className="fill-[#000000]" />
-            <article className="ml-4 text-[#000000]">Tus productos</article>
+            <article className="ml-4 text-[#000000]">Tus Productos</article>
 
             <ArrowForwardIosIcon className="absolute right-9 top-[375px] fill-[#000000]" />
           </div>

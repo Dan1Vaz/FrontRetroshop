@@ -45,29 +45,27 @@ const SellerProductDetail = ({ data }) => {
         <h2 className="font-medium"> {data.seller.name}</h2>
       </section>
 
-      <div className="flex justify-center mt-4 mb-4 ">
+      <div className="flex justify-center mt-4">
         {data.reservation.status === "finalizada" ? (
-          <>
-            <p className="flex justify-center mt-4 mb-4"> Retroshop siempre contigo </p>
-          </>
+          
+            <p  className="text-center font-medium text-[#3337a3]"> Retroshop Siempre Contigo!</p>
+          
         ) : data.reservation.status === "en proceso" ? (
           <div className='flex flex-col items-center justify-center '>
             <p>¡Te falta poco para finalizar el proceso!</p>
             <PurcharseConfirmationPage reservationId={data.reservation.id} />
           </div>
         ) : data.reservation.status === "pendiente" ? (
-          <>
-            <p>Ponte en contacto con el comprador. Toda la información está en tu correo electrónico.</p>
-          </> 
+            <p className="text-center">Ponte en contacto con el comprador. Toda la información está en tu correo electrónico.</p>  
         ) : data.reservation.status === "sin reservas" ? (
           <>
-            <DeletedProducts productId={data.product.id} />
-            <Link to={`/profile/modify/${data.product.id}`}>
-              <button className="p-2">
-                <EditNoteIcon className="text-xl" />
+            <DeletedProducts productId={data.product.id}/>
+            <Link to={`/profile/modify/${data.product.id}`} className="mx-2">
+              <button className="bg-[#3337a3] px-4 py-2 font-bold rounded-full text-[#FE7193]">
+                <EditNoteIcon /> Modificar
               </button>
             </Link>
-          </>
+            </>
         ) : null
         }
       </div>

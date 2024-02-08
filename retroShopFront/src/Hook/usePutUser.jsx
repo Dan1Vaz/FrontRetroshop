@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const usePutUser = () => {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const putUser = async (userData, token) => {
     try {
@@ -27,6 +29,7 @@ const usePutUser = () => {
 
       const responseData = await response.json();
       if (responseData.ok) setData(responseData);
+      navigate("/profile/menu");
     } catch (error) {
       setError(error.message);
     } finally {
