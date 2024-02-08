@@ -4,7 +4,7 @@ import { authContext } from "../providers/AuthProvider";
 import PopUp from "../components/PopUp";
 import { useParams } from "react-router-dom";
 const ConfirmacionPassword = () => {
-  const { reservationId, email } = useParams();
+  const { reservationId, email,ruta } = useParams();
 
   const [, setToken] = useContext(authContext);
   const navigate = useNavigate();
@@ -44,7 +44,7 @@ const ConfirmacionPassword = () => {
         console.log("Token recibido:", token);
         setStatusMessage("Logueado");
         setShowPopup(true);
-        navigate(`/status/${reservationId}`);
+        navigate(`${ruta}`);
       })
       .catch((error) => {
         console.error("Error en inicio de sesión:", error.message);
@@ -79,7 +79,7 @@ const ConfirmacionPassword = () => {
           type="submit"
           className="w-[278px] h-[33px] bg-[#3337a3]  p-[20px] text-white py-2 px-4 "
         >
-          confirma tu contraseña para verificar la reserva
+          confirma tu contraseña
         </button>
       </form>
 

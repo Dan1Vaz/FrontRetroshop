@@ -10,7 +10,7 @@ import { NavbarSearchedProducts } from "./components/NavbarSearchedProducts.jsx"
 import SearchProductsPage from "./pages/SearchProductsPage.jsx";
 import { MainPage } from "./pages/MainPage.jsx";
 import ConfirmacionPassword from "./pages/ConfirmacionPassword.jsx";
-import { StatusReservation } from "./pages/StatusReservation.jsx";
+
 import LoginPage from "./pages/LoginPage.jsx";
 import { RegisterPage } from "./pages/RegisterPage.jsx";
 import { VerificationPage } from "./pages/VerificationPage.jsx";
@@ -68,9 +68,9 @@ const router = createBrowserRouter([
         path: "/",
         element: <MainPage />,
       },
-      { path: "/status/:reservationId", element: <StatusReservation /> },
+     
       {
-        path: "/confirmacion/:reservationId/:email",
+        path: "/confirmacion/:reservationId/:email/:ruta",
         element: <ConfirmacionPassword />,
       },
       {
