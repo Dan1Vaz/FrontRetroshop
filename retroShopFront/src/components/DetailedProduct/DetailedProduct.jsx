@@ -5,6 +5,7 @@ import CreateReservation from "../CreateReservation.jsx";
 import { FavButtonDetailedProduct } from "./FavButtonDetailedProduct.jsx";
 import BackButton from "../BackButton.jsx";
 import CreateReview from "../../pages/CreateReview.jsx";
+import { StarsReview } from "../StarsReview.jsx";
 //componente que imprime el producto a detalle
 const DetailedProduct = ({ data }) => {
   console.log(data);
@@ -46,7 +47,11 @@ const DetailedProduct = ({ data }) => {
       </section>
       <div className="flex justify-center mt-4 ">
         {data.reservation.status === "finalizada" ? (
-          <CreateReview productId={data.product.id} />
+           !data.reservation.review ? (
+            <CreateReview productId={data.product.id} />
+          ) : (
+            <StarsReview review={data.reservation.review} />
+          )
         ) : data.reservation.status === "pendiente" ? (<p className="text-center">Espera a que el vendedor se ponga en contacto contigo</p>):(
           <CreateReservation productId={data.product.id} />
         )}
@@ -57,10 +62,4 @@ const DetailedProduct = ({ data }) => {
 
 export default DetailedProduct;
 
-{
-  /* <article className="bg-slate-950 w-9 h-9 flex justify-center items-center rounded-full">
-  <PersonIcon sx={{ fontSize: 35 }} className="fill-slate-500" />
-</article>; */
-}
 
-// `http://${import.meta.env.VITE_BASE_URL}:3001/${productImg1}`
