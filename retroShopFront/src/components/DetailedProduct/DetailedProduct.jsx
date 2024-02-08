@@ -55,7 +55,10 @@ const DetailedProduct = ({ data }) => {
            !data.reservation.review ? (
             <CreateReview productId={data.product.id}reservationDate={data.reservation.reservationDate} />
           ) : (
-            <StarsReview review={data.reservation.review} />
+            <p className="text-center font-medium text-[#3337a3]">
+            {" "}
+            Retroshop Siempre Contigo!
+          </p>
           )
         ) : data.reservation.status === "pendiente" ? (<p className="text-center">Espera a que el vendedor se ponga en contacto contigo</p>):(
           <CreateReservation productId={data.product.id} />
