@@ -25,6 +25,8 @@ export const MainPage = () => {
                 productImg2={product.imageURL2}
                 productName={product.name}
                 productPrice={product.price}
+                productId={product.id}
+                // {...console.log(product.id)}
               />
               </Link>
             </li>
