@@ -19,12 +19,10 @@ export const useFavoritesProducts = (token) => {
           }
         );
 
-        if (!response.ok) {
-          throw new Error("Error fetching products");
-        }
 
         const responseData = await response.json();
         setData(responseData.products);
+        console.log("esta es la data en el hook de favoritos", data);
       } catch (error) {
         setError(error.message);
         console.error(error);
@@ -35,8 +33,6 @@ export const useFavoritesProducts = (token) => {
 
     fetchFavorites(token);
   }, []);
-
-
 
   return { data, error, loading };
 };

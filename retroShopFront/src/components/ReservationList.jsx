@@ -7,13 +7,13 @@ import Reservation from "./Reservation";
 //componente que imprime la lista de reservas
 const ReservationList = ({ reservations, currentTab }) => {
   return reservations.length ? (
-    <ul className="w-full">
+    <ul className="w-full flex flex-col gap-1 ">
       {reservations.map((reservation) => (
         <Link
           to={`/products/product/?id=${reservation.productId}`}
           key={reservation.id}
         >
-          <li className="flex bg-[#D9D9D9] h-24 w-full justify-between items-center ">
+          <li className="flex bg-[#D9D9D9] h-24 w-full justify-between items-center border-y-[0.5px] border-[#7C7C7C] ">
             <Reservation reservation={reservation} />
           </li>
         </Link>

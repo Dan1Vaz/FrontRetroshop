@@ -29,7 +29,7 @@ export const ProfilePage = () => {
             src={`http://${import.meta.env.VITE_BASE_URL}:3001/${
               data.avatarURL
             }`}
-            alt=""
+            alt="Foto de perfil del usuario"
             className="m-2 w-20 h-20 rounded-full object-cover border-[#7C7C7C] border-[0.5px]"
           />
         ) : (

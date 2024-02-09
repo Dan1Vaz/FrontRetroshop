@@ -17,7 +17,7 @@ export const Footer = () => {
         <Link to="/">
           <HomeIcon
             fontSize="large"
-            className={`fill-${CurrentRoute("/") ? "[#FE7193]" : "[#7C7C7C]"}`}
+            className={`fill-${CurrentRoute("/") ? "[#92003C]" : "[#7C7C7C]"}`}
             // relleno con el color que corresponde a cada icono comparando la ruta actual con el estado de CurrentRoute
           />
           <p className="text-xs text-[#7C7C7C]">Inicio</p>
@@ -28,29 +28,34 @@ export const Footer = () => {
           <AddCircleOutlineIcon
             fontSize="large"
             className={`fill-${
-              CurrentRoute("/profile") ? "[#FE7193]" : "[#7C7C7C]"
+              CurrentRoute("/profile") ? "[#92003C]" : "[#7C7C7C]"
             }`}
             // relleno con el color que corresponde a cada icono comparando la ruta actual con el estado de CurrentRoute
           />
           <p className="text-xs text-[#7C7C7C]">Subir</p>
         </Link>
       </button>
-      <div className="flex flex-col items-center text-center">
-        <FavoriteIcon
-          fontSize="large"
-          className={CurrentRoute("/favorite")? "fill-[#FE7193]" : "fill-[#7C7C7C]"
-          }
-          // relleno con el color que corresponde a cada icono comparando la ruta actual con el estado de CurrentRoute (OJO CON ESTA que aun le falta el Link con la ruta que es para colocar la ruta correcta aqui)
-        />
-        <p className="text-xs text-[#7C7C7C]">Favoritos</p>
-      </div>
+      <button className="flex flex-col items-center text-center">
+        <Link to="/products/favorites">
+          <FavoriteIcon
+            fontSize="large"
+            className={
+              CurrentRoute("/products/favorites")
+                ? "fill-[#92003C]"
+                : "fill-[#7C7C7C]"
+            }
+            // relleno con el color que corresponde a cada icono comparando la ruta actual con el estado de CurrentRoute (OJO CON ESTA que aun le falta el Link con la ruta que es para colocar la ruta correcta aqui)
+          />
+          <p className="text-xs text-[#7C7C7C]">Favoritos</p>
+        </Link>
+      </button>
       <button className="flex flex-col items-center text-center">
         <Link to="/profile/menu">
           <PersonIcon
             fontSize="large"
             className={`fill-${
               CurrentRoute("/profile/menu") || CurrentRoute("/profile/login")
-                ? "[#FE7193]"
+                ? "[#92003C]"
                 : "[#7C7C7C]"
             }`}
             // relleno con el color que corresponde a cada icono comparando la ruta actual con el estado de CurrentRoute
