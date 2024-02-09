@@ -1,6 +1,6 @@
 import { ErrorMessage } from "../../components/ErrorMessage.jsx";
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { useFavoritesProducts } from "../../Hook/Favorites/useFavoritesProducts.jsx";
 
@@ -10,6 +10,10 @@ import FavoritesList from "../../components/Favorites/FavoritesList.jsx";
 export const FavoritesProductsPage = () => {
   const [token] = useContext(authContext);
   console.log(token);
+
+  if (!token) {
+    return <Navigate to="/profile/login" />;
+  }
   // nos traemos los estados
   const { data, error, loading } = useFavoritesProducts(token);
   console.log("esto es lo q devuelve el array", data);

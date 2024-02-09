@@ -107,10 +107,6 @@ const router = createBrowserRouter([
         element: <ProfilePage />,
       },
       {
-        path: "/profile/reservations",
-        element: <ReservationsPage />,
-      },
-      {
         path: "/profile/perfil",
         element: <PutUserPage />,
       },
@@ -144,6 +140,10 @@ const router = createBrowserRouter([
       {
         path: "/profile/yourproducts",
         element: <YourProductsPage />,
+      },
+      {
+        path: "/profile/reservations",
+        element: <ReservationsPage />,
       },
     ],
   },
