@@ -74,7 +74,9 @@ const CreateProduct = () => {
   };
 
   return (
-    <div className="flex justify-center items-center flex-col mt-3 mb-[100px]">
+    
+    <div className=" create flex justify-center items-center flex-col mt-3 mb-[100px]  md:bg-red-50  w-screen h-full">
+      <div className=" md:bg-white md:shadow-[0_0_30px_rgba(0,0,0,0.3)] rounded-[10px] p-3">
       <img src="/retroshop.svg" alt="" className="w-[400px] h-[100px]" />
 
       <h1 className="text-2xl font-bold text-[#3337a3] mb-5">Nuevo Producto</h1>
@@ -198,6 +200,7 @@ const CreateProduct = () => {
         </button>
         
       </form>
+    </div>
     </div>
   );
 };

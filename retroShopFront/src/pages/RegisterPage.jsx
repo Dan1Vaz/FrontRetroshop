@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PopUp from "../components/PopUp";
+import { NavLink } from "react-router-dom";
 
 export const RegisterPage = () => {
   const [userData, setUserData] = useState({
@@ -119,7 +120,13 @@ export const RegisterPage = () => {
         >
           Siguiente
         </button>
+        <div className="flex justify-start w-[278px] items-start mt-0">
+      <NavLink className="mr-0 underline text-blue-600 hover:text-blue-800 visited:[#3337a3]" to="/profile/login">
+        Login 
+      </NavLink>
+    </div>
       </form>
+     
       </div>
       {showPopup && (
         <PopUp message={statusMessage} onClose={closePopup} link={link} />
