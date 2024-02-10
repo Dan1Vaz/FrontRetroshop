@@ -79,7 +79,7 @@ const CreateProduct = () => {
       <div className=" md:bg-white md:shadow-[0_0_30px_rgba(0,0,0,0.3)] rounded-[10px] p-3">
       <img src="/retroshop.svg" alt="" className="w-[400px] h-[100px]" />
 
-      <h1 className="text-2xl font-bold text-[#3337a3] mb-5">Nuevo Producto</h1>
+      <h1 className="text-2xl font-bold text-[#3337a3] mb-5 text-center">Nuevo Producto</h1>
 
       <form
         className="flex justify-center items-center flex-col gap-1 text-[#3337a3]"

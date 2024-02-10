@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom"
 import Contact from "./Contact"
 
 
 export const FooterWeb = () => {
   return (
-    <div className="hidden sm:flex flex-col bg-gray-200 text-white ">
+    <div className="hidden lg:flex flex-col bg-gray-200 text-white ">
         <div className=" flex flex-row text-center justify-center p-[20px] " >
         
            <div className=" flex flex-col w-[30vw] gap-10 text-justify text-sm">
@@ -31,7 +32,7 @@ export const FooterWeb = () => {
         <div className=" w-[50%] flex gap-5 text-center  justify-center mt-2">
         <span className=" text-sm text-gray-500">© copyright derechos reservados</span>
             <span className=" text-sm text-gray-500">politica privacida</span>
-            <span className=" text-sm text-gray-500">cookies</span>
+           <Link to="/profile/cookies">cookies</Link>
         </div>
     </div>
 </div>
