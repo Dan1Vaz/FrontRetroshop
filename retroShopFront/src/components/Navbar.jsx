@@ -39,7 +39,7 @@ export const Navbar = () => {
         <img src="/iconretroshop.svg" alt="" className="h-[53px]" />
       </Link>
       <div className="SearchBar relative flex items-center">
-        <form onSubmit={handleSubmit}>
+        <form id="buscar-productos" onSubmit={handleSubmit}>
           <input
             className="w-[278px] h-[33px] bg-[#efefef] rounded-full p-[20px] "
             type="search"
@@ -53,7 +53,7 @@ export const Navbar = () => {
         </form>
       </div>
       <div className="overflow-x-scroll overflow-hidden no-scrollbar border-y-2 border-[#7C7C7C] mt-0 w-full">
-        <div className="flex w-auto">
+        <div className="flex w-auto justify-center">
           <Link to="/products?category=Consola">
             <p className="mx-3 text-[#080C89] font-semibold">Consolas</p>
           </Link>
