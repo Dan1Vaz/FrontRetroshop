@@ -45,10 +45,10 @@ const SellerProductDetail = ({ data }) => {
         ) : (
           <PersonIcon className="m-2 w-20 h-20 rounded-full fill-slate-200 bg-slate-400" />
         )}
-          <div className="flex flex-col">
+        <div className="flex flex-col">
           <h1 className="font-medium">{data.seller.name}</h1>
-          
-          <AverageReview id ={data.product.id}/>
+
+          <AverageReview id={data.seller.id} />
         </div>
       </section>
 
