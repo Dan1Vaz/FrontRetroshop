@@ -6,6 +6,7 @@ import { useSearchedProducts } from "../Hook/useSearchedProducts";
 import LoginPage from "../pages/LoginPage";
 import { useSearch } from "../providers/SearchContext";
 import { Button } from "@mui/material";
+import { Tu } from "./Tu";
 
 export const Navbar = () => {
   //const { searchedProducts, setSearchedProducts } = useSearch();
@@ -34,7 +35,7 @@ export const Navbar = () => {
   //console.log("Productos buscados actualizados", searchedProducts);
 
   return (
-    <div className="Navbar flex flex-wrap justify-center items-center pt-4 gap-[20px] sticky top-0 z-10 bg-white">
+    <div className="Navbar flex flex-wrap justify-center items-center pt-4 gap-[20px] sticky top-0 z-10 bg-white lg:">
       <Link to="/">
         <img src="/iconretroshop.svg" alt="" className="h-[53px]" />
       </Link>
@@ -51,7 +52,9 @@ export const Navbar = () => {
             <SearchIcon className=" fill-[#FD2A5C] " />
           </button>
         </form>
+       
       </div>
+      <Tu />
       <div className="overflow-x-scroll overflow-hidden no-scrollbar border-y-2 border-[#7C7C7C] mt-0 w-full">
         <div className="flex w-auto justify-center">
           <Link to="/products?category=Consola">
