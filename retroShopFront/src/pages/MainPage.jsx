@@ -8,26 +8,26 @@ export const MainPage = () => {
   //console.log(products);
   return (
     <>
-      <header className="flex h-[135px] w-full justify-center items-center">
+      <header className="flex h-fit w-full justify-center items-center lg:h-[400px] md:h-[400px] lg:overflow-hidden md:overflow-hidden">
         <VideoMain></VideoMain>
       </header>
       <main className="pb-28">
-        <div className="flex items-center justify-center border-y-2 border-[#7C7C7C] h-[76px] mt-8">
+        <div className="flex items-center justify-center border-y-2 border-[#7C7C7C] h-[76px] mt-0">
           <h2 className="font-bold text-[#080C89] ">PRODUCTOS DESTACADOS</h2>
         </div>
-        <ul className="productsTable grid grid-cols-2 gap-4 justify-items-center w-full pt-[15px]">
+        <ul className="productsTable grid grid-cols-2 lg:grid-cols-4 md:grid-cols-4 gap-4 justify-items-center  w-full pt-[15px]">
           {products.map((product) => (
             <li key={product.id} className="max-w-[154px]">
               <Link to={`/products/product/?id=${product.id}`} key={product.id}>
-              <ProductCard
-                productCategory={product.category}
-                productImg1={product.imageURL}
-                productImg2={product.imageURL2}
-                productName={product.name}
-                productPrice={product.price}
-                productId={product.id}
-                // {...console.log(product.id)}
-              />
+                <ProductCard
+                  productCategory={product.category}
+                  productImg1={product.imageURL}
+                  productImg2={product.imageURL2}
+                  productName={product.name}
+                  productPrice={product.price}
+                  productId={product.id}
+                  // {...console.log(product.id)}
+                />
               </Link>
             </li>
           ))}
