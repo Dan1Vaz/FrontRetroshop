@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import "./index.css";
@@ -28,6 +28,8 @@ import SellerProductDetail from "./components/sellerProducts/SellerProductDetail
 import { DetailedProductSellerPage } from "./pages/DetailedProductSellerPage.jsx";
 import { YourProductsPage } from "./pages/YourProductsPage.jsx";
 import { FavoritesProductsPage } from "./pages/Favorites/FavoritesProductsPage.jsx";
+import { FooterWeb } from "./components/FooterWeb.jsx";
+import { Cookies } from "./pages/Cookies.jsx";
 // import {
 //   SearchProductsPage,
 //   CreateProduct,
@@ -46,12 +48,27 @@ import { FavoritesProductsPage } from "./pages/Favorites/FavoritesProductsPage.j
 //   Error404,
 // } from "/pages";
 
+
 const Layout = ({ children, showFooter = true }) => {
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+useEffect(() => {
+  function resize() {
+    setIsLargeScreen(window.innerWidth >= 1024);
+  }
+  
+  window.addEventListener('resize', resize);
+  resize();
+  return () => {
+    window.removeEventListener('resize', resize);
+  };
+}, []);
+
   return (
     <div className="">
       {children}
       <Outlet />
-      {showFooter && <Footer />}
+      {isLargeScreen ? showFooter && <FooterWeb /> : showFooter && <Footer />}
     </div>
   );
 };
@@ -123,9 +140,10 @@ const router = createBrowserRouter([
         path: "/profile/products/user",
         element: <ProductsUserPage />,
       },
+ 
       {
-        path: "*",
-        element: <Error404 />,
+        path: "/profile/cookies",
+        element: <Cookies />,
       },
     ],
   },
