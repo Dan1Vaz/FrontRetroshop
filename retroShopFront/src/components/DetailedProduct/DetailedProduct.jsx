@@ -47,7 +47,7 @@ const DetailedProduct = ({ data }) => {
         <div className="flex flex-col">
           <h1 className="font-medium">{data.seller.name}</h1>
           
-          <AverageReview id ={data.product.id}/>
+          <AverageReview id ={data.seller.id}/>
         </div>
       </section>
       <div className="flex justify-center mt-4 ">

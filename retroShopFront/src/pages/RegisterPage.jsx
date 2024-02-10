@@ -1,6 +1,6 @@
 import { useState } from "react";
 import PopUp from "../components/PopUp";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export const RegisterPage = () => {
   const [userData, setUserData] = useState({
@@ -58,14 +58,14 @@ export const RegisterPage = () => {
   };
 
   return (
-    <div className="flex justify-center items-center flex-col mt-20 gap-5 md:flex-nowrap sm:h-screen sm:overflow-hidden  sm:mt-[-20px] lg:flex-row  ">
-      <div className=" hidden sm:flex  sm:h-full  sm:overflow-hidden lg:w-[70%] lg:h-full  
+    <div className="flex justify-center items-center flex-col gap-5 md:flex-nowrap sm:h-screen sm:overflow-hidden   lg:flex-row  ">
+      <Link to={"/"} className=" hidden sm:flex  sm:h-full  sm:overflow-hidden lg:w-[70%] lg:h-full  
        ">
       
         <video  autoPlay loop muted  className=" hidden  sm:flex sm:w-full sm:h-full sm:object-fill sm:aspect-video lg:object-fill aspect-auto">
         <source  src="/video3.mp4" type="video/mp4"/>
         </video>
-      </div>
+      </Link>
       <div className=" md:flex md:flex-col md:h-[100vh]  lg:w-[30%] md:mr-3% ">
       <img src="/retroshop.svg" alt="" className="h-[100px] p-4"/>
       <form
