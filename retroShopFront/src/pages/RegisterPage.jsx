@@ -58,7 +58,7 @@ export const RegisterPage = () => {
   };
 
   return (
-    <div className="flex justify-center items-center flex-col mt-20 gap-5 md:flex-nowrap sm:h-screen sm:overflow-hidden  sm:mt-[-20px] lg:flex-row  ">
+    <div className="flex justify-center items-center flex-col gap-5 md:flex-nowrap sm:h-screen sm:overflow-hidden   lg:flex-row  ">
       <div className=" hidden sm:flex  sm:h-full  sm:overflow-hidden lg:w-[70%] lg:h-full  
        ">
       

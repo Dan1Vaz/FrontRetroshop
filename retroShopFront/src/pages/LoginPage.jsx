@@ -66,8 +66,17 @@ const LoginPage = () => {
   };
 
   return (
-    <div
-      className="flex justify-center items-center flex-col mt-20 gap-5">
+    <div className="flex justify-center items-center flex-col gap-5 md:flex-nowrap sm:h-screen sm:overflow-hidden   lg:flex-row  ">
+      <div className=" hidden sm:flex  sm:h-full  sm:overflow-hidden lg:w-[70%] lg:h-full  
+       ">
+      
+        <video  autoPlay loop muted  className=" hidden  sm:flex sm:w-full sm:h-full sm:object-fill sm:aspect-video lg:object-fill aspect-auto">
+        <source  src="/video3.mp4" type="video/mp4"/>
+        </video>
+      </div>
+      <div className=" md:flex md:flex-col md:h-[100vh]  lg:w-[30%] md:mr-3% ">
+
+
         <img src="/retroshop.svg" alt="" className="h-[100px] p-4" />
       <form
         className="flex justify-center items-center flex-col gap-1"
@@ -107,13 +116,14 @@ const LoginPage = () => {
         >
           Iniciar Sesión
         </button>
-      </form>
+ 
       <div className="flex justify-start w-[278px] items-start mt-0">
       <NavLink className="mr-0 underline text-blue-600 hover:text-blue-800 visited:[#3337a3]" to="/profile/register">
         Crear Cuenta
       </NavLink>
     </div>
-
+    </form>
+    </div>
       {showPopup && <PopUp link={''} message={statusMessage} onClose={closePopup} />}
     </div>
   );
