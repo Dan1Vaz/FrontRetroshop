@@ -2,7 +2,7 @@
 import PersonIcon from "@mui/icons-material/Person";
 import { DetailedProductImage } from "./DetailedProductImage.jsx";
 import CreateReservation from "../CreateReservation.jsx";
-import { FavButtonDetailedProduct } from "./FavButtonDetailedProduct.jsx";
+import { FavButton } from "../FavButton.jsx";
 import BackButton from "../BackButton.jsx";
 import CreateReview from "../../pages/CreateReview.jsx";
 import { StarsReview } from "../StarsReview.jsx";
@@ -17,7 +17,9 @@ const DetailedProduct = ({ data }) => {
           productImg1={data.product.imageURL}
           productImg2={data.product.imageURL2}
         />
-        <FavButtonDetailedProduct />
+        <div className="flex justify-center items-center w-[35px] h-[35px] rounded-full bg-[#D9D9D9] absolute right-4 top-8">
+          <FavButton productId={data.product.id} />
+        </div>
         <div className="relative bottom-72 left-7 max-w-10">
           <BackButton />
         </div>
@@ -46,21 +48,28 @@ const DetailedProduct = ({ data }) => {
         )}
         <div className="flex flex-col">
           <h1 className="font-medium">{data.seller.name}</h1>
-          
-          <AverageReview id ={data.seller.id}/>
+
+          <AverageReview id={data.seller.id} />
         </div>
       </section>
       <div className="flex justify-center mt-4 ">
         {data.reservation.status === "finalizada" ? (
-           !data.reservation.review ? (
-            <CreateReview productId={data.product.id}reservationDate={data.reservation.reservationDate} />
+          !data.reservation.review ? (
+            <CreateReview
+              productId={data.product.id}
+              reservationDate={data.reservation.reservationDate}
+            />
           ) : (
             <p className="text-center font-medium text-[#3337a3]">
-            {" "}
-            Retroshop Siempre Contigo!
-          </p>
+              {" "}
+              Retroshop Siempre Contigo!
+            </p>
           )
-        ) : data.reservation.status === "pendiente" ? (<p className="text-center">Espera a que el vendedor se ponga en contacto contigo</p>):(
+        ) : data.reservation.status === "pendiente" ? (
+          <p className="text-center">
+            Espera a que el vendedor se ponga en contacto contigo
+          </p>
+        ) : (
           <CreateReservation productId={data.product.id} />
         )}
       </div>
@@ -69,5 +78,3 @@ const DetailedProduct = ({ data }) => {
 };
 
 export default DetailedProduct;
-
-
