@@ -3,7 +3,7 @@
 import PersonIcon from "@mui/icons-material/Person";
 import { DetailedProductImage } from "../DetailedProduct/DetailedProductImage.jsx";
 import DeletedProducts from "../DeletedProducts.jsx";
-import { FavButtonDetailedProduct } from "../DetailedProduct/FavButtonDetailedProduct.jsx";
+import { FavButton } from "../FavButton.jsx";
 import EditNoteIcon from "@mui/icons-material/EditNote";
 import { Link } from "react-router-dom";
 import { PurcharseConfirmationPage } from "../../pages/PurcharseConfirmationPage.jsx";
@@ -18,7 +18,9 @@ const SellerProductDetail = ({ data }) => {
           productImg1={data.product.imageURL}
           productImg2={data.product.imageURL2}
         />
-        <FavButtonDetailedProduct />
+        <div className="flex justify-center items-center w-[35px] h-[35px] rounded-full bg-[#D9D9D9] absolute right-4 top-8">
+          <FavButton productId={data.product.id} />
+        </div>
         <div className="relative bottom-72 left-7 max-w-10">
           <BackButton />
         </div>
