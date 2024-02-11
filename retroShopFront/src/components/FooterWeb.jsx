@@ -10,7 +10,7 @@ import VideogameAssetIcon from '@mui/icons-material/VideogameAsset';
 export const FooterWeb = () => {
   return (
     <div className="hidden lg:flex flex-col bg-gray-200 text-grey-700 max-w-screen shadow-[9px_-2px_18px_3px_rgba(133,126,133,1)] ">
-     ;
+     
         <div className=" flex flex-row text-center justify-center px-[10px] " >
         
            <div className=" flex flex-col w-[30vw] gap-10 justify-center items-center  text-md">
