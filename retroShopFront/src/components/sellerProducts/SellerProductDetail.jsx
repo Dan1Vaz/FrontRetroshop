@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import { PurcharseConfirmationPage } from "../../pages/PurcharseConfirmationPage.jsx";
 import BackButton from "../BackButton.jsx";
 import { AverageReview } from "../averageReview.jsx";
+import DeletedReservation from "../DeletedReservation.jsx";
 
 const SellerProductDetail = ({ data }) => {
   return (
@@ -62,8 +63,9 @@ const SellerProductDetail = ({ data }) => {
             Retroshop Siempre Contigo!
           </p>
         ) : data.reservation.status === "pendiente" ? (
-          <div className="flex flex-col items-center justify-center ">
+          <div className="flex flex-col items-center justify-center gap-4 p-2 rounded-md border-[2px] border-[#3337a3]">
             <PurcharseConfirmationPage reservationId={data.reservation.id} />
+            <DeletedReservation productId={data.product.id}/>
           </div>
         ) : data.reservation.status === "sin reservas" ? (
           <>
