@@ -2,7 +2,8 @@ import { useContext, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { authContext } from "../providers/AuthProvider";
 import PopUp from "../components/PopUp";
-import ForwardRoundedIcon from '@mui/icons-material/ForwardRounded';
+import ForwardRoundedIcon from "@mui/icons-material/ForwardRounded";
+import { Footer } from "../components/Footer";
 
 const LoginPage = () => {
   const [, setToken] = useContext(authContext);
@@ -80,7 +81,7 @@ const LoginPage = () => {
           <source src="/video3.mp4" type="video/mp4" />
         </video>
       </Link>
-      <div className="flex flex-col h-screen items-center justify-center md:flex md:flex-col md:h-[100vh]  lg:w-[30%] md:mr-3% lg:relative">
+      <div className="flex flex-col h-screen items-center justify-center md:flex md:flex-col md:h-[100vh]  lg:w-[30%] md:mr-3% lg:relative ">
         <img src="/retroshop.svg" alt="" className="h-[100px] p-4" />
         <form
           className="flex justify-center items-center flex-col gap-1"
@@ -129,14 +130,16 @@ const LoginPage = () => {
               Crear Cuenta
             </NavLink>
             <Link to="/">
-        <ForwardRoundedIcon className=" hidden lg:flex absolute top-0 left-0 rotate-180 z-5000 text-[40px] text-blue-900"/>
-        </Link>
+              <ForwardRoundedIcon className=" hidden lg:flex lg:absolute top-0 left-0 rotate-180 z-5000 text-[40px] text-blue-900" />
+            </Link>
           </div>
         </form>
       </div>
+
       {showPopup && (
         <PopUp link={""} message={statusMessage} onClose={closePopup} />
       )}
+      <Footer />
     </div>
   );
 };
