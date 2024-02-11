@@ -1,11 +1,10 @@
 import { ErrorMessage } from "../../components/ErrorMessage.jsx";
-import { useContext, useState } from "react";
-import { Link, Navigate } from "react-router-dom";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { useContext } from "react";
+import { Navigate } from "react-router-dom";
 import { useFavoritesProducts } from "../../Hook/Favorites/useFavoritesProducts.jsx";
-
 import { authContext } from "../../providers/AuthProvider";
 import FavoritesList from "../../components/Favorites/FavoritesList.jsx";
+import BackButton from "../../components/BackButton.jsx";
 //El componente de la pagina a imprimir
 export const FavoritesProductsPage = () => {
   const [token] = useContext(authContext);
@@ -29,16 +28,16 @@ export const FavoritesProductsPage = () => {
 
   return (
     <div className="pb-20">
-      {/* aqui se imprime el boton de volver atras que te manda al perfil del usuario */}
+      {/*titulo y backbutton */}
       <div className="flex justify-evenly py-10">
-        <Link to={"/profile/menu"} className="absolute left-7">
-          <ArrowBackIcon className="size-10 fill-[#000000]" />
-        </Link>
+        <div className="absolute left-7 top-[38px]">
+          <BackButton />
+        </div>
         <h1 className="text-2xl font-bold text-[#000000]">
           Productos Favoritos
         </h1>
       </div>
-      {/* aqui se imprime los botones que cambian los estados al clicar */}
+      {/* aqui se imprime la lista */}
 
       <article className="flex flex-col flex-nowrap items-center content-end w-full">
         <FavoritesList products={data} />
