@@ -9,7 +9,7 @@ export const Tu = () => {
   const { data, loading, error } = useGetUser();
 
   return (
-    <Link to="/profile/menu">
+    <Link to={"/profile/yourproducts"}>
       <div className="hidden lg:flex lg:flex-col lg:items-center">
         {data.avatarURL ? (
           <div className="hidden lg:flex lg:items-center">

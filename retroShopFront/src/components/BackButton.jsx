@@ -22,7 +22,7 @@ const BackButton = () => {
 
   return (
     <Link onClick={goBack}>
-      <ArrowBackIcon className="size-10" />
+      <ArrowBackIcon className="size-10 lg:hidden" />
     </Link>
   );
 };

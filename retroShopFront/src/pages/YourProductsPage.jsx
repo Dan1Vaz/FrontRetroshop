@@ -4,6 +4,8 @@ import { useState } from "react";
 import ReservationListSeller from "../components/sellerProducts/ReservationListSeller.jsx";
 import { Link } from "react-router-dom";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { Aside } from "../components/Aside.jsx";
+import { Navbar } from "../components/Navbar.jsx";
 //El componente de la pagina a imprimir
 export const YourProductsPage = () => {
   // nos traemos los estados
@@ -25,22 +27,26 @@ export const YourProductsPage = () => {
     return <ErrorMessage message={error} className="flex justify-center" />;
 
   return (
-    <div className="pb-20">
+    <div className="pb-20 lg:flex flex-wrap lg:pb-0 ">
       {/* aqui se imprime el boton de volver atras que te manda al perfil del usuario */}
-      <div className="flex justify-evenly py-10">
-        <Link to={"/profile/menu"} className="absolute left-7">
-          <ArrowBackIcon className="size-10 fill-[#000000]" />
-        </Link>
-        <h1 className="text-2xl font-bold text-[#000000]">Tus Productos</h1>
-      </div>
-      {/* aqui se imprime los botones que cambian los estados al clicar */}
+      <Navbar/>
+      <Aside />
+      <div className="flex flex-col flex-1 lg:sticky lg:h-screen lg:overflow-y-auto ">
+        <div className="flex justify-evenly items-center min-h-[80px] bg-white sticky top-0">
+          <Link to={"/profile/menu"} className="absolute left-7">
+            <ArrowBackIcon className="size-10 fill-[#000000] lg:hidden" />
+          </Link>
+          <h1 className="text-2xl font-bold text-[#000000]">Tus Productos</h1>
+        </div>
+        {/* aqui se imprime los botones que cambian los estados al clicar */}
 
-      <article className="flex flex-col flex-nowrap items-center content-end w-full">
-        <ReservationListSeller
-          reservations={filteredReservations}
-          currentTab={currentTab}
-        />
-      </article>
+        <article className="flex flex-col flex-nowrap items-center lg:h-screen ">
+          <ReservationListSeller
+            reservations={filteredReservations}
+            currentTab={currentTab}
+          />
+        </article>
+      </div>
     </div>
   );
 };

@@ -98,7 +98,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/profile",
-    element: <Layout />,
+    element: <Layout showFooter={false} />,
     children: [
       // {
       //   path: "/profile",
@@ -162,6 +162,10 @@ const router = createBrowserRouter([
         path: "/profile/perfil",
         element: <PutUserPage />,
       },
+      {
+        path: "/profile/favorites",
+        element: <FavoritesProductsPage />,
+      },
     ],
   },
   {
@@ -180,7 +184,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/products",
-    element: <Layout />,
+    element: (
+      <Layout>
+        <Navbar />
+      </Layout>
+    ),
     children: [
       {
         path: "/products/product",
@@ -189,10 +197,6 @@ const router = createBrowserRouter([
       {
         path: "/products/productSeller",
         element: <DetailedProductSellerPage />,
-      },
-      {
-        path: "/products/favorites",
-        element: <FavoritesProductsPage />,
       },
     ],
   },
