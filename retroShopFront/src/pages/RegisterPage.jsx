@@ -58,7 +58,7 @@ export const RegisterPage = () => {
   };
 
   return (
-    <div className="flex justify-center items-center flex-col gap-5 md:flex-nowrap sm:h-screen sm:overflow-hidden   lg:flex-row  md:pb-[100px] lg:pb-0">
+    <div className="flex justify-center items-center flex-col gap-5 md:flex-nowrap sm:h-screen sm:overflow-hidden sm:pb-[100px]   lg:flex-row  md:pb-[100px] lg:pb-0">
       <Link
         to={"/"}
         className=" hidden sm:flex  sm:h-full  sm:overflow-hidden lg:w-[70%] lg:h-full  

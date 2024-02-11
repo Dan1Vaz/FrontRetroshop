@@ -34,29 +34,39 @@ export const Navbar = () => {
 
   //console.log("Productos buscados actualizados", searchedProducts);
 
+  <></>;
+
   return (
-    <div className="Navbar flex flex-wrap justify-center items-center pt-4 gap-[20px] sticky top-0 z-10 bg-white ">
-      <Link to="/">
-        <img src="/iconretroshop.svg" alt="" className="h-[53px] lg:hidden" />
-        <img src="/retroshop.svg" alt="" className="h-[53px] hidden lg:flex lg:items-end " />
-      </Link>
-      <div className="SearchBar relative flex items-center">
-        <form id="buscar-productos" onSubmit={handleSubmit}>
-          <input
-            className="w-[278px] h-[33px] bg-[#efefef] rounded-full p-[20px] "
-            type="search"
-            placeholder="Busca un producto..."
-            value={searchValue}
-            onChange={handleInputChange}
+    <nav className="Navbar flex flex-wrap justify-center items-center pt-4 gap-[20px] sticky top-0 z-10 bg-white">
+      <div className=" flex  items-center lg:flex lg:items-center lg:pl- lg:pr-10 lg:w-screen lg:justify-between ">
+        <Link to="/">
+          <img src="/iconretroshop.svg" alt="" className="h-[53px] lg:hidden" />
+          <img
+            src="/retroshop.svg"
+            alt=""
+            className="h-[70px] hidden lg:flex lg:items-end "
           />
-          <button className="flex absolute justify-center items-center right-[5px] top-[5px] w-[28px] h-[28px] bg-white rounded-full">
-            <SearchIcon className=" fill-[#FD2A5C] " />
-          </button>
-        </form>
+        </Link>
+        <div className="flex items-center gap-10">
+          <div className="SearchBar relative flex items-center ">
+            <form id="buscar-productos" onSubmit={handleSubmit}>
+              <input
+                className="w-[278px] h-[33px] bg-[#efefef] rounded-full p-[20px] lg:w-[500px] "
+                type="search"
+                placeholder="Busca un producto..."
+                value={searchValue}
+                onChange={handleInputChange}
+              />
+              <button className="flex absolute justify-center items-center right-[5px] top-[5px] w-[28px] h-[28px] bg-white rounded-full">
+                <SearchIcon className=" fill-[#FD2A5C] " />
+              </button>
+            </form>
+          </div>
+          <Tu />
+        </div>
       </div>
-      <Tu />
       <div className="overflow-x-scroll overflow-hidden no-scrollbar border-y-2 border-[#7C7C7C] mt-0 w-full">
-        <div className="flex w-auto justify-center  bg-gradient-to-r from-blue-700 via-pink-500 to-purple-500 ">
+        <div className="flex w-max lg:w-screen md:w-screen sm:w-screen justify-center  bg-gradient-to-r from-blue-700 via-pink-500 to-purple-500 ">
           <Link to="/products?category=Consola">
             <p className="mx-3 text-white font-semibold">Consolas</p>
           </Link>
@@ -78,6 +88,6 @@ export const Navbar = () => {
           </a>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
