@@ -74,7 +74,7 @@ const CreateReview = ({ productId, reservationDate }) => {
           ))} 
         </div> 
         <div className="flex flex-col justify-center">
-          <button type="submit" className={`bg-[#3337a3] px-2 font-bold rounded-full text-${isEnabled ? '[gray-200]' : 'gray-500'}`} disabled={!isEnabled}>
+          <button type="submit" className={`bg-[#D9D9D9] px-10 py-2 font-bold rounded-full  text-${isEnabled ? '[gray-200] hover:bg-[#FE7193]' : 'gray-500 '}`} disabled={!isEnabled}>
             Votar
           </button>
       
