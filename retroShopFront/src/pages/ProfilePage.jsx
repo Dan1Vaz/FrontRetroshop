@@ -12,6 +12,7 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import InventoryIcon from "@mui/icons-material/Inventory";
 import { AverageReview } from "../components/averageReview";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import { Footer } from "../components/Footer";
 
 export const ProfilePage = () => {
   const [token] = useContext(authContext);
@@ -159,6 +160,7 @@ export const ProfilePage = () => {
           <LogOutButton />
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

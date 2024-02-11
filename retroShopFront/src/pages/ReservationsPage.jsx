@@ -52,16 +52,16 @@ export const ReservationsPage = () => {
             <h1 className="text-2xl font-bold text-[#000000]">Reservas</h1>
           </div>
           {/* aqui se imprime los botones que cambian los estados al clicar */}
-          <nav className="flex justify-evenly py-4 bg-white">
+          <nav className="flex justify-evenly bg-white overflow-y-hidden">
             <button
               onClick={handlerInProcess}
-              className="bg-[#D9D9D9] px-10 py-2 font-bold rounded-full focus:bg-[#FE7193] text-[#000000]"
+              className="bg-[#D9D9D9] px-10 py-1 font-bold rounded-full focus:bg-[#FE7193] text-[#000000]"
             >
               Pendiente
             </button>
             <button
               onClick={handlerFinished}
-              className="bg-[#D9D9D9] px-10 py-2 font-bold rounded-full focus:bg-[#FE7193] text-[#000000]"
+              className="bg-[#D9D9D9] px-10 py-1 font-bold rounded-full focus:bg-[#FE7193] text-[#000000]"
             >
               Finalizada
             </button>
@@ -69,7 +69,7 @@ export const ReservationsPage = () => {
         </div>
 
         {/* aqui se imprime el componente que trae la lista de reservas */}
-        <article className="flex flex-col flex-nowrap items-center content-end w-full">
+        <article className="flex flex-col flex-nowrap items-center content-end w-full pt-2">
           <ReservationList
             reservations={filteredReservations}
             currentTab={currentTab}

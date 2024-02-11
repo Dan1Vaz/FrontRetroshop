@@ -107,10 +107,9 @@ export const Aside = () => {
               <article className="pl-4 text-[#000000]">Favoritos</article>
             </div>
           </Link>
-        </div>
-
-        <div className="flex justify-center py-6">
-          <LogOutButton />
+          <div className="flex justify-center">
+            <LogOutButton />
+          </div>
         </div>
       </div>
     </aside>

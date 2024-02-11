@@ -36,11 +36,11 @@ export const Footer = () => {
         </Link>
       </button>
       <button className="flex flex-col items-center text-center">
-        <Link to="/products/favorites">
+        <Link to="/profile/favorites">
           <FavoriteIcon
             fontSize="large"
             className={
-              CurrentRoute("/products/favorites")
+              CurrentRoute("/profile/favorites")
                 ? "fill-[#92003C]"
                 : "fill-[#7C7C7C]"
             }

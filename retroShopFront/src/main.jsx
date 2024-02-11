@@ -172,7 +172,7 @@ const router = createBrowserRouter([
     path: "/products",
     element: (
       <Layout>
-        <NavbarSearchedProducts />
+        <Navbar />
       </Layout>
     ),
     children: [

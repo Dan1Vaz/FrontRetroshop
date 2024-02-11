@@ -48,23 +48,23 @@ export const ReservationsSeller = () => {
             <h1 className="text-2xl font-bold text-[#000000]">Ventas</h1>
           </div>
           {/* aqui se imprime los botones que cambian los estados al clicar */}
-          <nav className="flex justify-evenly py-4 bg-white">
+          <nav className="flex justify-evenly  bg-white">
             <button
               onClick={handlerPendiente}
-              className="bg-[#D9D9D9] px-10 py-2 font-bold rounded-full focus:bg-[#FE7193]"
+              className="bg-[#D9D9D9] px-10 py-1 font-bold rounded-full focus:bg-[#FE7193]"
             >
               Pendiente
             </button>
             <button
               onClick={handlerFinished}
-              className="bg-[#D9D9D9] px-10 py-2 font-bold rounded-full focus:bg-[#FE7193]"
+              className="bg-[#D9D9D9] px-10 py-1 font-bold rounded-full focus:bg-[#FE7193]"
             >
               Finalizada
             </button>
           </nav>
         </div>
 
-        <article className="flex flex-col flex-nowrap items-center content-end w-full">
+        <article className="flex flex-col flex-nowrap items-center content-end w-full pt-2">
           <ReservationListSeller
             reservations={filteredReservations}
             currentTab={currentTab}

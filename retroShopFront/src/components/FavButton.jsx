@@ -60,7 +60,11 @@ export const FavButton = ({ productId }) => {
           className={
             buttonColor === "#7C7C7C" ? "fill-[#7C7C7C]" : "fill-[#FD2A5C]"
           }
-          sx={CurrentRoute("/") ? { fontSize: 15 } : { fontSize: 25 }}
+          sx={
+            CurrentRoute("/") || CurrentRoute("/products")
+              ? { fontSize: 15 }
+              : { fontSize: 25 }
+          }
         />
       </button>
     </div>

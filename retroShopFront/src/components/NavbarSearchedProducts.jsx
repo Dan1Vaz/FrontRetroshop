@@ -6,6 +6,8 @@ import { Tu } from "./Tu";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 
+
+/* ESTE NAVBAR ERA PENSADO PARA INCLUIR BOTONES DE FILTROS PERO POR TEMAS DE TIEMPO NO SE UTILIZA, LUEGO DE ENTREGAR EL PROYECTO LO PONDREMOS FUNCIONAL*/
 export const NavbarSearchedProducts = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   //const navigate = useNavigate();
