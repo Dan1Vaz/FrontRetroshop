@@ -6,7 +6,7 @@ import { Link } from '@mui/material';
 
 const Contact = () => {
   return (
-    <div className=' flex justify-center flex-col items-center text-gray-800 text-center pt-[80px] ml-20 '>
+    <div className=' flex justify-center flex-col items-center text-gray-800 text-center pt-[60px] ml-20 '>
    
       
       <div className=" flex flex-col ">
