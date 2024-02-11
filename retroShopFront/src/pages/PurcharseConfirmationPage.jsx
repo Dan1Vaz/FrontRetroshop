@@ -48,7 +48,7 @@ export const PurcharseConfirmationPage = ({reservationId}) => {
       };
   
     return (
-      <div className='flex flex-col items-center justify-center gap-4 p-2 rounded-md border-[2px] border-[#3337a3]'>
+      <>
         <p className="font-semibold">¡Te falta poco para finalizar el proceso!</p>
         {error && <div>Error: {error}</div>}
         <form className='flex flex-col items-center justify-center'onSubmit={handleSubmit}>
@@ -74,12 +74,12 @@ export const PurcharseConfirmationPage = ({reservationId}) => {
               required
             />
   
-          <button className="hover:bg-[#D9D9D9] px-10 py-2 font-bold rounded-full bg-[#FE7193]" type="submit">Confirma la reserva</button>
+          <button className="hover:bg-[#FE7193] px-10 py-2 font-bold rounded-full bg-[#D9D9D9]" type="submit">Confirmar la Reserva</button>
         </form>
         {showPopup && (
         <PopUp message={statusMessage} onClose={handleClosePopup} link="/profile/seller" />
       )}
-      </div>
+      </>
     );
   };
  
