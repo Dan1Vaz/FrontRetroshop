@@ -7,11 +7,14 @@ const BackButton = () => {
 
   const goBack = () => {
     // SI la ruta de la que vienes empieza con tal
-    if (location.pathname.includes("/products/productSeller" || "products/product")) {
+    if (
+      location.pathname.includes(
+        "/products/productSeller" || "products/product"
+      )
+    ) {
       // entonces retrocede 3 pasos
       navigate(-3);
-    } 
-    else {
+    } else {
       //SIno retrocede un paso
       navigate(-1);
     }

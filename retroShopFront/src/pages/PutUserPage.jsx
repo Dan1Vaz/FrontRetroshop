@@ -50,13 +50,13 @@ export const PutUserPage = () => {
   };
 
   return (
-    <>
+    <div className=" create flex justify-center items-center flex-col py-3 mb-[100px] md:mb-0 md:bg-red-50  w-screen h-full">
       {/* Crear componente de loading */}
       {loading && <p>Loading... </p>}
       {error && <p>Error: {error.message}</p>}
       {data && <p>Data updated successfully</p>}
-      <div className="flex justify-center items-center flex-col mb-[100px]">
-        <div className="flex justify-evenly py-10">
+      <div className=" md:bg-white md:shadow-[0_0_30px_rgba(0,0,0,0.3)] rounded-[10px] p-3 md:px-14 md:pb-8">
+        <div className="flex justify-evenly pt-10">
           <Link to={"/profile/menu"} className="absolute left-7">
             <ArrowBackIcon className="size-10 fill-[#000000]" />
           </Link>
@@ -124,6 +124,6 @@ export const PutUserPage = () => {
           </button>
         </form>
       </div>
-    </>
+    </div>
   );
 };

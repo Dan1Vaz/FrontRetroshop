@@ -21,9 +21,8 @@ const LoginPage = () => {
 
   const closePopup = () => {
     setShowPopup(false);
-    setStatusMessage('');
+    setStatusMessage("");
   };
-
 
   const enviar = (e) => {
     e.preventDefault();
@@ -40,7 +39,6 @@ const LoginPage = () => {
           return response.json();
         } else {
           throw new Error("Failed to login");
-          
         }
       })
       .then((data) => {
@@ -49,14 +47,13 @@ const LoginPage = () => {
         setToken(token);
         console.log("Token recibido:", token);
         setStatusMessage("Logueado");
-        setShowPopup(true)
+        setShowPopup(true);
         autolink();
       })
       .catch((error) => {
         console.error("Error en inicio de sesión:", error.message);
         setStatusMessage("Nombre de usuario o contraseña incorrectos");
-        setShowPopup(true)
-        
+        setShowPopup(true);
       });
   };
 
@@ -66,65 +63,75 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="flex justify-center items-center flex-col gap-5 md:flex-nowrap sm:h-screen sm:overflow-hidden   lg:flex-row  ">
-      <Link to={"/"} className=" hidden sm:flex  sm:h-full  sm:overflow-hidden lg:w-[70%] lg:h-full  
-       ">
-      
-        <video  autoPlay loop muted  className=" hidden  sm:flex sm:w-full sm:h-full sm:object-fill sm:aspect-video lg:object-fill aspect-auto">
-        <source  src="/video3.mp4" type="video/mp4"/>
+    <div className="flex justify-center items-center flex-col gap-5 md:flex-nowrap sm:h-screen sm:overflow-hidden   lg:flex-row  md:pb-[100px] lg:pb-0">
+      <Link
+        to={"/"}
+        className=" hidden sm:flex  sm:h-full  sm:overflow-hidden lg:w-[70%] lg:h-full  
+       "
+      >
+        <video
+          autoPlay
+          loop
+          muted
+          className=" hidden  sm:flex sm:w-full sm:h-full sm:object-fill sm:aspect-video lg:object-fill aspect-auto"
+        >
+          <source src="/video3.mp4" type="video/mp4" />
         </video>
       </Link>
-      <div className=" md:flex md:flex-col md:h-[100vh]  lg:w-[30%] md:mr-3% ">
-
-
+      <div className=" md:flex md:flex-col md:h-[100vh]  lg:w-[30%] md:mr-3%">
         <img src="/retroshop.svg" alt="" className="h-[100px] p-4" />
-      <form
-        className="flex justify-center items-center flex-col gap-1"
-        onSubmit={enviar}
-      >
-        <label
+        <form
+          className="flex justify-center items-center flex-col gap-1"
+          onSubmit={enviar}
+        >
+          <label
             htmlFor="email"
             className="block text-base font-medium text-[#3337a3] w-[281px] p-2"
           >
             Correo:
           </label>
-        <input
-          type="email"
-          id="email"
-          placeholder="Nombre"
-          className="w-[278px] h-[33px] bg-white  p-[20px] border border-[#db2777] rounded-md"
-          value={userData.email}
-          onChange={handleInputChange}
-        />
-        <label
+          <input
+            type="email"
+            id="email"
+            placeholder="Nombre"
+            className="w-[278px] h-[33px] bg-white  p-[20px] border border-[#db2777] rounded-md"
+            value={userData.email}
+            onChange={handleInputChange}
+          />
+          <label
             htmlFor="password"
             className="block text-base font-medium text-[#3337a3] w-[281px] p-2"
           >
             Contraseña:
           </label>
-        <input
-          type="password"
-          placeholder="Contraseña"
-          className="w-[278px] h-[33px] bg-white  p-[20px] border border-[#db2777] rounded-md"
-          id="password"
-          value={userData.password}
-          onChange={handleInputChange}
-        />
-        <button
-          type="submit"
-          className="w-[278px] h-[33px] bg-[#3337a3] text-white rounded-sm mt-2"
-        >
-          Iniciar Sesión
-        </button>
- 
-      <div className="flex justify-start w-[278px] items-start mt-0">
-      <NavLink className="mr-0 underline text-blue-600 hover:text-blue-800 visited:[#3337a3]" to="/profile/register">
-        Crear Cuenta
-      </NavLink>
-    </div>
-    </form>
-    </div>
-      {showPopup && <PopUp link={''} message={statusMessage} onClose={closePopup} />}
+          <input
+            type="password"
+            placeholder="Contraseña"
+            className="w-[278px] h-[33px] bg-white  p-[20px] border border-[#db2777] rounded-md"
+            id="password"
+            value={userData.password}
+            onChange={handleInputChange}
+          />
+          <button
+            type="submit"
+            className="w-[278px] h-[33px] bg-[#3337a3] text-white rounded-sm mt-2"
+          >
+            Iniciar Sesión
+          </button>
+
+          <div className="flex justify-start w-[278px] items-start mt-0">
+            <NavLink
+              className="mr-0 underline text-blue-600 hover:text-blue-800 visited:[#3337a3]"
+              to="/profile/register"
+            >
+              Crear Cuenta
+            </NavLink>
+          </div>
+        </form>
+      </div>
+      {showPopup && (
+        <PopUp link={""} message={statusMessage} onClose={closePopup} />
+      )}
     </div>
   );
 };
