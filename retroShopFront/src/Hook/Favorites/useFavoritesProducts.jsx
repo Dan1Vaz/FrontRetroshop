@@ -4,10 +4,14 @@ export const useFavoritesProducts = (token) => {
   const [data, setData] = useState();
   const [error, setError] = useState();
   const [loading, setLoading] = useState(false);
-
+  
   useEffect(() => {
     const fetchFavorites = async (token) => {
       try {
+
+        if(!token){
+          return
+        }
         setLoading(true);
         const response = await fetch(
           `http://${import.meta.env.VITE_BASE_URL}:3001/favorites`,
@@ -18,7 +22,6 @@ export const useFavoritesProducts = (token) => {
             },
           }
         );
-
 
         const responseData = await response.json();
         setData(responseData.products);
@@ -32,7 +35,7 @@ export const useFavoritesProducts = (token) => {
     };
 
     fetchFavorites(token);
-  }, []);
+  }, [token]);
 
   return { data, error, loading };
 };
