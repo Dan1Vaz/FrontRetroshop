@@ -5,7 +5,7 @@ const useAverage = (id) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [token] = useContext(authContext);
+  //const [token] = useContext(authContext);
 
   useEffect(() => {
     const fetchAverage = async () => {
@@ -14,7 +14,6 @@ const useAverage = (id) => {
           `http://${import.meta.env.VITE_BASE_URL}:3001/getAverage/${id}`,
           {
             method: "GET",
-            headers: { Authorization: `Bearer ${token}` },
           }
         );
 

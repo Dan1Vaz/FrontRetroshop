@@ -4,7 +4,7 @@ import Contact from "./Contact"
 
 export const FooterWeb = () => {
   return (
-    <div className="hidden lg:flex flex-col bg-gray-200 text-white ">
+    <div className="hidden lg:flex flex-col bg-gray-200 text-white max-w-screen ">
         <div className=" flex flex-row text-center justify-center p-[20px] " >
         
            <div className=" flex flex-col w-[30vw] gap-10 text-justify text-sm">

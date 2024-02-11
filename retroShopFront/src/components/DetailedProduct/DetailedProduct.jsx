@@ -11,8 +11,8 @@ import { AverageReview } from "../averageReview.jsx";
 const DetailedProduct = ({ data }) => {
   console.log(data);
   return (
-    <div className="flex flex-col pb-28 absolute">
-      <div className="w-screen relative">
+    <div className="flex flex-col pb-28 lg:max-w-[700px] lg:border-2 lg:rounded-lg lg:overflow-hidden lg:shadow-lg lg:pb-6 ">
+      <div className="w-full relative">
         <DetailedProductImage
           productImg1={data.product.imageURL}
           productImg2={data.product.imageURL2}

@@ -48,21 +48,20 @@ import { Cookies } from "./pages/Cookies.jsx";
 //   Error404,
 // } from "/pages";
 
-
 const Layout = ({ children, showFooter = true }) => {
   const [isLargeScreen, setIsLargeScreen] = useState(false);
 
-useEffect(() => {
-  function resize() {
-    setIsLargeScreen(window.innerWidth >= 1024);
-  }
-  
-  window.addEventListener('resize', resize);
-  resize();
-  return () => {
-    window.removeEventListener('resize', resize);
-  };
-}, []);
+  useEffect(() => {
+    function resize() {
+      setIsLargeScreen(window.innerWidth >= 1024);
+    }
+
+    window.addEventListener("resize", resize);
+    resize();
+    return () => {
+      window.removeEventListener("resize", resize);
+    };
+  }, []);
 
   return (
     <div className="">
@@ -140,7 +139,7 @@ const router = createBrowserRouter([
         path: "/profile/products/user",
         element: <ProductsUserPage />,
       },
- 
+
       {
         path: "/profile/cookies",
         element: <Cookies />,
@@ -181,7 +180,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/products",
-    element: <Layout />,
+    element: (
+      <Layout>
+        <Navbar />
+      </Layout>
+    ),
     children: [
       {
         path: "/products/product",

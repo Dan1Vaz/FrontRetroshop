@@ -13,6 +13,7 @@ export const FavButton = ({ productId }) => {
   const { addFavorite } = useAddFavorites();
   const { deleteFavorite } = useDeleteFavorites();
   const { data: favoriteProducts } = useFavoritesProducts(token);
+  const location = useLocation();
   const CurrentRoute = (route) => {
     // pa sacar la ruta a un estado de ruta actual
     return location.pathname === route;

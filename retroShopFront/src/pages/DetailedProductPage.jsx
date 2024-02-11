@@ -19,9 +19,9 @@ export const DetailedProductPage = () => {
     return <ErrorMessage message={error} className="flex justify-center" />;
 
   return (
-    <>
+    <div className="lg:flex lg:justify-center lg:py-8 ">
       {/* aqui se imprime el componente que muestra el producto */}
       <DetailedProduct data={data} />
-    </>
+    </div>
   );
 };
