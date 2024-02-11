@@ -65,7 +65,7 @@ const CreateReservation = (props) => {
   return (
     <>
       <button
-        className="bg-[#D9D9D9] px-10 py-2 font-bold rounded-full focus:bg-[#FE7193]"
+        className="bg-[#D9D9D9] px-10 py-2 font-bold rounded-full hover:bg-[#FE7193]"
         onClick={enviar}
       >
         Reservar

@@ -92,7 +92,7 @@ export const PutUserPage = () => {
             type="password"
             id="password"
             className="w-[278px] h-[33px] bg-white p-[20px] border border-[#db2777] rounded-md"
-            placeholder="Verifica tu Clave"
+            placeholder="Contraseña Nueva"
             value={userData.password}
             onChange={handleInputChange}
           />
@@ -118,7 +118,7 @@ export const PutUserPage = () => {
           )}
           <button
             type="submit"
-            className="w-[278px] h-[33px] bg-[#3337a3] text-white rounded-sm mt-2"
+            className="w-[278px] h-[33px] bg-[#3337a3] text-white rounded-sm mt-2 hover:bg-[#0f17e7]"
           >
             Enviar
           </button>

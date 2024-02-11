@@ -198,7 +198,7 @@ const CreateProduct = () => {
 
           <button
             type="submit"
-            className="w-[278px] h-[33px] bg-[#3337a3] text-white rounded-sm mt-2"
+            className="w-[278px] h-[33px] bg-[#3337a3] text-white rounded-sm mt-2 hover:bg-[#0f17e7]"
           >
             Enviar
           </button>
