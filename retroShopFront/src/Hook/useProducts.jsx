@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
-const useProducts = () => {
+const useProducts = (limit) => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -8,9 +8,13 @@ const useProducts = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch('http://localhost:3001/products'); 
+        const response = await fetch(
+          `http://${import.meta.env.VITE_BASE_URL}:3001/products?${
+            limit ? `limit=${limit}` : ""
+          }`
+        );
         if (!response.ok) {
-          throw new Error('Failed to fetch products');
+          throw new Error("Failed to fetch products");
         }
 
         const productsData = await response.json();
@@ -23,7 +27,7 @@ const useProducts = () => {
     };
 
     fetchProducts();
-  }, []);
+  }, [limit]);
 
   return { products, loading, error };
 };
