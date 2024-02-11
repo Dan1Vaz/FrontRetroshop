@@ -10,25 +10,25 @@ const Contact = () => {
    
       
       <div className=" flex flex-col ">
-       <h2>CONTACTO</h2>
+       <h2 className='font-bold'>CONTACTO</h2>
        <p>Rúa Real, 1, </p> 
        <p> 15003 A Coruña</p>
        <p> T:981897800</p>
        <p> Email:retroshooop@gmail.com</p>
       </div>
 
-      <div className="text-red-500 ">
+      <div>
       <Link href="https://www.facebook.com/profile.php?id=61556001704868" target="_blank" rel="noopener noreferrer">
-      <FacebookIcon />
+      <FacebookIcon className='text-[#1D2375]'/>
       </Link>
  
     <Link href=" https://twitter.com/RetroShop__" target="_blank" rel="noopener noreferrer">
-        <TwitterIcon/>
+        <TwitterIcon className='text-[#1D2375]'/>
         </Link>
         <Link href=" https://www.pinterest.es/retroshooop/" target="_blank" rel="noopener noreferrer">
-        <PinterestIcon/>
+        <PinterestIcon className='text-[#1D2375]'/>
      </Link>
-        <InstagramIcon/>
+        <InstagramIcon className='text-[#1D2375]'/>
       </div>
     </div>
   )

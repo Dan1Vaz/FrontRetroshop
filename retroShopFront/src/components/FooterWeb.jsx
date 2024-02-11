@@ -4,7 +4,8 @@ import Contact from "./Contact"
 
 export const FooterWeb = () => {
   return (
-    <div className="hidden lg:flex flex-col bg-gray-200 text-white max-w-screen ">
+    <div className="hidden lg:flex flex-col bg-gray-200 text-white max-w-screen shadow-[9px_-2px_18px_3px_rgba(133,126,133,1)] ">
+     ;
         <div className=" flex flex-row text-center justify-center p-[20px] " >
         
            <div className=" flex flex-col w-[30vw] gap-10 text-justify text-sm">
@@ -24,15 +25,17 @@ export const FooterWeb = () => {
            <Contact/>
            </div>
     </div>
-    <div className=" flex flex-row bg-gradient-to-r from-blue-700 via-pink-500 to-purple-500' ">
+    <div className=" flex flex-row bg-gray-300 shadow-[9px_-2px_18px_3px_rgba(133,126,133,1)] ">
+      {/* bg-gradient-to-r from-blue-700 via-pink-500 to-purple-500' */}
+      {/* bg-gradient-to-r from-purple-500 via-pink-500 to-blue-700' */}
         <div className=" flex  justify-center text-center w-[50%]">
             <img  className="w-[30%]"src="/retroshop.svg"/>
             
         </div>
         <div className=" w-[50%] flex gap-5 text-center  justify-center mt-2">
         <span className=" text-sm text-gray-500">© copyright derechos reservados</span>
-            <span className=" text-sm text-gray-500">politica privacida</span>
-           <Link to="/profile/cookies">cookies</Link>
+            <span className=" text-sm text-gray-500">Política de privacidad</span>
+           <Link className=" text-sm text-gray-500" to="/profile/cookies">Política de cookies</Link>
         </div>
     </div>
 </div>
