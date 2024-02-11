@@ -40,8 +40,8 @@ export const ReservationsSeller = () => {
       <Navbar/>
       <Aside />
       <div className="flex flex-col flex-1 lg:sticky lg:h-screen lg:overflow-y-auto ">
-        <div className="sticky top-0">
-          <div className="flex justify-evenly items-center min-h-[80px] bg-white sticky">
+        <div className="sticky top-0 border-b-[0.5px] border-[#7C7C7C]">
+          <div className="flex justify-evenly items-center min-h-[80px] bg-white sticky ">
             <Link to={"/profile/menu"} className="absolute left-7">
               <ArrowBackIcon className="size-10 fill-[#000000] lg:hidden" />
             </Link>

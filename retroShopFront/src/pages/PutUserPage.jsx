@@ -60,13 +60,15 @@ export const PutUserPage = () => {
       <Navbar />
       <Aside />
       <div className="flex flex-col flex-1 h-screen lg:sticky lg:h-screen lg:overflow-y-auto ">
-        <div className="flex justify-evenly items-center min-h-[80px] bg-white">
-          <Link to={"/profile/menu"} className="absolute left-7 lg:hidden">
-            <ArrowBackIcon className="size-10 fill-[#000000]" />
-          </Link>
-          <h1 className="text-2xl font-bold text-[#000000]">
-            Modificar Perfil
-          </h1>
+        <div className="sticky top-0">
+          <div className="flex justify-evenly items-center min-h-[80px] bg-white border-b-[0.5px] border-[#7C7C7C]">
+            <Link to={"/profile/menu"} className="absolute left-7 lg:hidden">
+              <ArrowBackIcon className="size-10 fill-[#000000]" />
+            </Link>
+            <h1 className="text-2xl font-bold text-[#000000]">
+              Modificar Perfil
+            </h1>
+          </div>
         </div>
         <form
           className="flex justify-center items-center flex-col gap-1 mt-10"

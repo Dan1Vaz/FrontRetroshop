@@ -122,10 +122,7 @@ const router = createBrowserRouter([
         path: "/profile/menu",
         element: <ProfilePage />,
       },
-      {
-        path: "/profile",
-        element: <CreateProduct />,
-      },
+
       {
         path: "/profile/modify/:productId",
         element: <PutProductsPages />,
@@ -165,6 +162,10 @@ const router = createBrowserRouter([
       {
         path: "/profile/favorites",
         element: <FavoritesProductsPage />,
+      },
+      {
+        path: "/profile/product/create",
+        element: <CreateProduct />,
       },
     ],
   },

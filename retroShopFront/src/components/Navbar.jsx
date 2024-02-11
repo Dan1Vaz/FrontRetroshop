@@ -7,9 +7,8 @@ import LoginPage from "../pages/LoginPage";
 import { useSearch } from "../providers/SearchContext";
 import { Button } from "@mui/material";
 import { Tu } from "./Tu";
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
-
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 
 export const Navbar = () => {
   //const { searchedProducts, setSearchedProducts } = useSearch();
@@ -67,15 +66,15 @@ export const Navbar = () => {
           </div>
           <Tu />
           <div className=" hidden lg:flex gap-1 items-center">
-          <Link to="/profile/favorites" className="flex items-center">
-            <FavoriteBorderIcon/>
-            <p>Favoritos</p>
-          </Link>    
+            <Link to="/profile/favorites" className="flex items-center">
+              <FavoriteBorderIcon />
+              <p>Favoritos</p>
+            </Link>
           </div>
           <div className=" hidden lg:flex gap-1 items-center w-max">
-            <Link to="/profile" className="flex items-center">
-            <AddCircleOutlineIcon/>
-            <p>Subir producto</p>
+            <Link to="/profile/product/create" className="flex items-center">
+              <AddCircleOutlineIcon />
+              <p>Subir producto</p>
             </Link>
           </div>
         </div>
@@ -91,8 +90,8 @@ export const Navbar = () => {
           </Link>
           <Link to="/products?category=radio">
             <p className="mx-3 text-white font-semibold">Radios</p>
-         </Link>
-          
+          </Link>
+
           <Link to="/products?category=ordenador">
             <p className="mx-3 text-white font-semibold">Ordenadores</p>
           </Link>

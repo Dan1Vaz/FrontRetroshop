@@ -24,11 +24,11 @@ export const Footer = () => {
         </Link>
       </div>
       <button className="flex flex-col items-center text-center">
-        <Link to="/profile">
+        <Link to="/profile/product/create">
           <AddCircleOutlineIcon
             fontSize="large"
             className={`fill-${
-              CurrentRoute("/profile") ? "[#92003C]" : "[#7C7C7C]"
+              CurrentRoute("/profile/product/create") ? "[#92003C]" : "[#7C7C7C]"
             }`}
             // relleno con el color que corresponde a cada icono comparando la ruta actual con el estado de CurrentRoute
           />
