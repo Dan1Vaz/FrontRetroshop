@@ -35,10 +35,10 @@ export const Navbar = () => {
   //console.log("Productos buscados actualizados", searchedProducts);
 
   return (
-    <div className="Navbar flex flex-wrap justify-center items-center pt-4 gap-[20px] sticky top-0 z-10 bg-white lg:justify-evenly">
+    <div className="Navbar flex flex-wrap justify-center items-center pt-4 gap-[20px] sticky top-0 z-10 bg-white ">
       <Link to="/">
         <img src="/iconretroshop.svg" alt="" className="h-[53px] lg:hidden" />
-        <img src="/retroshop.svg" alt="" className="h-[53px] hidden lg:flex " />
+        <img src="/retroshop.svg" alt="" className="h-[53px] hidden lg:flex lg:items-end " />
       </Link>
       <div className="SearchBar relative flex items-center">
         <form id="buscar-productos" onSubmit={handleSubmit}>
@@ -53,28 +53,27 @@ export const Navbar = () => {
             <SearchIcon className=" fill-[#FD2A5C] " />
           </button>
         </form>
-       
       </div>
       <Tu />
       <div className="overflow-x-scroll overflow-hidden no-scrollbar border-y-2 border-[#7C7C7C] mt-0 w-full">
-        <div className="flex w-auto justify-center  lg:bg-gradient-to-r from-blue-700 via-pink-500 to-purple-500 ">
+        <div className="flex w-auto justify-center  bg-gradient-to-r from-blue-700 via-pink-500 to-purple-500 ">
           <Link to="/products?category=Consola">
-            <p className="mx-3 text-[#080C89] lg:text-white font-semibold">Consolas</p>
+            <p className="mx-3 text-white font-semibold">Consolas</p>
           </Link>
 
           <Link to="/products?category=Videojuego">
-            <p className="mx-3 text-[#080C89] lg:text-white font-semibold">Videojuegos</p>
+            <p className="mx-3 text-white font-semibold">Videojuegos</p>
           </Link>
-          <a href="" className="mx-3 text-[#080C89]  lg:text-white font-semibold">
+          <a href="" className="mx-3  text-white font-semibold">
             Radios
           </a>
-          <a href="" className="mx-3 text-[#080C89] lg:text-white font-semibold">
+          <a href="" className="mx-3 text-white font-semibold">
             Televisores
           </a>
           <Link to="/products?category=Ordenador">
-            <p className="mx-3 text-[#080C89] lg:text-white font-semibold">Ordenadores</p>
+            <p className="mx-3 text-white font-semibold">Ordenadores</p>
           </Link>
-          <a href="" className="mx-3 text-[#080C89]  lg:text-white font-semibold">
+          <a href="" className="mx-3  text-white font-semibold">
             Móviles
           </a>
         </div>

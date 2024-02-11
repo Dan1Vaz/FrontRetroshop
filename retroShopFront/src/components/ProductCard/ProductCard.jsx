@@ -16,7 +16,7 @@ export const ProductCard = ({
       <ProductCategory productCategory={productCategory} />
       <ProductImage productImg1={productImg1} productImg2={productImg2} />
       <ProductDetails productName={productName} productPrice={productPrice} />
-      <div className="flex justify-center items-center w-[22px] h-[22px] rounded-full bg-[#D9D9D9] absolute left-[120px] top-[190px] size-2">
+      <div className="flex justify-center items-center w-[22px] h-[22px] rounded-full bg-[#D9D9D9] absolute left-[120px] top-[190px]">
         <FavButton productId={productId} />
       </div>
       {console.log(productId)}
