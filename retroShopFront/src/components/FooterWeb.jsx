@@ -65,7 +65,7 @@ export const FooterWeb = () => {
         </div>
         <div className=" w-[50%] flex gap-5 text-center  justify-center mt-2">
         <span className=" text-sm text-gray-500">© copyright derechos reservados</span>
-            <span className=" text-sm text-gray-500">Política de privacidad</span>
+            <Link to="/profile/policies" className=" text-sm text-gray-500">Política de privacidad</Link>
            <Link className=" text-sm text-gray-500"to="/profile/cookies">Política de cookies</Link>
         </div>
     </div>
