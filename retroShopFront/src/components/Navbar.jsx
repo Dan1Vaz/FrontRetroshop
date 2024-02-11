@@ -67,12 +67,16 @@ export const Navbar = () => {
           </div>
           <Tu />
           <div className=" hidden lg:flex gap-1 items-center">
+          <Link to="/products/favorites" className="flex items-center">
             <FavoriteBorderIcon/>
             <p>Favoritos</p>
+          </Link>    
           </div>
           <div className=" hidden lg:flex gap-1 items-center w-max">
+            <Link to="/profile" className="flex items-center">
             <AddCircleOutlineIcon/>
             <p>Subir producto</p>
+            </Link>
           </div>
         </div>
       </div>
