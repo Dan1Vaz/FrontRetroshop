@@ -2,8 +2,10 @@ import { useContext, useState } from "react";
 
 import PopUp from "./PopUp";
 import { authContext } from "../providers/AuthProvider";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const CreateReservation = (props) => {
+  const navigate = useNavigate();
   const { productId } = props;
 
   const [token] = useContext(authContext);
@@ -16,8 +18,11 @@ const CreateReservation = (props) => {
     setShowPopup(false);
     setStatusMessage("");
   };
-
+  
   const enviar = async () => {
+    if (!token) {
+      navigate("/profile/login")
+    }
     try {
       const response = await fetch(
         `http://${import.meta.env.VITE_BASE_URL}:3001/reservation/${productId}`,
