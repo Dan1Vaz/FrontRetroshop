@@ -13,7 +13,7 @@ const SearchProductsPage = () => {
   return (
     <>
       <main>
-        <ul className="productsTable grid grid-cols-2 gap-4 justify-items-center w-full pt-[15px]">
+        <ul className="productsTable grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-items-center w-full pt-[15px]">
           {products.length > 0 ? (
             products.map((product) => (
               <li key={product.id} className="max-w-[154px]">
