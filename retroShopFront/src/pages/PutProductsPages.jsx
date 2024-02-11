@@ -53,15 +53,18 @@ export const PutProductsPages = () => {
   };
 
   return (
-    <div>
+    <div className=" create flex justify-center items-center flex-col py-3 mb-[100px] md:mb-0 md:bg-red-50  w-screen h-full">
       {/* Crear componente de loading */}
       {loading && <p>Loading... </p>}
       {error && <p>Error: {error.message}</p>}
       {data && <p>Data updated successfully</p>}
 
-      <div className="flex justify-center items-center flex-col mb-[100px]">
+      <div className="md:bg-white md:shadow-[0_0_30px_rgba(0,0,0,0.3)] rounded-[10px] p-3 md:px-14 md:pb-[100px]">
         <div className="flex justify-evenly py-10">
-          <Link to={`/products/productSeller/?id=${productId}`} className="absolute left-7">
+          <Link
+            to={`/products/productSeller/?id=${productId}`}
+            className="absolute left-7"
+          >
             <ArrowBackIcon className="size-10 fill-[#000000]" />
           </Link>
           <h1 className="text-2xl font-bold text-[#000000]">
@@ -138,12 +141,12 @@ export const PutProductsPages = () => {
             onChange={handleInputChange}
           />
 
-<label
-          htmlFor="description"
-          className="block text-base font-medium text-[#3337a3] w-[281px] p-2"
-        >
-          Descripcion:
-        </label>
+          <label
+            htmlFor="description"
+            className="block text-base font-medium text-[#3337a3] w-[281px] p-2"
+          >
+            Descripcion:
+          </label>
           <textarea
             id="description"
             value={productData.description}
@@ -169,14 +172,13 @@ export const PutProductsPages = () => {
             className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50  focus:outline-none"
             onChange={handleFileChange2}
           />
-          
-            <button
-              type="submit"
-              className="w-[278px] h-[33px] bg-[#3337a3] text-white rounded-sm mt-2"
-            >
-              Enviar
-            </button>
-          
+
+          <button
+            type="submit"
+            className="w-[278px] h-[33px] bg-[#3337a3] text-white rounded-sm mt-2"
+          >
+            Enviar
+          </button>
         </form>
       </div>
     </div>
