@@ -30,6 +30,7 @@ import { YourProductsPage } from "./pages/YourProductsPage.jsx";
 import { FavoritesProductsPage } from "./pages/Favorites/FavoritesProductsPage.jsx";
 import { FooterWeb } from "./components/FooterWeb.jsx";
 import { Cookies } from "./pages/Cookies.jsx";
+import { Policies } from "./pages/Policies.jsx";
 // import {
 //   SearchProductsPage,
 //   CreateProduct,
@@ -136,6 +137,10 @@ const router = createBrowserRouter([
       {
         path: "/profile/cookies",
         element: <Cookies />,
+      },
+      {
+        path: "/profile/policies",
+        element: <Policies />,
       },
     ],
   },
