@@ -72,6 +72,7 @@ const LoginPage = () => {
       >
         <video
           autoPlay
+          playsInline
           loop
           muted
           className=" hidden  sm:flex sm:w-full sm:h-full sm:object-fill sm:aspect-video lg:object-fill aspect-auto"
