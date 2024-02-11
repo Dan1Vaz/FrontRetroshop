@@ -49,7 +49,7 @@ export const ProfilePage = () => {
                   className="fill-[#000000]"
                 />
                 <article className="ml-4 text-[#000000]"> Reservas</article>
-                <ArrowForwardIosIcon className="absolute right-9 top-[25px] fill-[#000000]" />
+                <ArrowForwardIosIcon className="absolute right-9 top-[25px] fill-[#000000] lg:hidden" />
               </div>
             </Link>
             <Link to="/profile/seller">

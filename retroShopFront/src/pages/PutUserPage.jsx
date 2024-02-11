@@ -3,6 +3,8 @@ import usePutUser from "../Hook/usePutUser";
 import { authContext } from "../providers/AuthProvider";
 import { Link } from "react-router-dom";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { Aside } from "../components/Aside";
+import { Navbar } from "../components/Navbar";
 
 export const PutUserPage = () => {
   const [token] = useContext(authContext);
@@ -50,14 +52,16 @@ export const PutUserPage = () => {
   };
 
   return (
-    <div className=" create flex justify-center items-center flex-col py-3 mb-[100px] md:mb-0 md:bg-red-50  w-screen h-screen">
+    <div className="pb-20 lg:flex lg:pb-0 flex-wrap">
       {/* Crear componente de loading */}
       {loading && <p>Loading... </p>}
       {error && <p>Error: {error.message}</p>}
       {data && <p>Data updated successfully</p>}
-      <div className=" md:bg-white md:shadow-[0_0_30px_rgba(0,0,0,0.3)] rounded-[10px] p-3 md:px-14 md:pb-8">
-        <div className="flex justify-evenly pt-10">
-          <Link to={"/profile/menu"} className="absolute left-7 top-[40px]">
+      <Navbar />
+      <Aside />
+      <div className="flex flex-col flex-1 h-screen lg:sticky lg:h-screen lg:overflow-y-auto ">
+        <div className="flex justify-evenly items-center min-h-[80px] bg-white">
+          <Link to={"/profile/menu"} className="absolute left-7 lg:hidden">
             <ArrowBackIcon className="size-10 fill-[#000000]" />
           </Link>
           <h1 className="text-2xl font-bold text-[#000000]">
@@ -65,7 +69,7 @@ export const PutUserPage = () => {
           </h1>
         </div>
         <form
-          className="flex justify-center items-center flex-col gap-1 mt-16"
+          className="flex justify-center items-center flex-col gap-1 mt-10"
           onSubmit={handleUpdateProduct}
         >
           <label
@@ -105,7 +109,7 @@ export const PutUserPage = () => {
           <input
             type="file"
             id="avatar"
-            className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50  focus:outline-none"
+            className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50  focus:outline-none max-w-[281px]"
             onChange={handleFileChange}
           />
           {/* Mostrar la foto del usuario si existe */}

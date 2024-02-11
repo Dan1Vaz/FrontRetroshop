@@ -40,7 +40,7 @@ export const Navbar = () => {
   <></>;
 
   return (
-    <nav className="Navbar flex flex-wrap justify-center items-center pt-4 gap-[20px] sticky top-0 z-10 bg-white">
+    <nav className="Navbar flex flex-wrap justify-center items-center pt-4 gap-[20px] sticky top-0 z-10 lg:w-full bg-white">
       <div className=" flex  items-center lg:flex lg:items-center lg:pr-2 lg:w-screen lg:justify-around ">
         <Link to="/">
           <img src="/iconretroshop.svg" alt="" className="h-[53px] lg:hidden" />
@@ -67,7 +67,7 @@ export const Navbar = () => {
           </div>
           <Tu />
           <div className=" hidden lg:flex gap-1 items-center">
-          <Link to="/products/favorites" className="flex items-center">
+          <Link to="/profile/favorites" className="flex items-center">
             <FavoriteBorderIcon/>
             <p>Favoritos</p>
           </Link>    

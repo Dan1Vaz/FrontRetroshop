@@ -78,15 +78,27 @@ export const Aside = () => {
             </div>
           </Link>
           <Link to="/profile/perfil">
-            <div className="flex items-center pl-3 ">
+            <div
+              className={
+                CurrentRoute("/profile/perfil")
+                  ? "flex items-center pl-3    bg-slate-200"
+                  : "flex items-center pl-3  "
+              }
+            >
               <SettingsIcon sx={{ fontSize: 50 }} className="fill-[#000000]" />
               <article className="pl-4 text-[#000000]">Configuracion</article>
 
               <ArrowForwardIosIcon className="absolute right-9  fill-[#000000]" />
             </div>
           </Link>
-          <Link to="/products/favorites">
-            <div className="flex items-center pl-3 pb-3 ">
+          <Link to="/profile/favorites">
+            <div
+              className={
+                CurrentRoute("/profile/favorites")
+                  ? "flex items-center pl-3 pb-3   bg-slate-200"
+                  : "flex items-center pl-3 pb-3  "
+              }
+            >
               <FavoriteBorderIcon
                 sx={{ fontSize: 50 }}
                 className="fill-[#000000]"
@@ -97,7 +109,7 @@ export const Aside = () => {
           </Link>
         </div>
 
-        <div className="flex justify-center pt-6">
+        <div className="flex justify-center py-6">
           <LogOutButton />
         </div>
       </div>

@@ -5,6 +5,7 @@ import { ErrorMessage } from "../components/ErrorMessage";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { useState } from "react";
 import { Aside } from "../components/Aside";
+import { Navbar } from "../components/Navbar";
 
 //El componente de la pagina a imprimir
 export const ReservationsPage = () => {
@@ -38,14 +39,15 @@ export const ReservationsPage = () => {
     return <ErrorMessage message={error} className="flex justify-center" />;
 
   return (
-    <div className="pb-20 lg:flex lg:pb-0">
+    <div className="pb-20 lg:flex lg:pb-0 flex-wrap lg:max-w-screen">
+      <Navbar/>
       <Aside />
       {/* aqui se imprime el boton de volver atras que te manda al perfil del usuario */}
-      <div className="flex flex-col flex-1 lg:sticky lg:h-screen lg:overflow-y-auto lg:pb-20 ">
+      <div className="flex flex-col flex-1 lg:sticky lg:h-screen lg:overflow-y-auto  ">
         <div className="sticky top-0">
           <div className="flex justify-evenly items-center min-h-[80px] bg-white">
             <Link to={"/profile/menu"} className="absolute left-7">
-              <ArrowBackIcon className="size-10 fill-[#000000]" />
+              <ArrowBackIcon className="size-10 fill-[#000000] lg:hidden" />
             </Link>
             <h1 className="text-2xl font-bold text-[#000000]">Reservas</h1>
           </div>
