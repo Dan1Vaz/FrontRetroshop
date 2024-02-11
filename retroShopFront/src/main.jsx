@@ -21,10 +21,10 @@ import { PutProductsPages } from "./pages/PutProductsPages.jsx";
 import { ProductsUserPage } from "./pages/ProductsUserPage.jsx";
 import CreateReview from "./pages/CreateReview.jsx";
 import CreateProduct from "./pages/CreateProduct.jsx";
-//import Error404 from "./pages/Error404.jsx";
+import Error404 from "./pages/Error404.jsx";
 import { DetailedProductPage } from "./pages/DetailedProductPage.jsx";
 import { ReservationsSeller } from "./pages/ReservationSeller.jsx";
-//import SellerProductDetail from "./components/sellerProducts/SellerProductDetail.jsx";
+import SellerProductDetail from "./components/sellerProducts/SellerProductDetail.jsx";
 import { DetailedProductSellerPage } from "./pages/DetailedProductSellerPage.jsx";
 import { YourProductsPage } from "./pages/YourProductsPage.jsx";
 import { FavoritesProductsPage } from "./pages/Favorites/FavoritesProductsPage.jsx";
@@ -123,10 +123,6 @@ const router = createBrowserRouter([
         element: <ProfilePage />,
       },
       {
-        path: "/profile/perfil",
-        element: <PutUserPage />,
-      },
-      {
         path: "/profile",
         element: <CreateProduct />,
       },
@@ -162,6 +158,10 @@ const router = createBrowserRouter([
         path: "/profile/reservations",
         element: <ReservationsPage />,
       },
+      {
+        path: "/profile/perfil",
+        element: <PutUserPage />,
+      },
     ],
   },
   {
@@ -180,11 +180,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/products",
-    element: (
-      <Layout>
-        <Navbar />
-      </Layout>
-    ),
+    element: <Layout />,
     children: [
       {
         path: "/products/product",
