@@ -50,7 +50,7 @@ const DeletedProducts = (props) => {
 
   return (
     <>
-      <button onClick={handleDeleteProduct} className="bg-[#3337a3] px-4 py-2 font-bold rounded-full text-[#FE7193]">
+      <button onClick={handleDeleteProduct} className="bg-[#D9D9D9] px-4 py-2 font-bold rounded-full hover:bg-[#FE7193]">
         {" "}
         <DeleteOutlineOutlinedIcon /> Borrar
       </button>

@@ -73,7 +73,7 @@ export const RegisterPage = () => {
           <source src="/video3.mp4" type="video/mp4" />
         </video>
       </Link>
-      <div className=" md:flex md:flex-col md:h-[100vh]  lg:w-[30%] md:mr-3% ">
+      <div className="flex flex-col h-screen items-center justify-center md:flex md:flex-col md:h-[100vh]  lg:w-[30%] md:mr-3% ">
         <img src="/retroshop.svg" alt="" className="h-[100px] p-4" />
         <form
           className="flex justify-center items-center flex-col gap-1"
@@ -123,7 +123,7 @@ export const RegisterPage = () => {
           />
           <button
             type="submit"
-            className="w-[278px] h-[33px] bg-[#3337a3] text-white rounded-sm mt-2"
+            className="w-[278px] h-[33px] bg-[#3337a3] text-white rounded-sm mt-2 hover:bg-[#0f17e7]"
           >
             Siguiente
           </button>
