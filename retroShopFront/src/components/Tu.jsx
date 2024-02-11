@@ -18,7 +18,7 @@ export const Tu = () => {
                 data.avatarURL
               }`}
               alt="Foto de perfil del usuario"
-              className="m-2 w-5 h-5 rounded-full object-cover border-[#7C7C7C] border-[0.5px]"
+              className="m-2 w-8 h-8 rounded-full object-cover border-[#7C7C7C] border-[0.5px]"
             />
             <p className="">Tú</p>
           </div>
