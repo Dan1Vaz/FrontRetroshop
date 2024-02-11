@@ -86,21 +86,22 @@ export const Navbar = () => {
             <p className="mx-3 text-white font-semibold">Consolas</p>
           </Link>
 
-          <Link to="/products?category=Videojuego">
+          <Link to="/products?category=videojuegos">
             <p className="mx-3 text-white font-semibold">Videojuegos</p>
           </Link>
-          <a href="" className="mx-3  text-white font-semibold">
-            Radios
-          </a>
-          <a href="" className="mx-3 text-white font-semibold">
-            Televisores
-          </a>
-          <Link to="/products?category=Ordenador">
+          <Link to="/products?category=radio">
+            <p className="mx-3 text-white font-semibold">Radios</p>
+         </Link>
+          
+          <Link to="/products?category=ordenador">
             <p className="mx-3 text-white font-semibold">Ordenadores</p>
           </Link>
-          <a href="" className="mx-3  text-white font-semibold">
-            Móviles
-          </a>
+          <Link to="/products?category=movil">
+            <p className="mx-3 text-white font-semibold"> Móviles </p>
+          </Link>
+          <Link to="/products?category=otros">
+            <p className="mx-3 text-white font-semibold">Otros</p>
+          </Link>
         </div>
       </div>
     </nav>

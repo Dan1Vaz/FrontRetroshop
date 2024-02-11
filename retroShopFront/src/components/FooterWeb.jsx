@@ -9,31 +9,41 @@ import VideogameAssetIcon from '@mui/icons-material/VideogameAsset';
 
 export const FooterWeb = () => {
   return (
-    <div className="hidden lg:flex flex-col bg-gray-200 text-grey-700 max-w-screen shadow-[9px_-2px_18px_3px_rgba(133,126,133,1)] ">
+    <div className="hidden lg:flex flex-col bg-gray-200 text-grey-700 max-w-screen shadow-[9px_-2px_18px_3px_rgba(133,126,133,1)] mt-[20px]">
      
         <div className=" flex flex-row text-center justify-center px-[10px] " >
         
            <div className=" flex flex-col w-[30vw] gap-10 justify-center items-center  text-md">
            <div className="grid grid-cols-2 gap-4 text-center">
             <Link to="/products?category=Consola">
-            <p className="mx-3 text-grey-700  text-shadow-md"><SportsEsportsIcon/> Consolas</p>
+            <p className="mx-3 text-grey-700  text-shadow-md"><SportsEsportsIcon className='text-[#1D2375]'/> Consolas</p>
           </Link>
 
-          <Link to="/products?category=Videojuego">
-            <p className="mx-3  "> <VideogameAssetIcon/> Videojuegos</p>
+          <Link to="/products?category=Videojuegos">
+            <p className="mx-3  "> <VideogameAssetIcon className='text-[#1D2375]'/> Videojuegos</p>
           </Link>
-          <a href="" className="mx-3  text-grey-700 ">
-           <RadioIcon/> Radios
-          </a>
-          <a href="" className="mx-3 text-grey-700 ">
-           <DevicesOtherIcon/> Televisores
-          </a>
+          <Link to="/products?category=radio">
+          <p className="mx-3  text-grey-700 ">
+           <RadioIcon className='text-[#1D2375]'/> Radios
+          </p>
+          </Link>
+        
           <Link to="/products?category=Ordenador">
-            <p className="mx-3 text-grey-700 "> <LaptopChromebookIcon/> Ordenadores</p>
+            <p className="mx-3 text-grey-700 "> <LaptopChromebookIcon className='text-[#1D2375]'/> Ordenadores</p>
           </Link>
-          <a href="" className="mx-3  text-grey-700 ">
-           <PhoneIphoneIcon/> Móviles
-          </a></div>
+          <Link to="/products?category= movil">
+          <p className="mx-3  text-grey-700 ">
+           <PhoneIphoneIcon className='text-[#1D2375]'/> Móviles
+          </p>
+          </Link>
+          <Link to="/products?category=otros">
+          <p className="mx-3  text-grey-700 ">
+         
+           <DevicesOtherIcon className='text-[#1D2375]'/> Otros
+          </p>
+          </Link>
+          
+          </div>
            </div>
            <div className=" flex flex-col w-[30vw]  text-justify p-5 text-sm">
            <div className=" flex  justify-center text-center  ">

@@ -123,7 +123,7 @@ const CreateProduct = () => {
             <option value="consola">Consola</option>
             <option value="movil">Móvil</option>
             <option value="videojuegos">Videojuegos</option>
-            <option value="radio">Televisor</option>
+            <option value="radio">radio</option>
             <option value="ordenador">Ordenador</option>
             <option value="otros">Otros</option>
           </select>
