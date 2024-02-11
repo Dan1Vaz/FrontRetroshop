@@ -18,14 +18,14 @@ export const Tu = () => {
                 data.avatarURL
               }`}
               alt="Foto de perfil del usuario"
-              className="m-2 w-14 h-14 rounded-full object-cover border-[#7C7C7C] border-[0.5px]"
+              className="m-2 w-5 h-5 rounded-full object-cover border-[#7C7C7C] border-[0.5px]"
             />
-            <p className="text-[0.6rem]">Tú</p>
+            <p className="">Tú</p>
           </>
         ) : (
-          <div className="hidden lg:flex lg:flex-col lg:items-center">
-            <PersonIcon className="m-2 w-14 h-14 rounded-full fill-slate-200 bg-slate-400" />
-            <p className="text-[0.6rem] ">Tú</p>
+          <div className="hidden lg:flex lg:items-center">
+            <PersonIcon className="m-2 w-8 h-8 rounded-full fill-slate-200 bg-slate-400" />
+            <p className="">Tú</p>
           </div>
         )}
       </div>

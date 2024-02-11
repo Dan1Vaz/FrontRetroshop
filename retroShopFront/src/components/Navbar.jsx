@@ -7,6 +7,9 @@ import LoginPage from "../pages/LoginPage";
 import { useSearch } from "../providers/SearchContext";
 import { Button } from "@mui/material";
 import { Tu } from "./Tu";
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+
 
 export const Navbar = () => {
   //const { searchedProducts, setSearchedProducts } = useSearch();
@@ -38,20 +41,20 @@ export const Navbar = () => {
 
   return (
     <nav className="Navbar flex flex-wrap justify-center items-center pt-4 gap-[20px] sticky top-0 z-10 bg-white">
-      <div className=" flex  items-center lg:flex lg:items-center lg:pl- lg:pr-10 lg:w-screen lg:justify-between ">
+      <div className=" flex  items-center lg:flex lg:items-center lg:pr-2 lg:w-screen lg:justify-around ">
         <Link to="/">
           <img src="/iconretroshop.svg" alt="" className="h-[53px] lg:hidden" />
           <img
             src="/retroshop.svg"
             alt=""
-            className="h-[70px] hidden lg:flex lg:items-end "
+            className="min-h-[70px]  hidden lg:flex lg:items-end "
           />
         </Link>
-        <div className="flex items-center gap-10">
+        <div className="flex items-center gap-5">
           <div className="SearchBar relative flex items-center ">
             <form id="buscar-productos" onSubmit={handleSubmit}>
               <input
-                className="w-[278px] h-[33px] bg-[#efefef] rounded-full p-[20px] lg:w-[500px] "
+                className="w-[278px] h-[33px] bg-[#efefef] rounded-full p-[20px] lg:w-[500px]  "
                 type="search"
                 placeholder="Busca un producto..."
                 value={searchValue}
@@ -63,6 +66,14 @@ export const Navbar = () => {
             </form>
           </div>
           <Tu />
+          <div className=" hidden lg:flex gap-1 items-center">
+            <FavoriteBorderIcon/>
+            <p>Favoritos</p>
+          </div>
+          <div className=" hidden lg:flex gap-1 items-center w-max">
+            <AddCircleOutlineIcon/>
+            <p>Subir producto</p>
+          </div>
         </div>
       </div>
       <div className="overflow-x-scroll overflow-hidden no-scrollbar border-y-2 border-[#7C7C7C] mt-0 w-full">
