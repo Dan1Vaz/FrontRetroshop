@@ -12,8 +12,9 @@ import { AverageReview } from "../averageReview.jsx";
 
 const SellerProductDetail = ({ data }) => {
   return (
-    <div className="flex flex-col pb-28 absolute">
-      <div className="w-screen relative">
+    <div className="flex justify-center">
+    <div className="flex flex-col pb-28 lg:max-w-[700px] lg:border-2 lg:rounded-lg lg:overflow-hidden lg:shadow-lg lg:pb-6  lg:text-center justify-center">
+      <div className="w-full relative ">
         <DetailedProductImage
           productImg1={data.product.imageURL}
           productImg2={data.product.imageURL2}
@@ -75,6 +76,7 @@ const SellerProductDetail = ({ data }) => {
           </>
         ) : null}
       </div>
+    </div>
     </div>
   );
 };

@@ -13,6 +13,7 @@ const SearchProductsPage = () => {
   return (
     <>
       <main>
+        <div className="lg: min-h-screen">
         <ul className="productsTable grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-items-center w-full pt-[15px]">
           {products.length > 0 ? (
             products.map((product) => (
@@ -30,6 +31,7 @@ const SearchProductsPage = () => {
             <p>No hay datos disponibles</p>
           )}
         </ul>
+        </div>
       </main>
     </>
   );

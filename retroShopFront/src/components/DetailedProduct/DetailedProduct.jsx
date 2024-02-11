@@ -64,11 +64,11 @@ const DetailedProduct = ({ data }) => {
               Retroshop Siempre Contigo!
             </p>
           )
-        ) : data.reservation.status === "pendiente" ? (
-          <p className="text-center">
-            Espera a que el vendedor se ponga en contacto contigo
-          </p>
-        ) : (
+        ) : data.reservation.status === "pendiente" ?  (
+          <button disabled className="bg-gray-300 px-10 py-2 font-bold rounded-full">
+            Reserva ( tiene una solicitud)
+          </button>
+        ): (
           <CreateReservation productId={data.product.id} />
         )}
       </div>
