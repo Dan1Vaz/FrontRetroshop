@@ -5,7 +5,6 @@ import CreateReservation from "../CreateReservation.jsx";
 import { FavButton } from "../FavButton.jsx";
 import BackButton from "../BackButton.jsx";
 import CreateReview from "../../pages/CreateReview.jsx";
-import { StarsReview } from "../StarsReview.jsx";
 import { AverageReview } from "../averageReview.jsx";
 //componente que imprime el producto a detalle
 const DetailedProduct = ({ data }) => {
