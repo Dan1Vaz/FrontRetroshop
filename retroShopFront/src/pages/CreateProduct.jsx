@@ -97,7 +97,7 @@ const CreateProduct = () => {
           >
             <label
               htmlFor="name"
-              className="block text-base font-medium text-[#3337a3] w-[281px] p-2"
+              className="block text-base  text-[#3337a3] w-[281px] p-2"
             >
               Nombre del Producto:
             </label>
@@ -113,7 +113,7 @@ const CreateProduct = () => {
 
             <label
               htmlFor="category"
-              className="block text-base font-medium text-[#3337a3] w-[281px] p-2"
+              className="block text-base  text-[#3337a3] w-[281px] p-2"
             >
               Categoria:
             </label>
@@ -136,7 +136,7 @@ const CreateProduct = () => {
 
             <label
               htmlFor="price"
-              className="block text-base font-medium text-[#3337a3] w-[281px] p-2"
+              className="block text-base  text-[#3337a3] w-[281px] p-2"
             >
               Precio:
             </label>
@@ -152,7 +152,7 @@ const CreateProduct = () => {
 
             <label
               htmlFor="location"
-              className="block text-base font-medium text-[#3337a3] w-[281px] p-2"
+              className="block text-base  text-[#3337a3] w-[281px] p-2"
             >
               Ubicacion:
             </label>
@@ -167,7 +167,7 @@ const CreateProduct = () => {
 
             <label
               htmlFor="description"
-              className="block text-base font-medium text-[#3337a3] w-[281px] p-2"
+              className="block text-base  text-[#3337a3] w-[281px] p-2"
             >
               Descripcion:
             </label>
@@ -181,7 +181,7 @@ const CreateProduct = () => {
             ></textarea>
             <label
               htmlFor="avatar"
-              className="block text-base font-medium text-[#3337a3] w-[281px] p-2"
+              className="block text-base  text-[#3337a3] w-[281px] p-2"
             >
               Imagenes del Producto:
             </label>

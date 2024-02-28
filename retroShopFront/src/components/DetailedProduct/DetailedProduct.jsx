@@ -24,10 +24,10 @@ const DetailedProduct = ({ data }) => {
         </div>
       </div>
       <>
-        <h1 className="text-2xl font-bold capitalize p-2">
+        <h1 className="text-2xl capitalize p-2">
           {data.product.name}
         </h1>
-        <h2 className="text-2xl font-semibold text-gray-700 p-2">
+        <h2 className="text-2xl  text-gray-700 p-2">
           {data.product.price}€
         </h2>
         <article className="p-2">{data.product.description}</article>
@@ -65,7 +65,7 @@ const DetailedProduct = ({ data }) => {
             </p>
           )
         ) : data.reservation.status === "pendiente" ?  (
-          <button disabled className="bg-gray-300 px-10 py-2 font-bold rounded-full">
+          <button disabled className="bg-gray-300 px-10 py-2  rounded-full">
             Reserva ( tiene una solicitud)
           </button>
         ): (

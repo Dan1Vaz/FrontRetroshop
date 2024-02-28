@@ -13,7 +13,7 @@ import DeletedReservation from "../DeletedReservation.jsx";
 
 const SellerProductDetail = ({ data }) => {
   return (
-    <div className="flex flex-col pb-28 lg:max-w-[700px] lg:border-2 lg:rounded-lg lg:overflow-hidden lg:shadow-lg lg:pb-6  lg:text-center justify-center lg:ml-auto lg:mr-auto">
+    <div className="flex flex-col pb-28 lg:max-w-[700px] lg:border-2 lg:rounded-lg lg:overflow-hidden lg:shadow-lg  lg:text-center justify-center lg:ml-auto lg:mr-auto lg:mt-5">
       <div className="w-full relative">
         <DetailedProductImage
           productImg1={data.product.imageURL}
