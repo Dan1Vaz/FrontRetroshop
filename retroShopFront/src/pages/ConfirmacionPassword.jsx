@@ -45,6 +45,7 @@ const ConfirmacionPassword = () => {
         setStatusMessage("Logueado");
         setShowPopup(true);
         navigate(`${ruta}`);
+        console.log(ruta);
       })
       .catch((error) => {
         console.error("Error en inicio de sesión:", error.message);

@@ -29,7 +29,7 @@ const usePutUser = () => {
 
       const responseData = await response.json();
       if (responseData.ok) setData(responseData);
-      navigate("/profile/menu");
+      navigate("/profile/perfil");
     } catch (error) {
       setError(error.message);
     } finally {

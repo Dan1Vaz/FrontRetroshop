@@ -7,6 +7,7 @@ const useProducts = (limit) => {
 
   useEffect(() => {
     const fetchProducts = async () => {
+      console.log(import.meta.env.VITE_BASE_URL);
       try {
         const response = await fetch(
           `http://${import.meta.env.VITE_BASE_URL}:3001/products?${

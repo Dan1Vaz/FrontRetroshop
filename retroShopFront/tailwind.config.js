@@ -3,7 +3,11 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   important: "#root",
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        Quicksand: ['"Quicksand"'],
+      },
+    },
   },
   plugins: [
     function ({ addUtilities }) {

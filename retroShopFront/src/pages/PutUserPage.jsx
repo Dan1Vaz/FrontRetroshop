@@ -76,7 +76,7 @@ export const PutUserPage = () => {
         >
           <label
             htmlFor="name"
-            className="block text-base font-medium text-[#3337a3] w-[281px] p-2"
+            className="block text-base  text-[#3337a3] w-[281px] p-2"
           >
             Nombre:
           </label>
@@ -90,7 +90,7 @@ export const PutUserPage = () => {
           />
           <label
             htmlFor="password"
-            className="block text-base font-medium text-[#3337a3] w-[281px] p-2"
+            className="block text-base  text-[#3337a3] w-[281px] p-2"
           >
             Contraseña:
           </label>
@@ -104,7 +104,7 @@ export const PutUserPage = () => {
           />
           <label
             htmlFor="avatar"
-            className="block text-base font-medium text-[#3337a3] w-[281px] p-2"
+            className="block text-base  text-[#3337a3] w-[281px] p-2"
           >
             Foto de Perfil:
           </label>

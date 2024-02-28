@@ -67,7 +67,7 @@ export const PutProductsPages = () => {
           >
             <ArrowBackIcon className="size-10 fill-[#000000]" />
           </Link>
-          <h1 className="text-2xl font-bold text-[#000000]">
+          <h1 className="text-2xl text-[#000000]">
             Modificar Producto
           </h1>
         </div>
@@ -77,7 +77,7 @@ export const PutProductsPages = () => {
         >
           <label
             htmlFor="name"
-            className="block text-base font-medium text-[#3337a3] w-[281px] p-2"
+            className="block text-base  text-[#3337a3] w-[281px] p-2"
           >
             Nombre del Producto:
           </label>
@@ -91,7 +91,7 @@ export const PutProductsPages = () => {
           />
           <label
             htmlFor="category"
-            className="block text-base font-medium text-[#3337a3] w-[281px] p-2"
+            className="block text-base  text-[#3337a3] w-[281px] p-2"
           >
             Categoria:
           </label>
@@ -113,7 +113,7 @@ export const PutProductsPages = () => {
           </select>
           <label
             htmlFor="price"
-            className="block text-base font-medium text-[#3337a3] w-[281px] p-2"
+            className="block text-base  text-[#3337a3] w-[281px] p-2"
           >
             Precio:
           </label>
@@ -128,7 +128,7 @@ export const PutProductsPages = () => {
 
           <label
             htmlFor="location"
-            className="block text-base font-medium text-[#3337a3] w-[281px] p-2"
+            className="block text-base  text-[#3337a3] w-[281px] p-2"
           >
             Ubicacion:
           </label>
@@ -143,7 +143,7 @@ export const PutProductsPages = () => {
 
           <label
             htmlFor="description"
-            className="block text-base font-medium text-[#3337a3] w-[281px] p-2"
+            className="block text-base  text-[#3337a3] w-[281px] p-2"
           >
             Descripcion:
           </label>
@@ -156,7 +156,7 @@ export const PutProductsPages = () => {
           ></textarea>
           <label
             htmlFor="avatar"
-            className="block text-base font-medium text-[#3337a3] w-[281px] p-2"
+            className="block text-base  text-[#3337a3] w-[281px] p-2"
           >
             Imagenes del Producto:
           </label>
