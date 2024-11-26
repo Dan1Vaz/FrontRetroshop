@@ -39,8 +39,8 @@ export const ProfilePage = () => {
             ) : (
               <PersonIcon className="m-2 max-h-20 min-w-20 min-h-20 rounded-full fill-slate-200 bg-slate-400" />
             )}
-            <h1 className="text-ssm font-bold text-[#3337a3]">{data.name}</h1>
-            {/* <p className="text-base text-[#3337a3]">{data.description}</p> */}
+            <h1 className="text-ssm font-bold text-[#e19100]">{data.name}</h1>
+            {/* <p className="text-base text-[#e19100]">{data.description}</p> */}
           </div>
           <div className="border-b-[0.5px] border-[#db2777] bg-white relative lg:h-screen">
             <Link to="/profile/reservations">
@@ -114,8 +114,8 @@ export const ProfilePage = () => {
           ) : (
             <PersonIcon className="m-2 max-h-20 min-w-20 min-h-20 rounded-full fill-slate-200 bg-slate-400" />
           )}
-          <h1 className="text-2xl font-bold text-[#3337a3]">{data.name}</h1>
-          {/* <p className="text-base text-[#3337a3]">{data.description}</p> */}
+          <h1 className="text-2xl font-bold text-[#e19100]">{data.name}</h1>
+          {/* <p className="text-base text-[#e19100]">{data.description}</p> */}
         </div>
         <p className="pl-4 pt-4 text-xl font-medium text-[#000000]">
           Transacciones

@@ -92,12 +92,12 @@ const CreateProduct = () => {
         </div>
         <div className=" rounded-[10px] p-3 md:pb-[100px]">
           <form
-            className="flex justify-center items-center flex-col gap-1 text-[#3337a3]"
+            className="flex justify-center items-center flex-col gap-1 text-[#e19100]"
             onSubmit={enviar}
           >
             <label
               htmlFor="name"
-              className="block text-base  text-[#3337a3] w-[281px] p-2"
+              className="block text-base  text-[#e19100] w-[281px] p-2"
             >
               Nombre del Producto:
             </label>
@@ -113,7 +113,7 @@ const CreateProduct = () => {
 
             <label
               htmlFor="category"
-              className="block text-base  text-[#3337a3] w-[281px] p-2"
+              className="block text-base  text-[#e19100] w-[281px] p-2"
             >
               Categoria:
             </label>
@@ -136,7 +136,7 @@ const CreateProduct = () => {
 
             <label
               htmlFor="price"
-              className="block text-base  text-[#3337a3] w-[281px] p-2"
+              className="block text-base  text-[#e19100] w-[281px] p-2"
             >
               Precio:
             </label>
@@ -152,7 +152,7 @@ const CreateProduct = () => {
 
             <label
               htmlFor="location"
-              className="block text-base  text-[#3337a3] w-[281px] p-2"
+              className="block text-base  text-[#e19100] w-[281px] p-2"
             >
               Ubicacion:
             </label>
@@ -167,7 +167,7 @@ const CreateProduct = () => {
 
             <label
               htmlFor="description"
-              className="block text-base  text-[#3337a3] w-[281px] p-2"
+              className="block text-base  text-[#e19100] w-[281px] p-2"
             >
               Descripcion:
             </label>
@@ -181,7 +181,7 @@ const CreateProduct = () => {
             ></textarea>
             <label
               htmlFor="avatar"
-              className="block text-base  text-[#3337a3] w-[281px] p-2"
+              className="block text-base  text-[#e19100] w-[281px] p-2"
             >
               Imagenes del Producto:
             </label>
@@ -204,7 +204,7 @@ const CreateProduct = () => {
 
             <button
               type="submit"
-              className="w-[278px] h-[33px] bg-[#3337a3] text-white rounded-sm mt-2 hover:bg-[#0f17e7]"
+              className="w-[278px] h-[33px] bg-[#e19100] text-white rounded-sm mt-2 hover:bg-[#0f17e7]"
             >
               Enviar
             </button>

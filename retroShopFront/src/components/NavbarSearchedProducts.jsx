@@ -35,12 +35,7 @@ export const NavbarSearchedProducts = () => {
 <nav className="Navbar flex flex-wrap justify-center items-center pt-4 gap-[20px] sticky top-0 z-10 bg-white">
       <div className=" flex  items-center lg:flex lg:items-center lg:pr-2 lg:w-screen lg:justify-around ">
         <Link to="/">
-          <img src="/iconretroshop.svg" alt="" className="h-[53px] lg:hidden" />
-          <img
-            src="/retroshop.svg"
-            alt=""
-            className="min-h-[70px]  hidden lg:flex lg:items-end "
-          />
+        <img src="/retro.png" alt="" className="h-[100px] p-1 [filter:drop-shadow(0_0_5px_#e19100)]" />
         </Link>
         <div className="flex items-center gap-5">
           <div className="SearchBar relative flex items-center ">

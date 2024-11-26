@@ -59,7 +59,7 @@ const DetailedProduct = ({ data }) => {
               reservationDate={data.reservation.reservationDate}
             />
           ) : (
-            <p className="text-center font-medium text-[#3337a3]">
+            <p className="text-center font-medium text-[#e19100]">
               {" "}
               Retroshop Siempre Contigo!
             </p>

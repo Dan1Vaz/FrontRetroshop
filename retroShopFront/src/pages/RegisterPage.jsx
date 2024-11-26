@@ -64,26 +64,21 @@ export const RegisterPage = () => {
         className=" hidden sm:flex  sm:h-full  sm:overflow-hidden lg:w-[70%] lg:h-full relative 
        "
       >
-        <video
-          autoPlay
-          playsInline
-          loop
-          muted
-          className=" hidden  sm:flex sm:w-full sm:h-full sm:object-fill sm:aspect-video lg:object-fill aspect-auto"
-        >
-          <source src="/video3.mp4" type="video/mp4" />
-        </video>
+     <div 
+  className="hidden sm:flex sm:w-full sm:h-full sm:object-fill sm:aspect-video lg:object-fill aspect-auto [background-image:url('/fondo.png')] bg-cover bg-center"
+>
+</div>
         
       </Link>
-      <div className="flex flex-col h-screen items-center justify-center md:flex md:flex-col md:h-[100vh]  lg:w-[30%] md:mr-3%  relative">
-        <img src="/retroshop.svg" alt="" className="h-[100px] p-4" />
+      <div className="flex flex-col h-screen items-center justify-center md:flex md:flex-col md:h-[100vh]  lg:w-[30%] md:mr-3% lg:relative ">
+      <img src="/retro.png" alt="" className="h-[200px] p-1 [filter:drop-shadow(0_0_5px_#e19100)]"/>
         <form
           className="flex justify-center items-center flex-col gap-1"
           onSubmit={send}
         >
           <label
             htmlFor="name"
-            className="block text-base font-medium text-[#3337a3] w-[281px] p-2"
+            className="block text-base font-medium text-[#e19100] w-[281px] p-2"
           >
             Nombre:
           </label>
@@ -97,7 +92,7 @@ export const RegisterPage = () => {
           />
           <label
             htmlFor="email"
-            className="block text-base font-medium text-[#3337a3] w-[281px] p-2"
+            className="block text-base font-medium text-[#e19100] w-[281px] p-2"
           >
             Correo:
           </label>
@@ -111,7 +106,7 @@ export const RegisterPage = () => {
           />
           <label
             htmlFor="password"
-            className="block text-base font-medium text-[#3337a3] w-[281px] p-2"
+            className="block text-base font-medium text-[#e19100] w-[281px] p-2"
           >
             Contraseña:
           </label>
@@ -125,13 +120,13 @@ export const RegisterPage = () => {
           />
           <button
             type="submit"
-            className="w-[278px] h-[33px] bg-[#3337a3] text-white rounded-sm mt-2 hover:bg-[#0f17e7]"
+            className="w-[278px] h-[33px] bg-[#e19100] text-white rounded-sm mt-2 hover:bg-[#0f17e7]"
           >
             Siguiente
           </button>
           <div className="flex justify-start w-[278px] items-start mt-0">
             <NavLink
-              className="mr-0 underline text-blue-600 hover:text-blue-800 visited:[#3337a3]"
+              className="mr-0 underline text-blue-600 hover:text-blue-800 visited:[#e19100]"
               to="/profile/login"
             >
               Login

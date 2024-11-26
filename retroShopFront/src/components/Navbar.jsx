@@ -42,12 +42,8 @@ export const Navbar = () => {
     <nav className="Navbar flex flex-wrap justify-center items-center pt-4 gap-[20px] sticky top-0 z-10 lg:w-full bg-white">
       <div className=" flex  items-center lg:flex lg:items-center lg:pr-2 lg:w-screen lg:justify-around ">
         <Link to="/">
-          <img src="/iconretroshop.svg" alt="" className="h-[53px] lg:hidden" />
-          <img
-            src="/retroshop.svg"
-            alt=""
-            className="min-h-[70px]  hidden lg:flex lg:items-end "
-          />
+          
+        <img src="/retro.png" alt="" className="h-[0px] p-1 [filter:drop-shadow(0_0_5px_#e19100)]" />
         </Link>
         <div className="flex items-center gap-5">
           <div className="SearchBar relative flex items-center ">
@@ -80,7 +76,8 @@ export const Navbar = () => {
         </div>
       </div>
       <div className="overflow-x-scroll overflow-hidden no-scrollbar border-y-2 border-[#7C7C7C] mt-0 w-full">
-        <div className="flex w-max lg:w-screen md:w-screen sm:w-screen justify-center  bg-gradient-to-r from-blue-700 via-pink-500 to-purple-500 ">
+        <div className="flex w-max lg:w-screen md:w-screen sm:w-screen justify-center  [background-image:linear-gradient(to_right,#80A18E,#DFDCD5,#e3bc6f99)] ">
+       
           <Link to="/products?category=Consola">
             <p className="mx-3 text-white font-semibold">Consolas</p>
           </Link>

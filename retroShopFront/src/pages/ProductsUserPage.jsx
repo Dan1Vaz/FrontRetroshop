@@ -33,7 +33,7 @@ export const ProductsUserPage = () => {
               productPrice={product.price}
             />
             <Link to={`/profile/modify/${product.id}`}>
-              <button className="w-[150px] h-[33px] bg-[#3337a3]  p-[20px] text-white py-2 px-4 ">
+              <button className="w-[150px] h-[33px] bg-[#e19100]  p-[20px] text-white py-2 px-4 ">
                 Modificar
               </button>
             </Link>

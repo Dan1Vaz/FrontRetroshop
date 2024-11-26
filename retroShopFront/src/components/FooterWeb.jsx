@@ -9,7 +9,8 @@ import VideogameAssetIcon from '@mui/icons-material/VideogameAsset';
 
 export const FooterWeb = () => {
   return (
-    <div className="hidden lg:flex flex-col bg-gray-200 text-grey-700 max-w-screen shadow-[9px_-2px_18px_3px_rgba(133,126,133,1)] mt-[20px]">
+    <div    className="hidden lg:flex flex-col [background-image:linear-gradient(to_right,#80A18E,#DFDCD5,#e3bc6f99)] bg-[#e3bc6f99] text-gray-700 max-w-screen mt-[20px]"
+>
      
         <div className=" flex flex-row text-center justify-center px-[10px] " >
         
@@ -47,7 +48,7 @@ export const FooterWeb = () => {
            </div>
            <div className=" flex flex-col w-[30vw]  text-justify p-5 text-sm">
            <div className=" flex  justify-center text-center  ">
-            <img  className="w-[80%]"src="/retroshop.svg"/>
+            <img  className="h-[200px] p-1 [filter:drop-shadow(0_0_5px_#e19100)]"src="/retro.png"/>
             
         </div>
            <p className="text-gray-800"> Tu destino en línea para descubrir y vender tecnología retro. Sumérgete en nuestra vibrante comunidad donde puedes encontrar una amplia variedad de dispositivos vintage, desde consolas de videojuegos hasta gadgets icónicos. nuestra plataforma ofrece una forma fácil y segura de comprar y vender artículos retro. Únete a nosotros para revivir la nostalgia y explorar un mundo de tecnología clásica..</p>
@@ -56,11 +57,11 @@ export const FooterWeb = () => {
            <Contact/>
            </div>
     </div>
-    <div className=" flex flex-row bg-gray-300 shadow-[9px_-2px_18px_3px_rgba(133,126,133,1)] ">
+    <div className=" flex flex-row [background-image:linear-gradient(to_right,#80A18E,#DFDCD5,#DFDCD5)] shadow-[9px_-2px_18px_3px_rgba(133,126,133,1)] ">
       {/* bg-gradient-to-r from-blue-700 via-pink-500 to-purple-500' */}
       {/* bg-gradient-to-r from-purple-500 via-pink-500 to-blue-700' */}
         <div className=" flex  justify-center text-center w-[50%]">
-            <img  className="w-[30%]"src="/retroshop.svg"/>
+            <img  className="h-[50px] p-1 [filter:drop-shadow(0_0_5px_#e19100)]"src="/retro.png"/>
             
         </div>
         <div className=" w-[50%] flex gap-5 text-center  justify-center mt-2">

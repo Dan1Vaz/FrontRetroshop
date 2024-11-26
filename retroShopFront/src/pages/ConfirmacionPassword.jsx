@@ -62,7 +62,7 @@ const ConfirmacionPassword = () => {
   return (
     <div className="flex justify-center items-center flex-col gap-[20px] h-screen">
       <div className="flex">
-        <img src="/retroshop.svg" alt="" className="w-[300px] h-[100px]" />
+        <img src="/retroshop.png" alt="" className="w-[500px] h-[100px]" />
       </div>
       <form
         className="flex justify-center items-center flex-col gap-5"

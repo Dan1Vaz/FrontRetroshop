@@ -1,7 +1,52 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Sora:100,200,300,regular,500,600,700,800);
+@import url(https://fonts.googleapis.com/css?family=Russo+One:regular);
+@import url(https://fonts.googleapis.com/css?family=Russo+One:regular);
 
+
+:root {
+  --mt-ff-body: "Sora", sans-serif;
+  --mt-ff-heading: "Sora", sans-serif;
+  --mt-ff-russo: "Russo One", sans-serif;
+  --mt-ff-fontawesome: "Font Awesome 6 Pro";
+  --mt-body: #F2E205;
+  --mt-white: #F2B705;
+  --mt-off-white:#F29F05;
+  --mt-black: #F25C05;
+  --mt-black-2: #A60303;
+  --mt-heading-primary: #102039;
+  --mt-heading-secondary: #ea1826;
+  --mt-theme-primary: #EADA96;/*#8750f7;*/
+  --mt-theme-secondary:#078c2885;/* #5397a689;/*#2a1454;*/
+  --mt-theme-accent-1: #0f0715;
+  --mt-theme-accent-2: #140c1c;
+  --mt-grey-1: #747779;
+  --mt-grey-2: #d9d9d9;
+  --mt-grey-3: #dddddd;
+  --mt-grey-4: #22272c;
+  --mt-fw-normal: normal;
+  --mt-fw-elight: 200;
+  --mt-fw-light: 300;
+  --mt-fw-regular: 400;
+  --mt-fw-medium: 500;
+  --mt-fw-sbold: 600;
+  --mt-fw-bold: 700;
+  --mt-fw-ebold: 800;
+  --mt-fw-black: 900;
+  --mt-fz-body: 16px;
+  --mt-fz-btn: 15px;
+  --mt-fz-p: 18px;
+  --mt-fz-h1: 65px;
+  --mt-fz-h2: 45px;
+  --mt-fz-h3: 30px;
+  --mt-fz-h4: 24px;
+  --mt-fz-h5: 22px;
+  --mt-fz-h6: 18px;
+  --mt-fz-sub-title: 36px;
+}
 h1,
 h2,
 label {

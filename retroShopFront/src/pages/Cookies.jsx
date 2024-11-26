@@ -6,7 +6,7 @@ export const Cookies = () => {
   return (
     <div className="flex justify-center items-center flex-col gap-5 p-5 m-5 ">
 
-        <img src="/retroshop.svg" alt="" className="h-[100px] p-4" />
+        <img src="/retro.png" alt="" className="h-[200px] p-4" />
         <Link to="/">
               <ForwardRoundedIcon className=" hidden lg:flex lg:absolute top-0 left-0 rotate-180 z-5000 text-[40px] text-blue-900" />
             </Link>

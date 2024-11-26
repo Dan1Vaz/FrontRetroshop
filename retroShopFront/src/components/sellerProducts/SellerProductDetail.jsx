@@ -57,12 +57,12 @@ const SellerProductDetail = ({ data }) => {
 
       <div className="flex justify-center mt-4">
         {data.reservation.status === "finalizada" ? (
-          <p className="text-center font-medium text-[#3337a3]">
+          <p className="text-center font-medium text-[#e19100]">
             {" "}
             Retroshop Siempre Contigo!
           </p>
         ) : data.reservation.status === "pendiente" ? (
-          <div className="flex flex-col items-center justify-center gap-4 p-2 rounded-md border-[2px] border-[#3337a3]">
+          <div className="flex flex-col items-center justify-center gap-4 p-2 rounded-md border-[2px] border-[#e19100]">
             <PurcharseConfirmationPage reservationId={data.reservation.id} />
             <DeletedReservation productId={data.product.id}/>
           </div>

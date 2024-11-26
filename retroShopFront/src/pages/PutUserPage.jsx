@@ -76,7 +76,7 @@ export const PutUserPage = () => {
         >
           <label
             htmlFor="name"
-            className="block text-base  text-[#3337a3] w-[281px] p-2"
+            className="block text-base  text-[#e19100] w-[281px] p-2"
           >
             Nombre:
           </label>
@@ -90,7 +90,7 @@ export const PutUserPage = () => {
           />
           <label
             htmlFor="password"
-            className="block text-base  text-[#3337a3] w-[281px] p-2"
+            className="block text-base  text-[#e19100] w-[281px] p-2"
           >
             Contraseña:
           </label>
@@ -104,7 +104,7 @@ export const PutUserPage = () => {
           />
           <label
             htmlFor="avatar"
-            className="block text-base  text-[#3337a3] w-[281px] p-2"
+            className="block text-base  text-[#e19100] w-[281px] p-2"
           >
             Foto de Perfil:
           </label>
@@ -124,7 +124,7 @@ export const PutUserPage = () => {
           )}
           <button
             type="submit"
-            className="w-[278px] h-[33px] bg-[#3337a3] text-white rounded-sm mt-2 hover:bg-[#0f17e7]"
+            className="w-[278px] h-[33px] bg-[#e19100] text-white rounded-sm mt-2 hover:bg-[#0f17e7]"
           >
             Enviar
           </button>

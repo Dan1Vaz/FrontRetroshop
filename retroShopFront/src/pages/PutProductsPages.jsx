@@ -72,12 +72,12 @@ export const PutProductsPages = () => {
           </h1>
         </div>
         <form
-          className="flex justify-center items-center flex-col gap-1 text-[#3337a3]"
+          className="flex justify-center items-center flex-col gap-1 text-[#e19100]"
           onSubmit={handleUpdateProduct}
         >
           <label
             htmlFor="name"
-            className="block text-base  text-[#3337a3] w-[281px] p-2"
+            className="block text-base  text-[#e19100] w-[281px] p-2"
           >
             Nombre del Producto:
           </label>
@@ -91,7 +91,7 @@ export const PutProductsPages = () => {
           />
           <label
             htmlFor="category"
-            className="block text-base  text-[#3337a3] w-[281px] p-2"
+            className="block text-base  text-[#e19100] w-[281px] p-2"
           >
             Categoria:
           </label>
@@ -113,7 +113,7 @@ export const PutProductsPages = () => {
           </select>
           <label
             htmlFor="price"
-            className="block text-base  text-[#3337a3] w-[281px] p-2"
+            className="block text-base  text-[#e19100] w-[281px] p-2"
           >
             Precio:
           </label>
@@ -128,7 +128,7 @@ export const PutProductsPages = () => {
 
           <label
             htmlFor="location"
-            className="block text-base  text-[#3337a3] w-[281px] p-2"
+            className="block text-base  text-[#e19100] w-[281px] p-2"
           >
             Ubicacion:
           </label>
@@ -143,7 +143,7 @@ export const PutProductsPages = () => {
 
           <label
             htmlFor="description"
-            className="block text-base  text-[#3337a3] w-[281px] p-2"
+            className="block text-base  text-[#e19100] w-[281px] p-2"
           >
             Descripcion:
           </label>
@@ -156,7 +156,7 @@ export const PutProductsPages = () => {
           ></textarea>
           <label
             htmlFor="avatar"
-            className="block text-base  text-[#3337a3] w-[281px] p-2"
+            className="block text-base  text-[#e19100] w-[281px] p-2"
           >
             Imagenes del Producto:
           </label>
@@ -175,7 +175,7 @@ export const PutProductsPages = () => {
 
           <button
             type="submit"
-            className="w-[278px] h-[33px] bg-[#3337a3] text-white rounded-sm mt-2 hover:bg-[#0f17e7]"
+            className="w-[278px] h-[33px] bg-[#e19100] text-white rounded-sm mt-2 hover:bg-[#0f17e7]"
           >
             Enviar
           </button>
